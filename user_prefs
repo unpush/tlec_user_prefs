@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1030 2007/12/30 14:44:30 yoh Exp $
+# $Id: user_prefs,v 1.1032 2008/01/02 01:25:58 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -4643,6 +4643,23 @@ full NULLTXTPDF /(\n(?:-{12,}0\d{22,}|--={19,}_\d{6,}==_|-{12,}[0-9A-F]{16,})\n)
 meta NULLPDF_DCN (NULLTXTPDF || HTMLPDF) && ___DCN
 score NULLPDF_DCN 3.5
 
+
+# added 2008.01.02 by [yoh]
+# 
+full NULLTXTGIF /\nContent-Type: multipart\/mixed;\n  boundary=\"(----=_NextPart_000_000[6E]_0[0-9A-F]{7}\.[0-9A-F]{8})\"\n(?:.+\n)+\n.+\n\n--\1\nContent-Type: text\/plain;\n(?:.+\n){1,3}Content-Transfer-Encoding: 7bit\n{2,}--\1\nContent-Type: image\/gif;/
+
+meta NULLGIF_OTHER NULLTXTGIF && (ARIN || RIPE_NCC || LACNIC || AFRINIC || ___KOREATAIWANCHINA )
+score NULLGIF_OTHER 3.5
+meta NULLGIF_CBL NULLTXTGIF && RCVD_IN_CBL
+score NULLGIF_CBL 3.5
+meta NULLGIF_SPAMCOP NULLTXTGIF && RCVD_IN_BL_SPAMCOP_NET
+score NULLGIF_SPAMCOP 3.5
+meta NULLGIF_DSBL NULLTXTGIF && RCVD_IN_DSBL
+score NULLGIF_DSBL 3.5
+meta NULLGIF_DUL NULLTXTGIF && RCVD_IN_SORBS_DUL
+score NULLGIF_DUL 3.5
+
+
 # added 2007.08.11 by [yoh]
 # 
 full HTMLPDF /(-{6}=_NextPart_000_00[0-9A-F]{2}_[0-9A-F]{8}\.[0-9A-F]{8})\nContent-Type: multipart\/alternative;\n.boundary=\"(----=_NextPart_001_00[0-9A-F]{2}_[0-9A-F]{8}\.[0-9A-F]{8})\"\n\n\n--\2\nContent-Type: text\/plain;\n.charset=\"{0,1}[\w-]{5,}\"{0,1}\nContent-Transfer-Encoding: quoted-printable\n\n\n--\2\nContent-Type: text\/html;\n.charset=\"{0,1}[\w-]{5,}\"{0,1}\nContent-Transfer-Encoding: quoted-printable\n\n(?:.+\n){5}<STYLE><\/STYLE>\n.+\n.+\n<DIV><FONT face=3DArial size=3D2><\/FONT>&nbsp;<\/DIV><\/BODY><\/HTML>\n\n--\2--\n\n\1\nContent-Type: application\/(?:pdf|octet-stream);/
@@ -5327,7 +5344,8 @@ score DIRECTSYSTEMDESIGN 1.5
 
 # header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /ip=(219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)|61\.115\.(72\.195|114\.4[34])|61\.205\.237\.(39|114|208)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
 # 211\.19\.100\.5[346]
-header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /ip=(61\.115\.(72\.195|114\.4[34])|61\.205\.(237\.(39|114|208)|238\.127)|211\.19\.100\.(6|1[2348]|38|[4-9]\d)|219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+# header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /ip=(61\.45\.36\.2\d\d|61\.115\.(72\.195|114\.4[34])|61\.205\.(237\.(39|114|208)|238\.127)|211\.19\.100\.(6|1[2348]|38|[4-9]\d)|219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /^\[ ip=(61\.45\.36\.2\d\d|61\.115\.(72\.195|114\.4[34])|61\.205\.(237\.(39|114|208)|238\.127)|211\.19\.100\.(6|1[2348]|38|[4-9]\d)|219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)) /
 describe DIRECTWAKWAK directly received spam from XePhion(NTT-ME Corporation)
 score DIRECTWAKWAK 1.5
 
