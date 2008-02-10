@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1048 2008/02/03 10:03:26 yoh Exp $
+# $Id: user_prefs,v 1.1049 2008/02/09 22:00:42 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -314,6 +314,10 @@ score XMAILERSPAM99 7.0
 header X_MAIL_AGENT     X-Mail-Agent =~ /\(Extra Japan\)|BSMTP DLL/
 describe X_MAIL_AGENT   spammer's choice of X-Mail-Agent
 score X_MAIL_AGENT      1.0
+
+meta DYN_XMAGNT (X_MAIL_AGENT||X_MAILER) && ___DYNAMICIP
+score DYN_XMAGNT 5.5
+
 
 header USERAGENT User-Agent =~ /(VXmailer 1\.1|MMBoard Ver\.[0-9]+|Foxmail 4\.2 \[cn\]|MIME-tools 5\.[0-9]+ \(Entity |AspMail [0-9])/
 describe USERAGENT spammer's choice of User-Agent
@@ -4649,8 +4653,11 @@ score NULLPDF_DCN 3.5
 
 
 # added 2008.01.02 by [yoh]
+# modified 2008.02.10 by [yoh]
 # 
-full NULLTXTGIF /\nContent-Type: multipart\/mixed;\n  boundary=\"(----=_NextPart_000_000[6E]_0[0-9A-F]{7}\.[0-9A-F]{8})\"\n(?:.+\n)+\n.+\n\n--\1\nContent-Type: text\/plain;\n(?:.+\n){1,3}Content-Transfer-Encoding: 7bit\n{2,}--\1\nContent-Type: image\/gif;/
+# full NULLTXTGIF /\nContent-Type: multipart\/mixed;\n  boundary=\"(----=_NextPart_000_000[6E]_0[0-9A-F]{7}\.[0-9A-F]{8})\"\n(?:.+\n)+\n.+\n\n--\1\nContent-Type: text\/plain;\n(?:.+\n){1,3}Content-Transfer-Encoding: 7bit\n{2,}--\1\nContent-Type: image\/gif;/
+full NULLTXTGIF /\nContent-Type: multipart\/mixed;\n  boundary=\"(----=_NextPart_000_000[6E]_0[0-9A-F]{7}\.[0-9A-F]{8}|----------[0-9A-F]{16})\"\n(?:.+\n)+\n(?:.+\n\n){0,1}--\1\nContent-Type: text\/plain;(| charset=.+)\n(?:.+\n){0,3}Content-Transfer-Encoding: 7bit\n{2,}--\1\nContent-Type: image\/gif;/
+
 
 meta NULLGIF_OTHER NULLTXTGIF && (ARIN || RIPE_NCC || LACNIC || AFRINIC || ___KOREATAIWANCHINA )
 score NULLGIF_OTHER 3.5
@@ -5377,7 +5384,7 @@ header DIRECTMEDIAWARS X-Spam-Relays-Untrusted =~ /^\[ ip=210\.233\.74\.16[46] /
 describe DIRECTMEDIAWARS directly received spam from MEDIAWARS
 score DIRECTMEDIAWARS 1.5
 
-header DIRECTBITDRIVE X-Spam-Relays-Untrusted =~ /^\[ ip=202\.94\.153\.197 /
+header DIRECTBITDRIVE X-Spam-Relays-Untrusted =~ /^\[ ip=202\.94\.153\.(85,197) /
 describe DIRECTBITDRIVE directly received spam from BIT-DRIVE(Sony Corporation)
 score DIRECTBITDRIVE 1.5
 
