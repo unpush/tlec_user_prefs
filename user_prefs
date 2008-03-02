@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1054 2008/02/24 05:06:29 yoh Exp $
+# $Id: user_prefs,v 1.1055 2008/03/01 22:47:30 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -4692,6 +4692,33 @@ score NUMURL_DSBL 3.5
 meta NUMURL_DUL NUMURLWITHWORDS && RCVD_IN_SORBS_DUL
 score NUMURL_DUL 3.5
 
+# added 2008.03.01 by [yoh]
+# 
+full LONGCHARHTTP /\nContent-Type: text\/plain;\n(?:.+\n)+\n[A-Z][a-z]{2,}[A-Za-z]{15,}\nhttp:\/\/[a-z.]+[a-z]\n{1,}$/
+meta L_C_HTTP_OTHER LONGCHARHTTP && (ARIN || RIPE_NCC || LACNIC || AFRINIC || ___KOREATAIWANCHINA )
+score L_C_HTTP_OTHER 3.5
+meta L_C_HTTP_CBL LONGCHARHTTP && RCVD_IN_CBL
+score L_C_HTTP_CBL 3.5
+meta L_C_HTTP_SPAMCOP LONGCHARHTTP && RCVD_IN_BL_SPAMCOP_NET
+score L_C_HTTP_SPAMCOP 3.5
+meta L_C_HTTP_DSBL LONGCHARHTTP && RCVD_IN_DSBL
+score L_C_HTTP_DSBL 3.5
+meta L_C_HTTP_DUL LONGCHARHTTP && RCVD_IN_SORBS_DUL
+score L_C_HTTP_DUL 3.5
+
+# added 2008.03.03 by [yoh]
+# 
+full CHATGIRL /\nContent-Type: text\/plain;\n(?:.+\n)+\nHello\! I am .+ I am .+ that would like to chat with you\. Email me at [A-Z][a-z]+@[A-Za-z.]+ only/
+meta C_G_OTHER CHATGIRL && (ARIN || RIPE_NCC || LACNIC || AFRINIC || ___KOREATAIWANCHINA )
+score C_G_OTHER 3.5
+meta C_G_CBL CHATGIRL && RCVD_IN_CBL
+score C_G_CBL 3.5
+meta C_G_SPAMCOP CHATGIRL && RCVD_IN_BL_SPAMCOP_NET
+score C_G_SPAMCOP 3.5
+meta C_G_DSBL CHATGIRL && RCVD_IN_DSBL
+score C_G_DSBL 3.5
+meta C_G_DUL CHATGIRL && RCVD_IN_SORBS_DUL
+score C_G_DUL 3.5
 
 
 
