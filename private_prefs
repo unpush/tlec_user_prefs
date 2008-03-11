@@ -1,0 +1,103 @@
+# sample of ~/.spamassassin/private_prefs
+#  $Id: private_prefs,v 1.2 2007/01/03 14:08:04 yoh Exp $
+#  $Date: 2007/01/03 14:08:04 $
+
+# <<< ---NOTE---  ---NOTE---  ---NOTE---  ---NOTE--- >>>
+# 
+#               You MUST set below!
+# 
+# (1) your own 'trusted_networks'
+# 
+# 
+#   For AWL working properly, we have to write your trusted networks.
+#   http://article.gmane.org/gmane.mail.spam.spamassassin.general/72509
+#   http://wiki.apache.org/spamassassin/AwlWrongWay?highlight=%28awl%29
+#   2005.09.23 by [yoh]
+#   Thanks to OOI Keita san
+#   2005.11.22 by [yoh]
+# 
+#   You MUST write below in your ~/.spamassassin/private_prefs
+#   2006.04.18 by [yoh]
+
+# 
+# trusted_networks is 'accumulative' setting.
+# So, it's NOT overwritten by following setting.
+# see 'perldoc Mail::SpamAssassin::Conf'.
+#   2007.01.03 by [yoh]
+# 
+
+# First, you have to set using local IPs.
+trusted_networks 127.0.0.1/8 192.168.0.1/16 
+
+# I don't use them below. If you use, uncomment.
+# trusted_networks 10.0.0.1/8 172.16.0.1/12 
+
+# It's my mainly using networks.
+# trusted_networks 210.150.184.16/29 
+
+# below IPs are yahoo.co.jp's MTAs.
+trusted_networks 203.216.241.238/31 203.216.241.240/30 203.216.242.34/31 203.216.242.36/30 203.216.242.72/30 203.216.242.76/31 203.216.242.117/32 203.216.242.118/31 203.216.242.120/31 203.216.242.122/32 203.216.244.132/30 203.216.244.136/31 203.216.244.166/31 203.216.244.168/30 203.216.244.177/32 203.216.244.178/31 203.216.244.180/31 203.216.244.182/32 203.216.244.209/32 203.216.244.210/31 203.216.244.212/31 203.216.244.214/32 203.216.226.129/32 203.216.226.130/31 203.216.226.132/30 203.216.226.136/30 203.216.226.140/32 202.93.76.110/31 202.93.76.112/29 202.93.76.120/31 203.141.44.230/31 203.141.44.232/30
+
+# below IP is freemail.ne.jp's MTA.
+# trusted_networks 219.100.31.229 
+
+# below IPs are @nifty's MTAs.
+trusted_networks 202.248.238.40/29 202.248.238.48/29 202.248.238.56/31 202.248.238.85
+
+# below IPs are gmail.com's MTAs.
+trusted_networks 216.239.57.83 64.233.161.83 64.233.171.83
+
+# below IP is debian.or.jp's MTA.(debian-jp ML)
+trusted_networks 61.215.208.41 202.221.179.41 210.157.158.35 210.157.158.37
+# below IP is linux.or.jp's MTA.(linux-jp ML)
+trusted_networks 210.171.226.47
+
+# (2) your own 'internal_networks'
+#   'internal_networks' is a list of your receiver's MTA's IPs.
+#   You'd better write below in your ~/.spamassassin/private_prefs
+#   2007.01.03 by [yoh]
+
+# 
+# internal_networks is 'accumulative' setting.
+# So, it's NOT overwritten by following setting.
+# see 'perldoc Mail::SpamAssassin::Conf'.
+#   2007.01.03 by [yoh]
+# 
+
+# below IPs are yahoo.co.jp's MTAs.
+internal_networks 203.216.241.238/31 203.216.241.240/30 203.216.242.34/31 203.216.242.36/30 203.216.242.72/30 203.216.242.76/31 203.216.242.117/32 203.216.242.118/31 203.216.242.120/31 203.216.242.122/32 203.216.244.132/30 203.216.244.136/31 203.216.244.166/31 203.216.244.168/30 203.216.244.177/32 203.216.244.178/31 203.216.244.180/31 203.216.244.182/32 203.216.244.209/32 203.216.244.210/31 203.216.244.212/31 203.216.244.214/32 203.216.226.129/32 203.216.226.130/31 203.216.226.132/30 203.216.226.136/30 203.216.226.140/32 202.93.76.110/31 202.93.76.112/29 202.93.76.120/31 203.141.44.230/31 203.141.44.232/30
+
+# below IP is freemail.ne.jp's MTA.
+# internal_networks 219.100.31.229 
+
+# below IPs are @nifty's MTAs.
+internal_networks 202.248.238.40/29 202.248.238.48/29 202.248.238.56/31 202.248.238.85
+
+# below IPs are gmail.com's MTAs.
+internal_networks 216.239.57.83 64.233.161.83 64.233.171.83
+
+
+
+# (3) your own 'MYMTA'
+# 
+# You MUST write below in your ~/.spamassassin/private_prefs
+# Ex. If you use OCN:
+# replace_tag  MYMTA smtp\.[a-z]+\.ocn\.ne\.jp
+# see perldoc Mail::SpamAssassin::Plugin::ReplaceTags
+
+replace_tag   MYMTA (mail\.flcl\.org|[a-z0-9]+\.nifty\.((ne|co|ad)\.jp|com)|(alt|dns|mta|ybbmta)\d\d\.mail\.((bbt|mci|tnz)\.){0,1}yahoo\.co\.jp|fm[1-6]\.freemail\.ne\.jp)
+
+# 
+# for more details, see http://spamassassin.jp/modules/xhnewbb/viewtopic.php?topic_id=9&post_id=47#forumpost47
+# 
+# <<< ---NOTE---  ---NOTE---  ---NOTE---  ---NOTE--- >>>
+# 
+
+
+# 
+# If you have SpamCop account, you had better set below.
+#   2006.04.18 by [yoh]
+# 
+
+# spamcop_from_address your@mail.address
+# spamcop_to_address submit.usodapyon@spam.spamcop.net
