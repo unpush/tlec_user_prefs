@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1075 2008/04/17 07:28:39 yoh Exp $
+# $Id: user_prefs,v 1.1076 2008/04/19 06:33:58 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -4760,6 +4760,10 @@ score C_G_DSBL 3.5
 meta C_G_DUL CHATGIRL && RCVD_IN_SORBS_DUL
 score C_G_DUL 3.5
 
+meta C_G_PBL CHATGIRL && RCVD_IN_PBL
+score C_G_PBL 3.5
+meta C_G_DCN CHATGIRL && ___DCN 
+score C_G_DCN 3.5
 
 
 # added 2007.08.11 by [yoh]
