@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1078 2008/04/23 22:40:24 yoh Exp $
+# $Id: user_prefs,v 1.1079 2008/04/24 13:18:15 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -2696,14 +2696,14 @@ score DNSFRMSCRSG99 4.5
 # header HELO_BY_SAME X-Spam-Relays-Untrusted =~ /ip=(?!(127\.0\.0\.1|192\.168(\.\d{1,3}){2}|172\.(1[6-9]|2\d|3[01](\.\d{1,3}){2}|10(\.\d{1,3}){3})))\d{2,3}(\.\d{1,3}){3} rdns=[a-z0-9\._-]+ helo=([a-z0-9\._-]+) by=\7/
 # header HELO_BY_SAME X-Spam-Relays-Untrusted =~ /ip=(?!(127\.0\.0\.1|192\.168(\.\d{1,3}){2}|172\.(1[6-9]|2\d|3[01](\.\d{1,3}){2}|10(\.\d{1,3}){3})))\d{2,3}(\.\d{1,3}){3} rdns=[^\[]* helo=([\w\.-]+) by=\7/
 # header HELO_BY_SAME X-Spam-Relays-Untrusted =~ /ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns=[^\[]* helo=([\w\._-]+) by=\1/
-header HELO_BY_SAME X-Spam-Relays-Untrusted =~ /^\[ ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns=[^\[]* helo=([\w\._-]+) by=\1 ident= envfrom= intl=0 id=[^\[]* auth= \]$/
+header HELO_BY_SAME X-Spam-Relays-Untrusted =~ /^\[ ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns=[^\[]* helo=([\w\._-]+) by=\1 [^\[\]]+ \]/
 describe HELO_BY_SAME HELO is same received MTA's FQDN
 score HELO_BY_SAME 1.5
 
 # header HELO_BY_PARTIALSAME X-Spam-Relays-Untrusted =~ /ip=(?!(127\.0\.0\.1|192\.168(\.\d{1,3}){2}|172\.(1[6-9]|2\d|3[01](\.\d{1,3}){2}|10(\.\d{1,3}){3})))\d{2,3}(\.\d{1,3}){3} rdns=[^\[]* helo=([\w\.-]+) by=\w+\.\7/
 # header HELO_BY_PARTIALSAME X-Spam-Relays-Untrusted =~ /ip=(?!(127\.0\.0\.1|192\.168(\.\d{1,3}){2}|172\.(1[6-9]|2\d|3[01](\.\d{1,3}){2}|10(\.\d{1,3}){3})))\d{2,3}(\.\d{1,3}){3} rdns=[^\[]* helo=([\w\.-]+) by=[\w\.]+\7/
 # header HELO_BY_PARTIALSAME X-Spam-Relays-Untrusted =~ /ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|207\.46(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns=[^\[]* helo=([\w\._-]+) by=[\w\._-]+\1/
-header HELO_BY_PARTIALSAME X-Spam-Relays-Untrusted =~ /^\[ ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|207\.46(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns=[^\[]* helo=([\w\._-]+) by=[\w\._-]+\1 ident= envfrom= intl=0 id=[^\[]* auth= \]$/
+header HELO_BY_PARTIALSAME X-Spam-Relays-Untrusted =~ /^\[ ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|207\.46(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns=[^\[]* helo=([\w\._-]+) by=[\w\._-]+\1 [^\[\]]+ \]/
 describe HELO_BY_PARTIALSAME HELO is same received MTA's domain name
 score HELO_BY_PARTIALSAME 1.5
 
@@ -4683,7 +4683,8 @@ score TELKOMNET_ZA 1.5
 # modified 2007.07.04 by [yoh]
 # 
 # header ONLY1HOPDIRECT X-Spam-Relays-Untrusted =~ /^\[ ip=(\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[^\[\] ]+ by=<MYMTA> ident= envfrom= intl=0 id=[^\[\] ]* auth= \]$/
-header ONLY1HOPDIRECT X-Spam-Relays-Untrusted =~ /^\[ ip=(\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[^\[\] ]+ by=<MYMTA> ident= envfrom= intl=0 id=[^\[\] ]* auth= \]($| \[ ip=127\.0\.0\.1 rdns=localhost helo=localhost by=[^\[\] ]+ ident= envfrom= intl=0 id= auth= \]$)/
+# header ONLY1HOPDIRECT X-Spam-Relays-Untrusted =~ /^\[ ip=(\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[^\[\] ]+ by=<MYMTA> ident= envfrom= intl=0 id=[^\[\] ]* auth= \]($| \[ ip=127\.0\.0\.1 rdns=localhost helo=localhost by=[^\[\] ]+ ident= envfrom= intl=0 id= auth= \]$)/
+header ONLY1HOPDIRECT X-Spam-Relays-Untrusted =~ /^\[ ip=(\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[^\[\] ]+ by=<MYMTA> [^\[\]]+ \]($| \[ ip=127\.0\.0\.1 rdns=localhost helo=localhost [^\[\]]+ \]$)/
 
 meta MTAIDONLY1HOP MSGID_FROM_MTA_ID && ONLY1HOPDIRECT
 score MTAIDONLY1HOP 3.5
@@ -4692,7 +4693,8 @@ score MTAIDONLY1HOP 3.5
 # 1st BY is same 2nd HELO
 # added 2007.07.08 by [yoh]
 # 
-header SAMEHELOBY2HOP X-Spam-Relays-Untrusted =~ /^\[ ip=(?:\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=([^\[\] ]+) by=(?:[^ ]+) ident= envfrom= intl=0 id=[^\[\] ]* auth= \] \[ ip=(?:\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[a-z]{3,} by=\1 ident= envfrom= intl=0 id=[^\[\] ]* auth= \]$/
+# header SAMEHELOBY2HOP X-Spam-Relays-Untrusted =~ /^\[ ip=(?:\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=([^\[\] ]+) by=(?:[^ ]+) ident= envfrom= intl=0 id=[^\[\] ]* auth= \] \[ ip=(?:\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[a-z]{3,} by=\1 ident= envfrom= intl=0 id=[^\[\] ]* auth= \]$/
+header SAMEHELOBY2HOP X-Spam-Relays-Untrusted =~ /^\[ ip=(?:\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=([^\[\] ]+) by=(?:[^ ]+) [^\[\]]+ \] \[ ip=(?:\d{1,3}\.){3}\d{1,3} rdns=[^\[\] ]* helo=[a-z]{3,} by=\1 [^\[\]]+ \]/
 
 mimeheader MIMEPDF Content-Type =~ /application\/pdf.+name=\".+\.pdf\"/
 score MIMEPDF 0.1
