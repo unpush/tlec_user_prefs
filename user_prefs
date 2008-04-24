@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1077 2008/04/22 10:53:36 yoh Exp $
+# $Id: user_prefs,v 1.1078 2008/04/23 22:40:24 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -1837,7 +1837,7 @@ meta SJISJPSCAMURI SJIS_C && JPSCAMURI
 describe SJISJPSCAMURI SJIS_C && JPSCAMURI
 score SJISJPSCAMURI 10
 
-rawbody URLTRANSFER /http:\/\/tinyurl\.com\/{0,1}/
+rawbody URLTRANSFER /(http:\/\/tinyurl\.com\/{0,1}|http:\/\/www\.google\.([a-z].|com|co\.[a-z].)\/pagead\/iclk\?sa=l\&ai=[A-Za-z]+\&num=\d+\&adurl=http:\/\/)/
 score URLTRANSFER 0.1
 
 meta DYN_URLTRANS ___DYNAMICIP && URLTRANSFER
