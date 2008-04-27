@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1081 2008/04/26 00:13:22 yoh Exp $
+# $Id: user_prefs,v 1.1082 2008/04/26 19:04:15 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -1842,6 +1842,20 @@ score URLTRANSFER 0.1
 
 meta DYN_URLTRANS ___DYNAMICIP && URLTRANSFER
 score DYN_URLTRANS 3.5
+
+meta URLT_CBL URLTRANSFER && RCVD_IN_CBL
+score URLT_CBL 3.5
+meta URLT_SPAMCOP URLTRANSFER && RCVD_IN_BL_SPAMCOP_NET
+score URLT_SPAMCOP 3.5
+meta URLT_DSBL URLTRANSFER && RCVD_IN_DSBL
+score URLT_DSBL 3.5
+meta URLT_DUL URLTRANSFER && RCVD_IN_SORBS_DUL
+score URLT_DUL 3.5
+
+meta URLT_PBL URLTRANSFER && RCVD_IN_PBL
+score URLT_PBL 3.5
+meta URLT_DCN URLTRANSFER && ___DCN 
+score URLT_DCN 3.5
 
 
 # Umm, I've not seen recent spams including telephone numbers.
