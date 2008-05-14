@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1090 2008/05/10 04:04:29 yoh Exp $
+# $Id: user_prefs,v 1.1091 2008/05/14 00:30:45 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -3514,7 +3514,8 @@ score YONSEI_NET_KR 1.5
 # 125.176.0.0 - 125.191.255.255
 # 122.32.0.0 - 122.47.255.255
 # 116.32.0.0 - 116.47.255.255
-header XPEED_KR X-Spam-Relays-Untrusted =~ /ip=(116\.(3[2-8]|4[0-7])|122\.(3[2-9]|4[0-7])|124\.(4[89]|5\d|6[0-3])|125\.1(7[6-9]|8\d|9[01]))(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# /ip=(116\.(3[2-8]|4[0-7])|119\.(6[4-9]|7[01])|122\.(3[2-9]|4[0-7])|124\.(4[89]|5\d|6[0-3])|125\.1(7[6-9]|8\d|9[01]))(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header XPEED_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.(?:3[2-8]|4[0-7])|119\.(?:6[4-9]|7[01])|122\.(?:3[2-9]|4[0-7])|124\.(?:4[89]|5\d|6[0-3])|125\.1(?:7[6-9]|8\d|9[01]))(?:\.\d{1,3}){2} /
 describe XPEED_KR [KR]POWERCOM
 score XPEED_KR 1.5
 
