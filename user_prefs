@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1093 2008/05/21 07:38:22 yoh Exp $
+# $Id: user_prefs,v 1.1095 2008/05/24 12:25:05 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -781,14 +781,20 @@ score HAISHINTEISHI 0.3
 meta DYN_HAISHINTEISHI ___DYNAMICIP && HAISHINTEISHI
 score DYN_HAISHINTEISHI 1.5
 
-body KOUDOKUKAIJO /9XFI(..)*2r=\|/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KOUDOKUKAIJO /9XFI(..)*2r=\|/
 describe KOUDOKUKAIJO Koudoku Kaijo
 score KOUDOKUKAIJO 1.0
 
 meta DYN_KOUDOKUKAIJO ___DYNAMICIP && KOUDOKUKAIJO
 score DYN_KOUDOKUKAIJO 3.5
 
-body MURYOU /L5NA/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody MURYOU /L5NA/
 describe MURYOU Muryou
 score MURYOU 0.2
 
@@ -805,7 +811,10 @@ score HAJIMEMASHITE 1.5
 # /\=i\$a\$\^\$7\$F/
 # /(\$O\$8|\=i)\$a\$\^\$7\$F.+\$H\$\$\$\$\$\^\$9/
 
-body HAJIMEMASHITE2 /(\$O\$8|\=i)\$a\$\^\$7\$F/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HAJIMEMASHITE2 /(\$O\$8|\=i)\$a\$\^\$7\$F/
 describe HAJIMEMASHITE2 Hajimemashite ? I don't know about you.
 score HAJIMEMASHITE2 0.5
 
@@ -815,16 +824,25 @@ score DYN_HAJIMETE 2.0
 
 # There is no effect whether target mail is Japanese or not.
 # 2004.05.28 by [yoh]
-body ISO2022JP_BODY /\033\$[B@]/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ISO2022JP_BODY /\033\$[B@]/
 describe ISO2022JP_BODY ISO-2022-JP message
 # score ISO2022JP_BODY -2.394
 score ISO2022JP_BODY -0.1
 
-body KOUKOKUMEERU /9\-9p\%a\!\<\%k(\$N){0,1}G\[\?\.(Dd\;_|Be9T)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KOUKOKUMEERU /9\-9p\%a\!\<\%k(\$N){0,1}G\[\?\.(Dd\;_|Be9T)/
 describe KOUKOKUMEERU koukokume-ru
 score KOUKOKUMEERU 1.0
 
-body HAISHINDAIKOU /G\[\?\.Be9T/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HAISHINDAIKOU /G\[\?\.Be9T/
 describe HAISHINDAIKOU haishindaikou
 score HAISHINDAIKOU 1.0
 
@@ -858,7 +876,10 @@ score HAISHINDAIKOU 1.0
 # so,excludes:   \x81-\x9f\xf0-\xfc  \x40-\x7e\xc0-\xfc
 # so,excludes:   \xc0-\xfc           \x40-\x7e\xc0-\xfc
 
-body UTF8      /(([\xe0-\xef][\x80-\xbf][\x80-\xbf])(?!([\x81-\x9f\xe0-\xfc][\x40-\x7e\xc0-\xfc]|[\x81-\x9f\xf0-\xfc][\x40-\x7e\xc0-\xfc]|[\xc0-\xfc][\x40-\x7e\xc0-\xfc]))){5,}/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody UTF8      /(([\xe0-\xef][\x80-\xbf][\x80-\xbf])(?!([\x81-\x9f\xe0-\xfc][\x40-\x7e\xc0-\xfc]|[\x81-\x9f\xf0-\xfc][\x40-\x7e\xc0-\xfc]|[\xc0-\xfc][\x40-\x7e\xc0-\xfc]))){5,}/
 describe UTF8   UTF-8 message body
 score UTF8  -0.1
 
@@ -882,7 +903,10 @@ score UTF8  -0.1
 # 2006.05.03 by [yoh]
 # 
 
-body SJIS_C /(([\x81-\x9f\xe0-\xfc][\x40-\x7e\x80-\xfc])(?!([\xc0-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf][\x80-\xbf]|[\xa1-\xfe][\xa1-\xfe]))){7,}/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_C /(([\x81-\x9f\xe0-\xfc][\x40-\x7e\x80-\xfc])(?!([\xc0-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf][\x80-\xbf]|[\xa1-\xfe][\xa1-\xfe]))){7,}/
 describe SJIS_C SHIFT_JIS message body
 score SJIS_C 2.0
 
@@ -905,11 +929,17 @@ describe SJISFROM From: SJIS strings
 score SJISFROM 2.0
 
 
-body SHIROUTOMUSUME /AG\?ML</
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SHIROUTOMUSUME /AG\?ML</
 describe SHIROUTOMUSUME obscene word: shiroutomusume
 score SHIROUTOMUSUME 1.0
 
-body CLICK_JP /%\/%j%C%\//
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody CLICK_JP /%\/%j%C%\//
 describe CLICK_JP click
 score CLICK_JP 1.0
 
@@ -1082,32 +1112,53 @@ rawbody SIDEBUSINESS /%5%\$%I%S%8%M%9/
 describe SIDEBUSINESS SIDEBUSINESS
 score SIDEBUSINESS 1.0
 
-body OTAKARA /\$\*Ju/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OTAKARA /\$\*Ju/
 describe OTAKARA OTAKARA
 score OTAKARA 2.0
 
 
-body FUJITAYUZAN /F\#EDM\:\;3/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody FUJITAYUZAN /F\#EDM\:\;3/
 describe FUJITAYUZAN FUJITAYUZAN
 score FUJITAYUZAN 0.5
 
-body HIROSHIMAKENCHIJI /9\-Eg8\)CN\;v/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HIROSHIMAKENCHIJI /9\-Eg8\)CN\;v/
 describe HIROSHIMAKENCHIJI HIROSHIMAKENCHIJI
 score HIROSHIMAKENCHIJI 0.5
 
-body NOMOTODENO /\$N85\$G\$N/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody NOMOTODENO /\$N85\$G\$N/
 describe NOMOTODENO NOMOTODENO
 score NOMOTODENO 0.1
 
-body OSOROSHIIHANASHI /62\$m\$7\$\$OC/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OSOROSHIIHANASHI /62\$m\$7\$\$OC/
 describe OSOROSHIIHANASHI OSOROSHIIHANASHI
 score OSOROSHIIHANASHI 0.1
 
-body GYOUSEISOSHO /9T\@\/AJ\>Y/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody GYOUSEISOSHO /9T\@\/AJ\>Y/
 describe GYOUSEISOSHO GYOUSEISOSHO
 score GYOUSEISOSHO 0.1
 
-body SOKURYOSHI /B\,NL\;N/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SOKURYOSHI /B\,NL\;N/
 describe SOKURYOSHI SOKURYOSHI
 score SOKURYOSHI 0.1
 
@@ -1204,7 +1255,10 @@ score EMPTYEXTRAMPARTTYPE 3.5
 # score OBFUSTAG1 3.0
 
 # special thanks to: R.Takashi ISHIOKA-san! 2003/07/16
-body SJIS_SOSHINSHA /\221\227\220M\216\322/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_SOSHINSHA /\221\227\220M\216\322/
 describe SJIS_SOSHINSHA soushinsha using sjis
 score SJIS_SOSHINSHA 1.0
 
@@ -1214,28 +1268,52 @@ score SJIS_SOSHINSHA 1.0
 # describe FAKED_SJISBODY1 SJIS_SOSHINSHA && ISO2022JP_BODY
 # score FAKED_SJISBODY1 5.0
 
-body SJIS_URAVIDEO /\x97.\x83\x72\x83\x66\x83\x49/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_URAVIDEO /\x97.\x83\x72\x83\x66\x83\x49/
 describe SJIS_URAVIDEO uravideo using sjis
 score SJIS_URAVIDEO 2.5
-body SJIS_SAISHINRYUSHUTSU /\x8d\xc5\x90\x56\x97\xac\x8f\x6f/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_SAISHINRYUSHUTSU /\x8d\xc5\x90\x56\x97\xac\x8f\x6f/
 describe SJIS_SAISHINRYUSHUTSU saishinryushutsu using sjis
 score SJIS_SAISHINRYUSHUTSU 2.5
-body SJIS_BURUSERA /\x83\x75\x83\x8b\x83\x5a\x83\x89/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_BURUSERA /\x83\x75\x83\x8b\x83\x5a\x83\x89/
 describe SJIS_BURUSERA burusera using sjis
 score SJIS_BURUSERA 2.5
-body SJIS_SHIROUTOTOUKOU /\x91\x66\x90\x6c\x93\x8a\x8d\x65/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_SHIROUTOTOUKOU /\x91\x66\x90\x6c\x93\x8a\x8d\x65/
 describe SJIS_SHIROUTOTOUKOU shiroutotoukou using sjis
 score SJIS_SHIROUTOTOUKOU 2.5
-body SJIS_YOUMONO /\x97\x6d\x95\xa8/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_YOUMONO /\x97\x6d\x95\xa8/
 describe SJIS_YOUMONO youmono using sjis
 score SJIS_YOUMONO 2.5
-body SJIS_TOUSATSU /\x93\x90\x8e\x42/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_TOUSATSU /\x93\x90\x8e\x42/
 describe SJIS_TOUSATSU tousatsu using sjis
 score SJIS_TOUSATSU 2.5
-body SJIS_LOLIKEI /\x83\x8d\x83\x8a\x8c\x6e/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_LOLIKEI /\x83\x8d\x83\x8a\x8c\x6e/
 describe SJIS_LOLIKEI lolikei using sjis
 score SJIS_LOLIKEI 2.5
-body SJIS_ZENKAKU_SM /\x82\x72\x82\x6c/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SJIS_ZENKAKU_SM /\x82\x72\x82\x6c/
 describe SJIS_ZENKAKU_SM SM in zenkaku using sjis
 score SJIS_ZENKAKU_SM 1.5
 
@@ -1256,18 +1334,25 @@ score PORN_SJIS 5.0
 
 
 
-body ZAITAKU /\:_Bp/
+# body ZAITAKU /\:_Bp/
+rawbody ZAITAKU /\:_Bp/
 describe ZAITAKU ZAITAKU
 score ZAITAKU 0.2
 
-body BUSINESS /%S%8%M%9/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody BUSINESS /%S%8%M%9/
 describe BUSINESS BUSINESS
 score BUSINESS 0.2
 
 meta DYN_BUSINESS ___DYNAMICIP && BUSINESS
 score DYN_BUSINESS 2.0
 
-body SHUUNYUU /\<\}F\~/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SHUUNYUU /\<\}F\~/
 describe SHUUNYUU SHUUNYUU
 score SHUUNYUU 0.2
 
@@ -1281,37 +1366,61 @@ score SHUUNYUU 0.2
 # describe HOSYOUSPAM2 HOSYOU_JPSPAM && HOSYOU_590MYEN
 # score HOSYOUSPAM2 5.0
 
-body OATSUI /\$\*G\.\$\$/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OATSUI /\$\*G\.\$\$/
 describe OATSUI Japanese porn word: OATSUI
 score OATSUI 0.2
 
-body ZUKOZUKO /%:%3%:%3/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ZUKOZUKO /%:%3%:%3/
 describe ZUKOZUKO Japanese porn word: ZUKOZUKO
 score ZUKOZUKO 0.5
 
-body BINYUU /H~F}/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody BINYUU /H~F}/
 describe BINYUU Japanese porn word: BINYUU
 score BINYUU 0.5
 
-body SEISHI /\@:;R/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SEISHI /\@:;R/
 describe SEISHI Japanese porn word: SEISHI
 score SEISHI 0.5
 
-body BIMAN /H~%^%s/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody BIMAN /H~%^%s/
 describe BIMAN Japanese porn word: BIMAN
 score BIMAN 0.5
 
-body DOSUKEBE /\$I\$9\$1\$Y/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody DOSUKEBE /\$I\$9\$1\$Y/
 describe DOSUKEBE Japanese porn word: DOSUKEBE
 score DOSUKEBE 0.5
 
-body SHOJO /=h=w/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SHOJO /=h=w/
 describe SHOJO Japanese porn word: SHOJO
 score SHOJO 1.0
 
 # !#$*JV;vBT$C$F$^$9!#!#
 
-body OHENJIMATT /\!\#\$\*JV;vBT\$C\$F\$\^\$9\!\#\!\#/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OHENJIMATT /\!\#\$\*JV;vBT\$C\$F\$\^\$9\!\#\!\#/
 describe OHENJIMATT OHENJIMATTEMASU
 score OHENJIMATT 1.0
 
@@ -1319,68 +1428,101 @@ rawbody TOOLONGSTR /^.{480,}$/
 describe TOOLONGSTR too long strings without linefeed
 score TOOLONGSTR 0.5
 
-body ZENKOKUSOKUJITSU /\x91\x53\x8d\x91\x91\xa6\x93\xfa.+\x97\x5a\x8e\x91/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ZENKOKUSOKUJITSU /\x91\x53\x8d\x91\x91\xa6\x93\xfa.+\x97\x5a\x8e\x91/
 describe ZENKOKUSOKUJITSU YAMIKIN word: zenkokusokujitsu supi-do yuushi
 score ZENKOKUSOKUJITSU 3.0
 
-body TOUKYOUTOCHIJININKA /\x93\x8c\x8b\x9e\x93\x73\x92\x6d\x8e\x96\x94\x46\x89\xc2.+\x8f\xc1\x94\xef\x8e\xd2\x8b\xe0\x97\x5a/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody TOUKYOUTOCHIJININKA /\x93\x8c\x8b\x9e\x93\x73\x92\x6d\x8e\x96\x94\x46\x89\xc2.+\x8f\xc1\x94\xef\x8e\xd2\x8b\xe0\x97\x5a/
 describe TOUKYOUTOCHIJININKA YAMIKIN word: toukyoutochijininkazumi no shouhisha kin'yuu
 score TOUKYOUTOCHIJININKA 3.0
 
-body GEKIYASU /(7c|3J)0B/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody GEKIYASU /(7c|3J)0B/
 describe GEKIYASU GEKIYASU
 score GEKIYASU 0.5
 
 meta DYN_GEKIYASU ___DYNAMICIP && GEKIYASU
 score DYN_GEKIYASU 3.0
 
-body PCSOFTHANBAI /PC...\%\=\%U\%H.*HNGd/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody PCSOFTHANBAI /PC...\%\=\%U\%H.*HNGd/
 describe PCSOFTHANBAI PCsofthanbai
 score PCSOFTHANBAI 1.0
 
 meta DYN_PCSOFTHANBAI ___DYNAMICIP && PCSOFTHANBAI
 score DYN_PCSOFTHANBAI 3.0
 
-body SAISHINPCSOFT /\:G\?7...PC...\%\=\%U\%H/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SAISHINPCSOFT /\:G\?7...PC...\%\=\%U\%H/
 describe SAISHINPCSOFT saishinPCsoft
 score SAISHINPCSOFT 2.0
 
 meta DYN_SAISHINPCSOFT ___DYNAMICIP && SAISHINPCSOFT
 score DYN_SAISHINPCSOFT 3.5
 
-body PCSOFTGEKIYASU /PC.+\%\=\%U\%H(7c|3J)0B/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody PCSOFTGEKIYASU /PC.+\%\=\%U\%H(7c|3J)0B/
 describe PCSOFTGEKIYASU PCSOFTGEKIYASU
 score PCSOFTGEKIYASU 1.5
 
 meta DYN_PCSOFTGEKIYASU ___DYNAMICIP && PCSOFTGEKIYASU
 score DYN_PCSOFTGEKIYASU 3.5
 
-body AITAI /(2q\$\$\$\?\$\$|\$\*2q\$\$\$7\$(\?\$\$|F\$_\$\^)|2q\$C\$F\$_\$(\^|F|\?))/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody AITAI /(2q\$\$\$\?\$\$|\$\*2q\$\$\$7\$(\?\$\$|F\$_\$\^)|2q\$C\$F\$_\$(\^|F|\?))/
 describe AITAI aitai...(sigh)
 score AITAI 1.5
 
-body MATTERU /((BT|\$\^)\$C\$F(\$\$\$^\$9|\$C\$F\$b\$\$\$\$|\$F\$b\$\$\$\$|\$\^\$9|\$k|\$\$\$k)|\$\*BT\$A\$7\$F|BT\$C\$F\$\$\$\^\$9\!\#)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody MATTERU /((BT|\$\^)\$C\$F(\$\$\$^\$9|\$C\$F\$b\$\$\$\$|\$F\$b\$\$\$\$|\$\^\$9|\$k|\$\$\$k)|\$\*BT\$A\$7\$F|BT\$C\$F\$\$\$\^\$9\!\#)/
 describe MATTERU matteru
 score MATTERU 0.3
 
 meta DYN_MATTERU ___DYNAMICIP && MATTERU
 score DYN_MATTERU 2.0
 
-body RENRAKU /O\"Mm/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody RENRAKU /O\"Mm/
 describe RENRAKU renraku
 score RENRAKU 0.2
 
 meta DYN_RENRAKU ___DYNAMICIP && RENRAKU
 score DYN_RENRAKU 2.0
 
-body DEAI /\=P2q\$\$/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody DEAI /\=P2q\$\$/
 describe DEAI deai
 score DEAI 0.5
 
 meta DYN_DEAI ___DYNAMICIP && DEAI
 score DYN_DEAI 2.5
 
-body KARAMAIL /6u\%a\!\<\%k/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KARAMAIL /6u\%a\!\<\%k/
 describe KARAMAIL karame-ru
 score KARAMAIL 0.3
 
@@ -1391,71 +1533,104 @@ score KARAMAIL 0.3
 # score KARASCAM 3.5
 
 # $*IU$-9g$$
-body OTSUKIAI /\$\*IU(\$\-){0,1}9g\$\$/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OTSUKIAI /\$\*IU(\$\-){0,1}9g\$\$/
 describe OTSUKIAI otsukiai
 score OTSUKIAI 0.3
 
 meta DYN_OTSUKIAI ___DYNAMICIP && OTSUKIAI
 score DYN_OTSUKIAI 2.0
 
-body KONOKIMOCHI /\$3\$N5\$\;\}\$A/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KONOKIMOCHI /\$3\$N5\$\;\}\$A/
 describe KONOKIMOCHI konokimochi
 score KONOKIMOCHI 0.3
 
-body UWAKI /Ib5\$/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody UWAKI /Ib5\$/
 describe UWAKI uwaki
 score UWAKI 0.3
 
 meta DYN_UWAKI ___DYNAMICIP && UWAKI
 score DYN_UWAKI 2.0
 
-body FURIN /ITNQ/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody FURIN /ITNQ/
 describe FURIN furin
 score FURIN 0.3
 
 meta DYN_FURIN ___DYNAMICIP && FURIN
 score DYN_FURIN 2.0
 
-body WARIKIRI /3d\$j\@Z\$j/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody WARIKIRI /3d\$j\@Z\$j/
 describe WARIKIRI warikiri
 score WARIKIRI 0.3
 
 meta DYN_WARIKIRI ___DYNAMICIP && WARIKIRI
 score DYN_WARIKIRI 2.0
 
-body DOUTEI /F8Dg/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody DOUTEI /F8Dg/
 describe DOUTEI doutei
 score DOUTEI 0.3
 
 meta DYN_DOUTEI ___DYNAMICIP && DOUTEI
 score DYN_DOUTEI 2.0
 
-body HITODZUMA /\?M\:J/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HITODZUMA /\?M\:J/
 describe HITODZUMA hitodzuma
 score HITODZUMA 0.3
 
 meta DYN_HITODZUMA ___DYNAMICIP && HITODZUMA
 score DYN_HITODZUMA 2.0
 
-body MIDARA /0\|\$i/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody MIDARA /0\|\$i/
 describe MIDARA midara
 score MIDARA 0.3
 
 meta DYN_MIDARA ___DYNAMICIP && MIDARA
 score DYN_MIDARA 2.0
 
-body HIMITSUNO /HkL\)\$N/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HIMITSUNO /HkL\)\$N/
 describe HIMITSUNO himitsuno
 score HIMITSUNO 0.1
 
 meta DYN_HIMITSUNO ___DYNAMICIP && HIMITSUNO
 score DYN_HIMITSUNO 2.0
 
-body HIMITSUNOHOGE /HkL\)\$N(\=P2q\$\$|M\'C\#|4X78|\$\*IU\$\-9g\$\$)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HIMITSUNOHOGE /HkL\)\$N(\=P2q\$\$|M\'C\#|4X78|\$\*IU\$\-9g\$\$)/
 describe HIMITSUNOHOGE himitsuno hogehoge
 score HIMITSUNOHOGE 1.5
 
-body FUAN /IT0B/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody FUAN /IT0B/
 describe FUAN fuan
 score FUAN 0.2
 
@@ -1463,21 +1638,30 @@ meta DYN_FUAN ___DYNAMICIP && FUAN
 score DYN_FUAN 2.0
 
 # body ANATA /\$\"\$J\$\?(\$\,|\$7\$\+|\$H|\$K|\$N|\$O|\$X\$N|\$b|\$r)/
-body ANATA /(5\.J\}|\$\"\$J\$\?)(\$\,|\$7\$\+|\$H|\$K|\$N|\$O|\$X\$N|\$b|\$r|\$\@)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ANATA /(5\.J\}|\$\"\$J\$\?)(\$\,|\$7\$\+|\$H|\$K|\$N|\$O|\$X\$N|\$b|\$r|\$\@)/
 describe ANATA Anata ... call me my name.(sigh)
 score ANATA 0.5
 
 meta DYN_ANATA  ___DYNAMICIP && ANATA
 score DYN_ANATA 2.0
 
-body ONEGAI /\$\*4j\$\$/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ONEGAI /\$\*4j\$\$/
 describe ONEGAI onegai
 score ONEGAI 0.2
 
 meta DYN_ONEGAI ___DYNAMICIP && ONEGAI
 score DYN_ONEGAI 2.0
 
-body TOUROKU /EPO\?(\$\,|\$7\$\?|\$7\$A\$c\$\$|\$7\$F|\$7\$J\$\$|\$7\$\^\$9|\$9\$k|\$C\$F|\$G\$\-|\$H\$\$\$\&|\$H\$\+|\$N|\$O|\<T\$N\>R2p)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody TOUROKU /EPO\?(\$\,|\$7\$\?|\$7\$A\$c\$\$|\$7\$F|\$7\$J\$\$|\$7\$\^\$9|\$9\$k|\$C\$F|\$G\$\-|\$H\$\$\$\&|\$H\$\+|\$N|\$O|\<T\$N\>R2p)/
 describe TOUROKU touroku
 score TOUROKU 0.5
 
@@ -1489,7 +1673,10 @@ score DYN_TOUROKU 2.0
 # describe ANATAONEGAITOUROKU ANATA ONEGAI TOUROKU to JPSCAMURI or JPSCAMMAILADDRESS
 # score ANATAONEGAITOUROKU 3.0
 
-body OHENJI /\$\*JV\;v/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OHENJI /\$\*JV\;v/
 describe OHENJI Ohenji
 score OHENJI 0.2
 
@@ -1500,11 +1687,17 @@ meta OHENJIMATTERU OHENJI && MATTERU
 describe OHENJIMATTERU OHENJI && MATTERU
 score OHENJIMATTERU 1.0
 
-body HOTERU /\%\[\%F\%k/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HOTERU /\%\[\%F\%k/
 describe HOTERU hoteru
 score HOTERU 0.5
 
-body HOTEL /(HOTEL|\#H\#O\#T\#E\#L)/i
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HOTEL /(HOTEL|\#H\#O\#T\#E\#L)/i
 describe HOTEL hotel
 score HOTEL 0.5
 
@@ -1515,39 +1708,57 @@ score DYN_HOTEL 2.5
 # describe HOTEL HOTEL
 # score HOTEL 0.5
 
-body TOUSATSU /Ep\;\#/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody TOUSATSU /Ep\;\#/
 describe TOUSATSU tousatsu
 score TOUSATSU 1.0
 
 meta DYN_TOUSATSU ___DYNAMICIP && TOUSATSU
 score DYN_TOUSATSU 4.0
 
-body KARESHI /H\`\;a/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KARESHI /H\`\;a/
 describe KARESHI kareshi
 score KARESHI 0.2
 
 meta DYN_KARESHI ___DYNAMICIP && KARESHI
 score DYN_KARESHI 2.0
 
-body CHAT /\%A\%c\%C\%H/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody CHAT /\%A\%c\%C\%H/
 describe CHAT chatto
 score CHAT 0.2
 
-body HITORIKURASHI /0l\?MJk\$i\$7/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody HITORIKURASHI /0l\?MJk\$i\$7/
 describe HITORIKURASHI hitorikurashi
 score HITORIKURASHI 0.2
 
 meta DYN_HITORIKURASHI ___DYNAMICIP && HITORIKURASHI
 score DYN_HITORIKURASHI 2.0
 
-body CIRCLE /\%5\!\<\%\/\%k/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody CIRCLE /\%5\!\<\%\/\%k/
 describe CIRCLE sa-kuru
 score CIRCLE 0.1
 
 meta DYN_CIRCLE ___DYNAMICIP && CIRCLE
 score DYN_CIRCLE 1.5
 
-body MAJIMENAKANKEI /(\?\?LLL\\\$J|3d\$j\@Z\$C\$\?|Bg\?M\$N|BN\$N)(4X78|8r\:\]|\$\*IU\$\-9g\$\$|\$\*\$D\$\-9g\$\$)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody MAJIMENAKANKEI /(\?\?LLL\\\$J|3d\$j\@Z\$C\$\?|Bg\?M\$N|BN\$N)(4X78|8r\:\]|\$\*IU\$\-9g\$\$|\$\*\$D\$\-9g\$\$)/
 describe MAJIMENAKANKEI majimenakankei
 score MAJIMENAKANKEI 1.5
 
@@ -1559,21 +1770,30 @@ score DYN_MAJIMENAKANKEI 3.0
 # describe CIRCLEKANKEI CIRCLE && MAJIMENAKANKEI
 # score CIRCLEKANKEI 3.0
 
-body ENQUETE /\%\"\%s\%1\!\<\%H/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ENQUETE /\%\"\%s\%1\!\<\%H/
 describe ENQUETE anke-to
 score ENQUETE 0.2
 
 meta DYN_ENQUETE ___DYNAMICIP && ENQUETE
 score DYN_ENQUETE 2.0
 
-body DAIHYOU /BeI\=/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody DAIHYOU /BeI\=/
 describe DAIHYOU daihyou
 score DAIHYOU 0.2
 
 meta DYN_DAIHYOU ___DYNAMICIP && DAIHYOU
 score DYN_DAIHYOU 2.0
 
-body BOSHUUWO /Jg\=8\$r/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody BOSHUUWO /Jg\=8\$r/
 describe BOSHUUWO boshuuwo
 score BOSHUUWO 0.1
 
@@ -1586,64 +1806,94 @@ score DYN_BOSHUUWO 2.0
 # describe DAIHYOUBOSHUUENQ ENQUETE && DAIHYOU && BOSHUUWO
 # score DAIHYOUBOSHUUENQ 1.5
 
-body DANSEIKAIIN /(CK|\=w)\@\-2q0w/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody DANSEIKAIIN /(CK|\=w)\@\-2q0w/
 describe DANSEIKAIIN danseikaiin
 score DANSEIKAIIN 1.5
 
 meta DYN_DANSEIKAIIN ___DYNAMICIP && DANSEIKAIIN
 score DYN_DANSEIKAIIN 3.0
 
-body TOMODACHI /M\'C\#/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody TOMODACHI /M\'C\#/
 describe TOMODACHI tomodachi
 score TOMODACHI 0.1
 
 meta DYN_TOMODACHI ___DYNAMICIP && TOMODACHI
 score DYN_TOMODACHI 1.0
 
-body AISHOU /Aj\@\-/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody AISHOU /Aj\@\-/
 describe AISHOU aishou
 score AISHOU 0.2
 
 meta DYN_AISHOU ___DYNAMICIP && AISHOU
 score DYN_AISHOU 1.0
 
-body FERA /\%U\%\'\%i/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody FERA /\%U\%\'\%i/
 describe FERA Japanese porn word: fera
 score FERA 1.0
 
 meta DYN_FERA ___DYNAMICIP && FERA
 score DYN_FERA 3.0
 
-body KINSENTEKI /6bA\,E\*\$[JK]/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KINSENTEKI /6bA\,E\*\$[JK]/
 describe KINSENTEKI Kinsenteki
 score KINSENTEKI 0.2
 
 meta DYN_KINSENTEKI ___DYNAMICIP && KINSENTEKI
 score DYN_KINSENTEKI 1.5
 
-body KIKONSHA /4\{\:\'\<T/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KIKONSHA /4\{\:\'\<T/
 describe KIKONSHA Kikonsha
 score KIKONSHA 0.2
 
-body OTTO /IW\$[\+|K|\,|\@|X|O|N|H]/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OTTO /IW\$[\+|K|\,|\@|X|O|N|H]/
 describe OTTO otto
 score OTTO 0.1
 
-body SHUJIN /\<g\?M/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SHUJIN /\<g\?M/
 describe SHUJIN shujin
 score SHUJIN 0.1
 
 meta DYN_SHUJIN ___DYNAMICIP && (SHUJIN || OTTO || KIKONSHA)
 score DYN_SHUJIN 1.0
 
-body DEETO /\%G\!\<\%H/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody DEETO /\%G\!\<\%H/
 describe DEETO deeto
 score DEETO 0.1
 
 meta DYN_DEETO ___DYNAMICIP && DEETO
 score DYN_DEETO 1.0
 
-body WAGAMAMA /((\$o|2f)\$\,\$\^\$\^|\%o\%\,\%\^\%\^|2fPV)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody WAGAMAMA /((\$o|2f)\$\,\$\^\$\^|\%o\%\,\%\^\%\^|2fPV)/
 describe WAGAMAMA wagamama
 score WAGAMAMA 0.1
 
@@ -1651,21 +1901,30 @@ meta DYN_WAGAMAMA ___DYNAMICIP && WAGAMAMA
 score DYN_WAGAMAMA 1.0
 
 
-body ASONDE /M7\$s\$G/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ASONDE /M7\$s\$G/
 describe ASONDE asonde
 score ASONDE 0.1
 
 meta DYN_ASONDE ___DYNAMICIP && ASONDE
 score DYN_ASONDE 1.5
 
-body SUPPORT /\%5\%\]\!\<\%H/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SUPPORT /\%5\%\]\!\<\%H/
 describe SUPPORT sapo-to
 score SUPPORT 0.1
 
 meta DYN_SUPPORT ___DYNAMICIP && SUPPORT
 score DYN_SUPPORT 2.0
 
-body ___MAN_EN /K\|1_/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ___MAN_EN /K\|1_/
 describe ___MAN_EN man'en
 
 # thrown away 2006.01.05 by [yoh]
@@ -1685,7 +1944,10 @@ describe ___MAN_EN man'en
 # 2006.03.27 by [yoh]
 # 
 
-body GYAKUEN /5U(\!o|1g|1o)/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody GYAKUEN /5U(\!o|1g|1o)/
 describe GYAKUEN gyakuen
 score GYAKUEN 1.0
 
@@ -1702,14 +1964,20 @@ score GYAKUENSUBJ 2.0
 meta DYN_GYAKUEN ___DYNAMICIP && (GYAKUEN || GYAKUENSUBJ)
 score DYN_GYAKUEN 2.5
 
-body URADVD /N\".{2,5}DVD/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody URADVD /N\".{2,5}DVD/
 describe URADVD uradvd
 score URADVD 1.0
 
 meta DYN_URADVD ___DYNAMICIP && URADVD
 score DYN_URADVD 4.0
 
-body KEIJIBAN /7G\<\(HD/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody KEIJIBAN /7G\<\(HD/
 describe KEIJIBAN keijiban
 score KEIJIBAN 0.3
 
@@ -1719,35 +1987,50 @@ score DYN_KEIJIBAN 1.0
 meta HAJIMETEKEIJIBAN DYN_HAJIMETE && KEIJIBAN
 score HAJIMETEKEIJIBAN 5.5
 
-body SEFURE /\%\;\%U\%l/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody SEFURE /\%\;\%U\%l/
 describe SEFURE sefure
 score SEFURE 0.7
 
 meta DYN_SEFURE ___DYNAMICIP && SEFURE
 score DYN_SEFURE 2.0
 
-body OAITE /\$\*Aj\<j/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OAITE /\$\*Aj\<j/
 describe OAITE oaite
 score OAITE 0.2
 
 meta DYN_OAITE ___DYNAMICIP && OAITE
 score DYN_OAITE 1.0
 
-body ECSTASY /\%\(\%\/\%9\%\?\%7/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody ECSTASY /\%\(\%\/\%9\%\?\%7/
 describe ECSTASY ecstasy
 score ECSTASY 0.3
 
 meta DYN_ECSTASY ___DYNAMICIP && ECSTASY
 score DYN_ECSTASY 3.0
 
-body OMATOME /\$\*\$\^\$H\$a/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody OMATOME /\$\*\$\^\$H\$a/
 describe OMATOME omatome
 score OMATOME 1.0
 
 meta DYN_OMATOME ___DYNAMICIP && OMATOME
 score DYN_OMATOME 3.5
 
-body PACHINKO /\%Q\%A\%s\%3/
+# In SA 3.2.x, "body" rule has been changed.
+# So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
+# 2008.05.24 by [yoh]
+rawbody PACHINKO /\%Q\%A\%s\%3/
 describe PACHINKO pachinko
 score PACHINKO 0.1
 
@@ -2667,6 +2950,10 @@ score DYN_DNSFRMRFCPST 3.5
 
 meta DYN_JPSCAMURI JPSCAMURI && ___DYNAMICIP
 score DYN_JPSCAMURI 3.0
+
+meta DYN_MISSMID MISSING_MID && ___DYNAMICIP
+score DYN_MISSMID 3.5
+
 
 # 
 # 
@@ -4236,7 +4523,8 @@ score TYNET_CN 1.5
 # 219.95.0.0 - 219.95.255.255
 # 218.208.0.0 - 218.208.255.255
 # 118.100.0.0 - 118.101.255.255
-header XDSLSTREAMYX X-Spam-Relays-Untrusted =~ /ip=((60\.(4[89]|5[0-4])|118\.10[01]|218\.(111|208)|219\.9[235])(\.\d{1,3}){2}|(202\.71\.(9[6-9]|10\d|11[01])|202\.75\.(3[2-9]|[45]\d|6[0-3])|218\.208\.(12[89]|1[3-9]\d|2\d\d)|219\.94\.(\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 /
+# 124.13.0.0 - 124.13.255.255
+header XDSLSTREAMYX X-Spam-Relays-Untrusted =~ /ip=((60\.(4[89]|5[0-4])|118\.10[01]|124\.13|218\.(111|208)|219\.9[235])(\.\d{1,3}){2}|(202\.71\.(9[6-9]|10\d|11[01])|202\.75\.(3[2-9]|[45]\d|6[0-3])|218\.208\.(12[89]|1[3-9]\d|2\d\d)|219\.94\.(\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 /
 describe XDSLSTREAMYX [MY]Telekom Malaysia Berhad
 score XDSLSTREAMYX 1.5
 
