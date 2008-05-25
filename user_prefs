@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1095 2008/05/24 12:25:05 yoh Exp $
+# $Id: user_prefs,v 1.1096 2008/05/25 16:16:39 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -3998,7 +3998,7 @@ score KE_ING_NET_TW 1.5
 # CSLOXINFO || 
 
 
-meta ___KOREATAIWANCHINA CNCGROUPNP || CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN 
+meta ___KOREATAIWANCHINA CNCGROUPNP || CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN 
 
 
 meta JPSUBJTWKRCN ___KOREATAIWANCHINA && SUBJ_ILLEGAL_CHARS && ISO2022JP_BODY
@@ -4511,6 +4511,10 @@ header TYNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=119\.19(\.\d{1,3}){2} /
 describe TYNET_CN [CN]Tianying Information and Technology Co. Ltd.
 score TYNET_CN 1.5
 
+header TUNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=119\.19(\.\d{1,3}){2} /
+describe TUNET_CN [CN]Tsinghua University
+score TUNET_CN 1.5
+
 
 # 60.48.0.0 -  60.54.255.255
 # 202.75.32.0 - 202.75.63.255
@@ -4755,7 +4759,7 @@ score EXATTNET_IN 1.5
 # 125.16.0.0 - 125.23.255.255
 # 203.145.128.0 - 203.145.191.255
 # header BHARTI_IN X-Spam-Relays-Untrusted =~ /ip=((59\.14[45]|61\.246|125\.(1[6-9]|2[0-3]))(\.\d{1,3}){2}|203\.101\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=((59\.14[45]|61\.246|125\.(1[6-9]|2[0-3]))(\.\d{1,3}){2}|203\.101\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) rdns=[^ \[\]]* helo=[^ \[\]]+ by=[^ \[\]]+ ident= envfrom= intl=0 id=[^\[\] ]* auth= \]/
+header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=((59\.14[45]|61\.246|125\.(1[6-9]|2[0-3]))(\.\d{1,3}){2}|203\.101\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe BHARTI_IN [IN]Bharti Broadband networks Limited
 score BHARTI_IN 1.5
 
@@ -4763,27 +4767,30 @@ score BHARTI_IN 1.5
 # 220.224.0.0 - 220.227.255.255
 # 123.236.0.0 - 123.239.255.255
 # header RELIANCE_IN X-Spam-Relays-Untrusted =~ /ip=220\.226\.1(2[89]|[3-8]\d|9[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header RELIANCE_IN X-Spam-Relays-Untrusted =~ /ip=(123\.23[6-9]|124\.12[45]|220\.22[4-7])(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header RELIANCE_IN X-Spam-Relays-Untrusted =~ /ip=(123\.23[6-9]|124\.12[45]|220\.22[4-7])(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header RELIANCE_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(123\.23[6-9]|124\.12[45]|220\.22[4-7])(\.\d{1,3}){2} /
 describe RELIANCE_IN [IN]Reliance Infocom Ltd Internet Data Centre
 score RELIANCE_IN 1.5
 
 # 219.91.128.0 - 219.91.255.255
-header IQARANET_IN X-Spam-Relays-Untrusted =~ /ip=(123\.201(\.\d{1,3}){2}|219\.91\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header IQARANET_IN X-Spam-Relays-Untrusted =~ /ip=(123\.201(\.\d{1,3}){2}|219\.91\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header IQARANET_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(123\.201(\.\d{1,3}){2}|219\.91\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe IQARANET_IN [IN]Iqara Telecom India Pvt Ltd Cable Internet Service Provider
 score IQARANET_IN 1.5
 
 # 210.214.0.0 - 210.214.255.255
-header SILNET_IN X-Spam-Relays-Untrusted =~ /ip=210\.214(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header SILNET_IN X-Spam-Relays-Untrusted =~ /ip=210\.214(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header SILNET_IN X-Spam-Relays-Untrusted =~ /^\[ ip=210\.214(\.\d{1,3}){2} /
 describe SILNET_IN [IN]Satyam Infoway Pvt.Ltd. Value Added Network service provider in India.
 score SILNET_IN 1.5
 
 # 202.177.144.0 - 202.177.191.255
-header SIFYNET_IN X-Spam-Relays-Untrusted =~ /ip=202\.177\.1(4[4-9]|[5-8]\d|9[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header SIFYNET_IN X-Spam-Relays-Untrusted =~ /^\[ ip=202\.177\.1(4[4-9]|[5-8]\d|9[01])\.\d{1,3} /
 describe SIFYNET_IN [IN]Satyam Infoway (P) Ltd. National Internet Service Provider
 score SIFYNET_IN 1.5
 
 # 203.129.192.0 - 203.129.255.255
-header STPI_IN X-Spam-Relays-Untrusted =~ /ip=203\.129\.(19[2-9]|2\d\d)\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header STPI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=203\.129\.(19[2-9]|2\d\d)\.\d{1,3} /
 describe STPI_IN [IN]Software Technology Parks of India
 score STPI_IN 1.5
 
@@ -4801,7 +4808,7 @@ describe HATHWAY_NET_IN [IN]Hathway IP Over Cable Internet Access Service
 score HATHWAY_NET_IN 1.5
 
 # 203.123.128.0 - 203.123.191.255
-header PI_IN X-Spam-Relays-Untrusted =~ /ip=203\.123\.1(2[89]|[3-8]\d|9[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header PI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=203\.123\.1(2[89]|[3-8]\d|9[01])\.\d{1,3} /
 describe PI_IN [IN]Pacific Internet Limited
 score PI_IN 1.5
 
@@ -4835,7 +4842,7 @@ score KDD_HK 1.5
 # 59.188.0.0 - 59.188.255.255
 # header NWTNET Received =~ /from .+210\.245\.(1(2[89]|[3-9][0-9])|2([0-4][0-9]|5[0-5]))\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/
 # 210.209.64.0 - 210.209.127.255
-header NWTNET X-Spam-Relays-Untrusted =~ /ip=(59\.188(\.\d{1,3}){2}|(210\.209\.(6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.245\.(1(2[89]|[3-9]\d)|2\d\d))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header NWTNET X-Spam-Relays-Untrusted =~ /^\[ ip=(59\.188(\.\d{1,3}){2}|(210\.209\.(6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.245\.(1(2[89]|[3-9]\d)|2\d\d))\.\d{1,3}) /
 describe NWTNET [HK]New World Telephone
 score NWTNET 1.5
 
@@ -4845,12 +4852,12 @@ score NWTNET 1.5
 # 218.188.0.0 - 218.189.255.255
 # 210.3.0.0 - 210.3.255.255
 # header HGC_HK Received =~ /from .+218\.19[01](\.[0-9]{1,3}){2,2}/
-header HGC_HK X-Spam-Relays-Untrusted =~ /ip=((210\.3|218\.1(8[89]|9[01])|221\.12[4-7])(\.\d{1,3}){2}|210\.0\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header HGC_HK X-Spam-Relays-Untrusted =~ /^\[ ip=((210\.3|218\.1(8[89]|9[01])|221\.12[4-7])(\.\d{1,3}){2}|210\.0\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe HGC_HK [HK]Hutchison Global Communications
 score HGC_HK 1.5
 
 # 202.66.0.0 - 202.66.255.255
-header CPCNET_HK X-Spam-Relays-Untrusted =~ /ip=202\.66(\.[0-9]{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header CPCNET_HK X-Spam-Relays-Untrusted =~ /^\[ ip=202\.66(\.[0-9]{1,3}){2} /
 describe CPCNET_HK [HK]CPCNet Hong Kong Ltd.
 score CPCNET_HK 1.5
 
@@ -4869,22 +4876,22 @@ score HKCABLE_HK 1.5
 # 203.115.128.0-203.115.191.255
 # 121.96.0.0 - 121.97.255.255
 # header PHSKYINET Received =~ /from .+203\.215\.(8[0-9]|9[0-5])\.[0-9]{1,3}/
-header SKYINET_PH X-Spam-Relays-Untrusted =~ /ip=(121\.9[67](\.\d{1,3}){2}|203\.(115\.1(2[89]|[3-8]\d|9[01])|215\.(8[0-9]|9[0-5]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header SKYINET_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(121\.9[67](\.\d{1,3}){2}|203\.(115\.1(2[89]|[3-8]\d|9[01])|215\.(8[0-9]|9[0-5]))\.\d{1,3}) /
 describe SKYINET_PH [PH]Bayan Telecommunications Inc.
 score SKYINET_PH 1.0
 
 # 203.82.16.0 - 203.82.23.255
-header DEFENSNET X-Spam-Relays-Untrusted =~ /ip=203\.82\.(1[6-9]|2[0-3])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header DEFENSNET X-Spam-Relays-Untrusted =~ /^\[ ip=203\.82\.(1[6-9]|2[0-3])\.\d{1,3} /
 describe DEFENSNET [PH]DEFENSNET, Hosting Service and Content Provider from Antonio Defensor Consulting
 score DEFENSNET 1.0
 
 # 210.4.0.0 - 210.4.63.255
-header BAYANTELDSL_AP X-Spam-Relays-Untrusted =~ /ip=210\.4\.(\d|[1-5]\d|6[0-3])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header BAYANTELDSL_AP X-Spam-Relays-Untrusted =~ /^\[ ip=210\.4\.(\d|[1-5]\d|6[0-3])\.\d{1,3} /
 describe BAYANTELDSL_AP [PH]Bayantel DSL Infrastructure
 score BAYANTELDSL_AP 1.5
 
 # 202.78.96.0-202.78.111.255
-header SKYCABLENET_PH X-Spam-Relays-Untrusted =~ /ip=202\.78\.(9[6-9]|10\d|11[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header SKYCABLENET_PH X-Spam-Relays-Untrusted =~ /^\[ ip=202\.78\.(9[6-9]|10\d|11[01])\.\d{1,3} /
 describe SKYCABLENET_PH [PH]Sky Internet http://www.skyinet.net/
 score SKYCABLENET_PH 1.5
 
@@ -4893,39 +4900,39 @@ score SKYCABLENET_PH 1.5
 # 58.71.0.0 - 58.71.127.255
 # 58.69.0.0 - 58.69.255.255
 # 122.52.0.0 - 122.55.255.255
-header IPG_PH X-Spam-Relays-Untrusted =~ /ip=((58\.69|122\.5[2-5]|124\.10[4-7])(\.\d{1,3}){2}|(58\.71\.(\d|\d\d|1[01]\d|12[0-7])|210\.14\.(\d|[12]\d|3[01]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header IPG_PH X-Spam-Relays-Untrusted =~ /^\[ ip=((58\.69|122\.5[2-5]|124\.10[4-7])(\.\d{1,3}){2}|(58\.71\.(\d|\d\d|1[01]\d|12[0-7])|210\.14\.(\d|[12]\d|3[01]))\.\d{1,3}) /
 describe IPG_PH [PH]Philippine Long Distance Telephone Company
 score IPG_PH 1.5
 
 # 58.69.0.0 - 58.69.127.0
-header PLDTDSL_PH X-Spam-Relays-Untrusted =~ /ip=58\.69\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header PLDTDSL_PH X-Spam-Relays-Untrusted =~ /^\[ ip=58\.69\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3} /
 describe PLDTDSL_PH [PH]DSL_Consumer
 score PLDTDSL_PH 1.5
 
 # 203.131.64.0 - 203.131.191.255
-header INFOCOM_PH X-Spam-Relays-Untrusted =~ /ip=203\.131\.(6[4-9]|[7-9]\d|1[0-8]\d|19[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header INFOCOM_PH X-Spam-Relays-Untrusted =~ /^\[ ip=203\.131\.(6[4-9]|[7-9]\d|1[0-8]\d|19[01])\.\d{1,3} /
 describe INFOCOM_PH [PH]INFOCOM Technologies Inc
 score INFOCOM_PH 1.5
 
 # 124.6.128.0 - 124.6.191.255
 # 203.177.0.0 - 203.177.255.255
 # 222.127.0.0 - 222.127.127.255
-header GLOBET_PH X-Spam-Relays-Untrusted =~ /ip=(124\.6\.1(2[89]|[3-8]\d|9[01])\.\d{1,3}|(203\.177|222\.127)(\.\d{1,3}){2}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header GLOBET_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(124\.6\.1(2[89]|[3-8]\d|9[01])\.\d{1,3}|(203\.177|222\.127)(\.\d{1,3}){2}) /
 describe GLOBET_PH [PH]Globe Telecom/Innove Communication
 score GLOBET_PH 1.5
 
 # 210.23.96.0 - 210.23.127.255
-header PI_PH X-Spam-Relays-Untrusted =~ /ip=210\.23\.(9[6-9]|1[01]\d|12[0-7])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header PI_PH X-Spam-Relays-Untrusted =~ /^\[ ip=210\.23\.(9[6-9]|1[01]\d|12[0-7])\.\d{1,3} /
 describe PI_PH [PH]Pacific Internet Philippines
 score PI_PH 1.5
 
 # 124.104.176.0 - 124.104.191.255
-header CONS_PH X-Spam-Relays-Untrusted =~ /ip=124\.104\.1(7[6-9]|8\d|9[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header CONS_PH X-Spam-Relays-Untrusted =~ /^\[ ip=124\.104\.1(7[6-9]|8\d|9[01])\.\d{1,3} /
 describe CONS_PH [PH]GNTC7300i02_Consumer
 score CONS_PH 1.5
 
 # 203.167.0.0 - 203.167.31.255
-header TRIDEL_TECH_PH X-Spam-Relays-Untrusted =~ /ip=203\.167\.(\d|[12]\d|3[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header TRIDEL_TECH_PH X-Spam-Relays-Untrusted =~ /^\[ ip=203\.167\.(\d|[12]\d|3[01])\.\d{1,3} /
 describe TRIDEL_TECH_PH [PH]Tridel Technologies, Inc.
 score TRIDEL_TECH_PH 1.5
 
@@ -5837,22 +5844,22 @@ meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN ||
 
 replace_rules DIRECTYOURNET DIRECTINTERSPIN DIRECTDION DIRECTODN DIRECTINFOSPHERE DIRECTSONETDYN DIRECTOCNDYN DIRECTVECTANTDYN DIRECTHI_HO DIRECTUSENBROAD DIRECTBBTEC DIRECTINFOWEB DIRECTDTI DIRECTBIGLOBE DIRECTALPHANET DIRECTUNETSURF DIRECTEDITNET DIRECTDSNETWORKS DIRECTGERAGERA DIRECTVOICETOWN DIRECTSAKURAWEB DIRECTHYPERBOX DIRECTGMOACCESS DIRECTIIJ4U DIRECTASAHINET DIRECTVIPLT DIRECTSST_BB DIRECTTCOMADSL DIRECTXEXONNET DIRECTBBEXCITE DIRECTITSCOM DIRECTSAINET_NET DIRECTDORPHIN DIRECTWILLCOM DIRECTINTERLINK DIRECTLINKCLUB DIRECTPLALA DIRECTUNKNOWN DIRECTPOWEREDCOM DIRECTARCSTAR DIRECTINTERQ DIRECTEACCESS DIRECTCPI VALIDEZWEB VALIDVODAFONE DIRECTPROX DIRECTCLARA DIRECTSAVVIS DIRECTATTGNS DIRECTASIANETCOM DIRECTSYSTEMDESIGN DIRECTWAKWAK ONLY1HOPDIRECT ONLY1HOPDIRECTARIN ONLY1HOPDIRECTRIPE ONLY1HOPDIRECTLACNIC ONLY1HOPDIRECTAFRINIC
 
-
-# header ___JPSCAMPORNQSV1 X-Spam-Relays-Untrusted =~ / helo=mail\.[a-z0-9_-]+\.(com|net) /
-header ___JPSCAMPORNQSV1 X-Spam-Relays-Untrusted =~ /( rdns=(mail\.[\w-]+\.(com|net)) helo=\2 | ip=(\d+\.\d+\.\d+\.\d+) rdns=\4 helo=mail\.[\w-]+\.(com|net) | rdns= helo=mail\.[\w-]+\.(com|net) )/
-header ___JPSCAMPORNQSV2 Return-Path =~ /info\@(mail\.){0,1}[\w-]+\.(com|net)/
-header ___JPSCAMPORNQSV3 MESSAGEID =~ /^<2\d+\.\d+\.qmail\@mail\.[\w-]+\.(com|net)/
-
-meta JPSCAMPORNQSV ___JPSCAMPORNQSV1 && ___JPSCAMPORNQSV2 && ___JPSCAMPORNQSV3
-describe JPSCAMPORNQSV From info@mail.tekitou.com
-score JPSCAMPORNQSV 2.5
-
-meta ASIAQSV JPSCAMPORNQSV && ___KOREATAIWANCHINA 
-describe ASIAQSV QSV spams come from east asia countries except Japan.
-score ASIAQSV 5.5
-
-meta DCNQSV JPSCAMPORNQSV && ___DCN
-score DCNQSV 10
+# thrown away 2008.05.25 by [yoh]
+# # header ___JPSCAMPORNQSV1 X-Spam-Relays-Untrusted =~ / helo=mail\.[a-z0-9_-]+\.(com|net) /
+# header ___JPSCAMPORNQSV1 X-Spam-Relays-Untrusted =~ /( rdns=(mail\.[\w-]+\.(com|net)) helo=\2 | ip=(\d+\.\d+\.\d+\.\d+) rdns=\4 helo=mail\.[\w-]+\.(com|net) | rdns= helo=mail\.[\w-]+\.(com|net) )/
+# header ___JPSCAMPORNQSV2 Return-Path =~ /info\@(mail\.){0,1}[\w-]+\.(com|net)/
+# header ___JPSCAMPORNQSV3 MESSAGEID =~ /^<2\d+\.\d+\.qmail\@mail\.[\w-]+\.(com|net)/
+# 
+# meta JPSCAMPORNQSV ___JPSCAMPORNQSV1 && ___JPSCAMPORNQSV2 && ___JPSCAMPORNQSV3
+# describe JPSCAMPORNQSV From info@mail.tekitou.com
+# score JPSCAMPORNQSV 2.5
+# 
+# meta ASIAQSV JPSCAMPORNQSV && ___KOREATAIWANCHINA 
+# describe ASIAQSV QSV spams come from east asia countries except Japan.
+# score ASIAQSV 5.5
+# 
+# meta DCNQSV JPSCAMPORNQSV && ___DCN
+# score DCNQSV 10
 
 header REVDNSUNKNOWN Received =~ /\(\[(?!(127\.0\.0\.1|192\.168(\.\d{1,3}){2}|172\.(1[6-9]|2\d|3[01](\.\d{1,3}){2}|10(\.\d{1,3}){3})))\d{2,3}(\.\d{1,3}){3}\]\)/
 describe REVDNSUNKNOWN some MTA doesn't tell result of reverse dns lookup failure.
@@ -5880,24 +5887,25 @@ meta SPAMSRV ___HELO_SPAMSRV && ___RTRN_SPAMSRV
 describe SPAMSRV error@spamsrv1.hn.org
 score SPAMSRV 20
 
-header ___RTRN_APCINFO Return-Path =~ /([a-z0-9_]{3,}\@[\w_-]+\.(info|com)|[A-Z0-9_]{3,}\@[\w_-]+\.INFO)/
-header ___RTRN_YAHOOCOJP Return-Path =~ /(apache|[a-z0-9_]{3,})\@yahoo\.co\.jp/
-
-header ___MSGID_APCINFO MESSAGEID =~ /^<2\d+\.[A-F0-9]+\@[\w_.-]+\.(info|com)/
-
-# meta DEFENSAPCINFO DEFENSNET && (___RTRN_APCINFO && ___MSGID_APCINFO || ___HELO_SPAMSRV && ONLY1HOPDIRECT) && ISO2022JP_BODY
-meta DEFENSAPCINFO DEFENSNET && (___MSGID_APCINFO && ___HELO_SPAMSRV || (MSGID_FROM_MTA_ID || HELO_BY_PARTIALSAME) && (___RTRN_YAHOOCOJP || ___RTRN_APCINFO)) && ISO2022JP_BODY
-score DEFENSAPCINFO 3.0
-
-meta DEFAPCINFOURI DEFENSAPCINFO && (JPSCAMURI || URIBL_SBL || URIBL_JP_SURBL || URIBL_OB_SURBL || URIBL_WS_SURBL)
-score DEFAPCINFOURI 3.5
-
-meta DEFAPCINFONOT DEFENSAPCINFO && NOTINCONTENTTYPE
-score DEFAPCINFONOT 3.5
-
-
-meta DEFENSSJIS DEFENSNET && NOTINCONTENTTYPE && SJIS_BODY
-score DEFENSSJIS 5
+# thrown away 2008.05.25 by [yoh]
+# header ___RTRN_APCINFO Return-Path =~ /([a-z0-9_]{3,}\@[\w_-]+\.(info|com)|[A-Z0-9_]{3,}\@[\w_-]+\.INFO)/
+# header ___RTRN_YAHOOCOJP Return-Path =~ /(apache|[a-z0-9_]{3,})\@yahoo\.co\.jp/
+# 
+# header ___MSGID_APCINFO MESSAGEID =~ /^<2\d+\.[A-F0-9]+\@[\w_.-]+\.(info|com)/
+# 
+# # meta DEFENSAPCINFO DEFENSNET && (___RTRN_APCINFO && ___MSGID_APCINFO || ___HELO_SPAMSRV && ONLY1HOPDIRECT) && ISO2022JP_BODY
+# meta DEFENSAPCINFO DEFENSNET && (___MSGID_APCINFO && ___HELO_SPAMSRV || (MSGID_FROM_MTA_ID || HELO_BY_PARTIALSAME) && (___RTRN_YAHOOCOJP || ___RTRN_APCINFO)) && ISO2022JP_BODY
+# score DEFENSAPCINFO 3.0
+# 
+# meta DEFAPCINFOURI DEFENSAPCINFO && (JPSCAMURI || URIBL_SBL || URIBL_JP_SURBL || URIBL_OB_SURBL || URIBL_WS_SURBL)
+# score DEFAPCINFOURI 3.5
+# 
+# meta DEFAPCINFONOT DEFENSAPCINFO && NOTINCONTENTTYPE
+# score DEFAPCINFONOT 3.5
+# 
+# 
+# meta DEFENSSJIS DEFENSNET && NOTINCONTENTTYPE && SJIS_BODY
+# score DEFENSSJIS 5
 
 
 header COMBZSENDER X-Sender =~ /CombzMailSender/
