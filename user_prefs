@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1101 2008/05/28 09:11:35 yoh Exp $
+# $Id: user_prefs,v 1.1102 2008/05/31 12:01:11 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -197,6 +197,26 @@ score MISSING_MIMEOLE 0.1
 # 2006.10.29 by [yoh]
 # 
 score PLING_QUERY 0.1
+
+# 
+# This rule is no meanings because many people send "no subject" mail.
+# 2008.05.31 by [yoh]
+# 
+score MISSING_SUBJECT 0
+
+# 
+# This rule is no meanings because Outlook Express send this type mail.
+# 2008.05.31 by [yoh]
+# 
+score FROM_EXCESS_BASE64 0
+
+# 
+# This rule is no meanings because Outlook Express send this type mail.
+# So, this rule is nonsense.
+# 2008.05.31 by [yoh]
+# 
+score TVD_SPACE_RATIO 0
+
 
 # 
 # - language definition
@@ -629,7 +649,7 @@ score HTMLIMG_FRGDHELO 5.5
 
 rawbody HTML_FONT_SIZE_TINY2 /<FONT (face=\w+ |)size=\"{0,1}[0-3]\"{0,1}(>| )/i
 describe HTML_FONT_SIZE_TINY2 <FONT face=Arial size=2>
-score HTML_FONT_SIZE_TINY2 1.5
+score HTML_FONT_SIZE_TINY2 0.5
 
 meta IMGONLYHTML1 HTML_FONT_SIZE_TINY2 && ___HTMLIMG && BAYES_99
 score IMGONLYHTML1 5.0
