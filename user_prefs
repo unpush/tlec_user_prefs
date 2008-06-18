@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1103 2008/06/04 21:25:39 yoh Exp $
+# $Id: user_prefs,v 1.1106 2008/06/18 20:50:25 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -2047,6 +2047,21 @@ score OMATOME 1.0
 meta DYN_OMATOME ___DYNAMICIP && OMATOME
 score DYN_OMATOME 3.5
 
+
+rawbody AFFILIATE /\%\"\%U\%\#\%j\%\(\%\$\%H/
+describe AFFILIATE affiliate
+score AFFILIATE 0.5
+
+meta DYN_AFFILIATE ___DYNAMICIP && AFFILIATE
+score DYN_AFFILIATE 3.5
+
+rawbody KASEGU /2T\$0/
+describe KASEGU kasegu
+score KASEGU 0.5
+
+meta DYN_KASEGU ___DYNAMICIP && KASEGU
+score DYN_KASEGU 3.5
+
 # In SA 3.2.x, "body" rule has been changed.
 # So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
 # 2008.05.24 by [yoh]
@@ -2128,7 +2143,7 @@ score JPPORNSCAMFROM 7.0
 # combzmail\.jp|
 # |[a-z0-9]+
 
-rawbody JPSCAMURI /http:\/\/[a-z0-9-.]*(europe\.webmatrixhosting\.net|gogoway\.orgdns\.org|spread\.or\.tv|maga\.readymade\.jp|value\.webcordial\.com|pika\.tv|19191969\.com|093ana\.com|cam-cam\.net|candypop\.tv|deaiking\.com|milkymail\.net|purelove888\.com|secretoflove\.net|l1l9\.com|otegaruhp\.com\/cobra\/html\/hirokopr|online-jp\.net|outside-lover\.com|blue-ocean2004\.com|naturalget\.com|scoop-on\.(com|jp)|1092\.cn|1092\.gs|19190930\.com|i1i9\.net|l1l9\.com|yoso-zu\.com|rose-kiss\.com|members\.fortunecity\.com|up7\.cc|eyc\.jp|zl8\.jp|61\.96\.62\.167|pure1151\.com|bblive\.tv|ai-angel\.net|soku-aeru\.net|nightpita\.com|dejavu\.to|tada\.ph|peachat\.net|1919japan\.com|to-roku\.com|ceaw\.jp|59862777\.com|orange-rocket\.com|prin\.to|lolo\.ojiji\.net|ana093\.cc|eroero999\.com|love4deai\.com|kicks-ass\.net|is-a-geek\.org|lovemint\.net|e-hot-news\.jp|getget\.oops\.jp|upper\.jp|xx-mail\.jp|px\.a8\.net|pc\.lovefree\.tv|pure1107\.net|ljart\.net|(0-9a-z)+\.ifdef\.jp|(free24mail|365hdate)\.fc2\.com|odaiba-bbs\.jp|ai51\.e-city\.tv|bokumetu\.com|kissmi\.jp|party-jamjam\.org|hosting-geomax\.jp|sf-spot\.com|big-888\.com|o-oku-channel\.com|soresoreweb\.com|geocities\.jp\/(sayacchimail|poophy15)|websamba\.com|members\.lycos\.co\.uk\/cadlove|[a-z0-9-]+\.(tripod\.com|host\.sk)(\/top|\/main){0,1}|xid-love\.netfirms\.com|club-classico\.com|e-ezweb\.jp|rakuen-dx\.com|lover-kiss\.com|cross\.ne\.jp|j-sine\.com|swht\.jp|doxlive\.com|perfectharmony-ms\.org|1251\.us|servecounterstrike\.com|[a-z_-]*deai[a-z_-]*\.[a-z0-9-]+\.(jp|com|net|tv|sk|cn)|61\.197\.117\.99|redmax\.jp|morachao\.com|1251\.cc|formzu\.net|members\.ocry\.com|cbat\.page\.ne\.jp|889860\.com|89balls\.com|filltheblank\.com|members2\.jcom\.home\.ne\.jp\/3385927201|aru-aru\.jpn\.org|otz5678\.hn\.org|tinyurl\.com|choco2\.jp|buisinespp\.dyndns\.dk|abcwill\.dyn\.dhs\.org|yudoweb1\.freewebsitehosting\.com|umimono.no.sapo.pt|656566\.com|sss-japan\.co\.jp|home\.doramail\.com|www40\.brinkster\.com|shameme\.host\.sk|autocall\.jp|dm-mail\.net|www18\.ocn\.ne\.jp\/\~kio-pack|mo-v\.jp|www\.tactnet\.co\.jp|hiromirror-desighner\.net|fff\.lir\.dk|s-s\.kyed\.com|brandwholesaler\.com|nihon-cash\.com|dogyman\.com|yellowsanta\.jp|bottom-up1\.com|hime\.ontheweb\.nu|free-xx\.com|address-bank\.homeip\.net|agk-777\.jp|shotgunmarriage\.net|(minami|farewell|alstroemeria)\.dynu\.ca|kyousai\.squares\.net|gigamerimp\.net|boorats19\.info|sunnyday\.jp|life-line\.mods\.jp|lucavenus\.jp|e-shops\.jp|fox99\.staticcling\.org|e-net\.velvet\.jp|access\.main\.jp|webclick\.chu\.jp|www\.infotop\.jp|www\.mailbank\.biz|ladymaid\.net|new-homebiz\.com|777navi\.cc|riajet\.com|af-sv\.com|yy-life\.com|1151bbs\.jp|gambletips\.net|oogachi-t\.com|keiba-de-myhome-get\.seesaa\.net|pachipuro-m\.com|sugowaza\.jp|free-book\.jp|ippatu\.com|.\$B%a%k%:.\(B\.jp|data-jobbank\.from\.tv|deairooms\.com|1-coin\.jp)\/{0,1}/
+rawbody JPSCAMURI /http:\/\/[a-z0-9-.]*(europe\.webmatrixhosting\.net|gogoway\.orgdns\.org|spread\.or\.tv|maga\.readymade\.jp|value\.webcordial\.com|pika\.tv|19191969\.com|093ana\.com|cam-cam\.net|candypop\.tv|deaiking\.com|milkymail\.net|purelove888\.com|secretoflove\.net|l1l9\.com|otegaruhp\.com\/cobra\/html\/hirokopr|online-jp\.net|outside-lover\.com|blue-ocean2004\.com|naturalget\.com|scoop-on\.(com|jp)|1092\.cn|1092\.gs|19190930\.com|i1i9\.net|l1l9\.com|yoso-zu\.com|rose-kiss\.com|members\.fortunecity\.com|up7\.cc|eyc\.jp|zl8\.jp|61\.96\.62\.167|pure1151\.com|bblive\.tv|ai-angel\.net|soku-aeru\.net|nightpita\.com|dejavu\.to|tada\.ph|peachat\.net|1919japan\.com|to-roku\.com|ceaw\.jp|59862777\.com|orange-rocket\.com|prin\.to|lolo\.ojiji\.net|ana093\.cc|eroero999\.com|love4deai\.com|kicks-ass\.net|is-a-geek\.org|lovemint\.net|e-hot-news\.jp|getget\.oops\.jp|upper\.jp|xx-mail\.jp|px\.a8\.net|pc\.lovefree\.tv|pure1107\.net|ljart\.net|(0-9a-z)+\.ifdef\.jp|(free24mail|365hdate)\.fc2\.com|odaiba-bbs\.jp|ai51\.e-city\.tv|bokumetu\.com|kissmi\.jp|party-jamjam\.org|hosting-geomax\.jp|sf-spot\.com|big-888\.com|o-oku-channel\.com|soresoreweb\.com|geocities\.jp\/(sayacchimail|poophy15)|websamba\.com|members\.lycos\.co\.uk\/cadlove|[a-z0-9-]+\.(tripod\.com|host\.sk)(\/top|\/main){0,1}|xid-love\.netfirms\.com|club-classico\.com|e-ezweb\.jp|rakuen-dx\.com|lover-kiss\.com|cross\.ne\.jp|j-sine\.com|swht\.jp|doxlive\.com|perfectharmony-ms\.org|1251\.us|servecounterstrike\.com|[a-z_-]*deai[a-z_-]*\.[a-z0-9-]+\.(jp|com|net|tv|sk|cn)|61\.197\.117\.99|redmax\.jp|morachao\.com|1251\.cc|formzu\.net|members\.ocry\.com|cbat\.page\.ne\.jp|889860\.com|89balls\.com|filltheblank\.com|members2\.jcom\.home\.ne\.jp\/3385927201|aru-aru\.jpn\.org|otz5678\.hn\.org|tinyurl\.com|choco2\.jp|buisinespp\.dyndns\.dk|abcwill\.dyn\.dhs\.org|yudoweb1\.freewebsitehosting\.com|umimono.no.sapo.pt|656566\.com|sss-japan\.co\.jp|home\.doramail\.com|www40\.brinkster\.com|shameme\.host\.sk|autocall\.jp|dm-mail\.net|www18\.ocn\.ne\.jp\/\~kio-pack|mo-v\.jp|www\.tactnet\.co\.jp|hiromirror-desighner\.net|fff\.lir\.dk|s-s\.kyed\.com|brandwholesaler\.com|nihon-cash\.com|dogyman\.com|yellowsanta\.jp|bottom-up1\.com|hime\.ontheweb\.nu|free-xx\.com|address-bank\.homeip\.net|agk-777\.jp|shotgunmarriage\.net|(minami|farewell|alstroemeria)\.dynu\.ca|kyousai\.squares\.net|gigamerimp\.net|boorats19\.info|sunnyday\.jp|life-line\.mods\.jp|lucavenus\.jp|e-shops\.jp|fox99\.staticcling\.org|e-net\.velvet\.jp|access\.main\.jp|webclick\.chu\.jp|www\.infotop\.jp|www\.mailbank\.biz|ladymaid\.net|new-homebiz\.com|777navi\.cc|riajet\.com|af-sv\.com|yy-life\.com|1151bbs\.jp|gambletips\.net|oogachi-t\.com|keiba-de-myhome-get\.seesaa\.net|pachipuro-m\.com|sugowaza\.jp|free-book\.jp|ippatu\.com|.\$B%a%k%:.\(B\.jp|data-jobbank\.from\.tv|deairooms\.com|1-coin\.jp|combzmail\.jp)\/{0,1}/
 describe JPSCAMURI Japanese scam site
 score JPSCAMURI 3.5
 
@@ -4019,7 +4034,7 @@ score KE_ING_NET_TW 1.5
 # CSLOXINFO || 
 
 
-meta ___KOREATAIWANCHINA CNCGROUPNP || CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN || IOLNET_IN 
+meta ___KOREATAIWANCHINA CNCGROUPNP || CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN || IOLNET_IN || HUARUI_CN 
 
 
 meta JPSUBJTWKRCN ___KOREATAIWANCHINA && SUBJ_ILLEGAL_CHARS && ISO2022JP_BODY
@@ -4116,7 +4131,7 @@ score CNCNPJP 10.0
 # 116.16.0.0 - 116.31.255.255
 # 123.144.0.0 - 123.175.255.255
 # 125.211.0.0 - 125.211.255.255
-header CNCGROUP X-Spam-Relays-Untrusted =~ /ip=((58\.2(0[89]|1\d|2[0-3])|116.([1-9]|1[016-9]|2\d|3[01]|22[4-9]|23\d)|119\.11[2-9]|121\.([89]|[12]\d|3[0-5])|122\.(13[6-9]|14[0-3]|15[6-9]|22[4-9]|23\d)|123\.([4-9]|1[0-5]|14[4-9]|1[56]\d|17[0-5789]|18\d|19[01])|124\.(6[4-7]|8[89]|9[0-5]|12[89]|13[0-5]|16[014-7])|125\.(4[0-7]|6[4-9]|[78]\d|9[0-5]|10[4-9]|11\d|12[0-7]|211)|202\.(9[6-9]|1(0\d|1[01]))|210\.(1[23]|2[12]|5[123]|8[23])|218\.(\d|[12]\d|3[01]|5[6-9]|[6-8]\d|9[0-5]|10[4-7])|219\.(1(2[89]|[3-5]\d)|23[234])|220\.2(4[89]|5[01])|221\.(\d|1[013-5]|19[2-9]|2([01]\d|2[0-3]))|222\.(12[89]|13\d|14[0-3]|16[0-3]|24[0-7])|58\.(1[6-9]|2[0-3]|2(4\d|5[0-5]))|60\.(\d|[12]\d|3[01]|2(0[89]|1\d|2[0-3]))|61\.(4[89]|5[0-5]|12[89]|1[3-7]\d|18[12]))(\.\d{1,3}){2}|(202\.97\.(19[2-9]|2[0-4]\d|25[0-5])|210\.(14\.(1[6-9]\d|2[0-4]\d|25[0-5])|15\.(\d|[1-9]\d|1[0-8]\d|19[01])|74\.(9[6-9]|1[0-5]\d)|78\.(\d|[12]\d|3[01]))|(61\.18[09])\.(12[89]|1[3-9]\d|2[0-4]\d|25[0-5])|221\.12\.(\d|[1-9]\d|1[0-8]\d|19[01]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header CNCGROUP X-Spam-Relays-Untrusted =~ /ip=((58\.2(0[89]|1\d|2[0-3])|116.([1-9]|1[016-9]|2\d|3[01]|22[4-9]|23\d)|119\.11[2-9]|121\.([89]|[12]\d|3[0-5])|122\.(13[6-9]|14[0-3]|15[6-9]|22[4-9]|23\d)|123\.([4-9]|1[0-5]|14[4-9]|1[56]\d|17[0-5789]|18\d|19[01])|124\.(6[4-7]|8[89]|9[0-5]|12[89]|13[0-5]|16[014-7]|22[67])|125\.(4[0-7]|6[4-9]|[78]\d|9[0-5]|10[4-9]|11\d|12[0-7]|211)|202\.(9[6-9]|1(0\d|1[01]))|210\.(1[23]|2[12]|5[123]|8[23])|218\.(\d|[12]\d|3[01]|5[6-9]|[6-8]\d|9[0-5]|10[4-7])|219\.(1(2[89]|[3-5]\d)|23[234])|220\.2(4[89]|5[01])|221\.(\d|1[013-5]|19[2-9]|2([01]\d|2[0-3]))|222\.(12[89]|13\d|14[0-3]|16[0-3]|24[0-7])|58\.(1[6-9]|2[0-3]|2(4\d|5[0-5]))|60\.(\d|[12]\d|3[01]|2(0[89]|1\d|2[0-3]))|61\.(4[89]|5[0-5]|12[89]|1[3-7]\d|18[12]))(\.\d{1,3}){2}|(202\.97\.(19[2-9]|2[0-4]\d|25[0-5])|210\.(14\.(1[6-9]\d|2[0-4]\d|25[0-5])|15\.(\d|[1-9]\d|1[0-8]\d|19[01])|74\.(9[6-9]|1[0-5]\d)|78\.(\d|[12]\d|3[01]))|(61\.18[09])\.(12[89]|1[3-9]\d|2[0-4]\d|25[0-5])|221\.12\.(\d|[1-9]\d|1[0-8]\d|19[01]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 describe CNCGROUP [CN]Japanese spammer's footstool: CNCGROUP
 score CNCGROUP 1.5
 
@@ -4536,6 +4551,10 @@ header TUNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=116\.111(\.\d{1,3}){2} /
 describe TUNET_CN [CN]Tsinghua University
 score TUNET_CN 1.5
 
+header HUARUI_CN X-Spam-Relays-Untrusted =~ /^\[ ip=118\.102\.(1[6-9]|2\d|3[01])\.\d{1,3} /
+describe HUARUI_CN [CN]Langfang Development Area Huarui Xintong Network Technology Co., Ltd.
+score HUARUI_CN 1.5
+
 
 # 60.48.0.0 -  60.54.255.255
 # 202.75.32.0 - 202.75.63.255
@@ -4686,7 +4705,7 @@ score RIMA_TDE_NET 1.0
 
 # .revip.asianet.co.th
 # header ASIANET_TH Received =~ /from .+\.revip[2-9]{0,1}\.asianet\.co\.th/
-header ASIANET_TH X-Spam-Relays-Untrusted =~ /(ip=(58\.([89]|1[01])|124\.12[01])(\.\d{1,3}){2}|rdns=.+\.(revip[2-9]{0,1}|static)\.asianet\.co\.th) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header ASIANET_TH X-Spam-Relays-Untrusted =~ /(ip=(58\.([89]|1[01])|124\.12[012])(\.\d{1,3}){2}|rdns=.+\.(revip[2-9]{0,1}|static)\.asianet\.co\.th) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 describe ASIANET_TH [TH]Asianet Corperation
 score ASIANET_TH 2.0
 
@@ -5816,7 +5835,7 @@ score DIRECTSYSTEMDESIGN 1.5
 # header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /ip=(61\.45\.36\.2\d\d|61\.115\.(72\.195|114\.4[34])|61\.205\.(237\.(39|114|208)|238\.127)|211\.19\.100\.(6|1[2348]|38|[4-9]\d)|219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
 # 237\.(39|114|208)|238\.127
 # 211\.19\.100\.(6|1[2348]|38|[4-9]\d)
-header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /^\[ ip=(61\.45\.(36\.2\d\d|39\.\d{1,3})|61\.115\.(72\.195|112\.\d{1,3}|114\.4[34]|1(1[35-8]|24)\.\d{1,3})|61\.205\.(22[67]|23[2378])\.\d{1,3}|211\.19\.100\.\d{1,3}|219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)) /
+header DIRECTWAKWAK X-Spam-Relays-Untrusted =~ /^\[ ip=(61\.45\.(36\.2\d\d|39\.\d{1,3})|61\.115\.(72\.(57|195)|112\.\d{1,3}|114\.4[34]|1(1[35-8]|24)\.\d{1,3})|61\.205\.(22[67]|23[2378])\.\d{1,3}|211\.19\.10[01]\.\d{1,3}|219\.103\.(210\.(84|135|18[234]|2(37|4[07]))|211\.11)) /
 describe DIRECTWAKWAK directly received spam from XePhion(NTT-ME Corporation)
 score DIRECTWAKWAK 1.5
 
@@ -5828,7 +5847,7 @@ header DIRECTBITDRIVE X-Spam-Relays-Untrusted =~ /^\[ ip=202\.94\.(129\.36|153\.
 describe DIRECTBITDRIVE directly received spam from BIT-DRIVE(Sony Corporation)
 score DIRECTBITDRIVE 1.5
 
-header DIRECTXREA X-Spam-Relays-Untrusted =~ /^\[ ip=(125\.53\.25\.(\d|[1-5]\d|6[0-3])|210\.196\.169\.(19[2-9]|2[01]\d|22[0-3])) /
+header DIRECTXREA X-Spam-Relays-Untrusted =~ /^\[ ip=(125\.53\.25\.(\d|[1-5]\d|6[0-3])|210\.196\.169\.(19[2-9]|2[01]\d|22[0-3])|219\.101\.229\.159) /
 describe DIRECTXREA directly received spam from XREA(DIGIROCK,INC.)
 score DIRECTXREA 1.5
 
@@ -5839,7 +5858,6 @@ score DIRECTMEDEXCG 1.5
 header DIRECTADVANSCOPE X-Spam-Relays-Untrusted =~ /^\[ ip=61\.121\.224\.38 [^\[\]]+ \] \[ ip=219\.106\.190\.102 /
 describe DIRECTADVANSCOPE directly received spam from advanscope.inc
 score DIRECTADVANSCOPE 1.5
-
 
 
 
