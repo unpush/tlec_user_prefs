@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1106 2008/06/18 20:50:25 yoh Exp $
+# $Id: user_prefs,v 1.1107 2008/06/23 22:39:00 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -3538,7 +3538,7 @@ describe COMBZMAIL_JP Combz Inc.
 score COMBZMAIL_JP 1.5
 
 # 203.131.192.0 - 203.131.207.255
-header DATAHOTEL_JP X-Spam-Relays-Untrusted =~ /ip=203\.131\.198\.71 [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header DATAHOTEL_JP X-Spam-Relays-Untrusted =~ /ip=203\.(104\.97\.101|131\.198\.71) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 describe DATAHOTEL_JP Livedoor Co., Ltd.
 score DATAHOTEL_JP 1.5
 
