@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1107 2008/06/23 22:39:00 yoh Exp $
+# $Id: user_prefs,v 1.1109 2008/06/29 07:02:39 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -2219,6 +2219,11 @@ meta UNDISCMTAID UNDISC_RECIPS && MSGID_FROM_MTA_ID
 describe UNDISCMTAID UNDISC_RECIPS && MSGID_FROM_MTA_ID
 score UNDISCMTAID 10.0
 
+# 
+# 2008.06.29 by [yoh]
+# 
+meta BOUNCESPAM __BOUNCE_RPATH_NULL && (URIBL_BLACK || URIBL_AB_SURBL || URIBL_SC_SURBL || URIBL_JP_SURBL || URIBL_OB_SURBL || URIBL_SBL || URIBL_RHS_DOB || URIBL_PH_SURBL || URIBL_WS_SURBL)
+score BOUNCESPAM 7.5
 
 # 
 # - Razor and Pyzor score
@@ -4946,7 +4951,8 @@ score SKYCABLENET_PH 1.5
 # 58.71.0.0 - 58.71.127.255
 # 58.69.0.0 - 58.69.255.255
 # 122.52.0.0 - 122.55.255.255
-header IPG_PH X-Spam-Relays-Untrusted =~ /^\[ ip=((58\.69|122\.5[2-5]|124\.10[4-7])(\.\d{1,3}){2}|(58\.71\.(\d|\d\d|1[01]\d|12[0-7])|210\.14\.(\d|[12]\d|3[01]))\.\d{1,3}) /
+# 122.2.0.0 - 122.3.255.255
+header IPG_PH X-Spam-Relays-Untrusted =~ /^\[ ip=((58\.69|122\.([23]|5[2-5])|124\.10[4-7])(\.\d{1,3}){2}|(58\.71\.(\d|\d\d|1[01]\d|12[0-7])|210\.14\.(\d|[12]\d|3[01]))\.\d{1,3}) /
 describe IPG_PH [PH]Philippine Long Distance Telephone Company
 score IPG_PH 1.5
 
@@ -5653,7 +5659,7 @@ score DIRECTVOICETOWN 3.5
 
 # header DIRECTSAKURAWEB Received =~ /from .*www[0-9]{1,3}\.sakura\.ne\.jp[^a-z]+[0-9]{2,3}(\.[0-9]{1,3}){3,3}[^(a-z]{0,3}by (mail\.flcl\.org|[a-z0-9]+\.nifty\.((ne|co|ad)\.jp|com)|(alt|dns|mta|ybbmta)[0-9][0-9]\.mail\.((bbt|mci|tnz)\.){0,1}yahoo\.co\.jp|fm[1-6]\.freemail\.ne\.jp)/
 # header DIRECTSAKURAWEB X-Spam-Relays-Untrusted =~ /(ip=(59\.106\.(14\.204|18\.67|20\.223|32\.207|107\.72)|61\.211\.234\.41|202\.222\.30\.222|219\.94\.(128\.(45|51|173|188)|132\.(7|107)|133\.242))|rdns=(www2{0,1}\.skynetdm\.com|www933\.sakura\.ne\.jp|sv1\.mhai\.jp)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
-header DIRECTSAKURAWEB X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.106\.(?:14\.204|18\.67|19\.40|20\.223|32\.207|107\.72)|61\.211\.234\.41|202\.(?:181\.(97\.71|98\.162|105\.136)|222\.30\.222)|210\.188\.205\.212|210\.224\.165\.36|219\.94\.(?:128\.(?:45|51|173|188)|129\.91|132\.(?:7|107)|133\.242|143\.3[2-5]|144\.71|148\.176|162\.142|167\.177))|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:www2{0,1}\.skynetdm\.com|www933\.sakura\.ne\.jp|sv1\.mhai\.jp)) /
+header DIRECTSAKURAWEB X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.106\.(?:14\.204|18\.67|19\.40|20\.223|32\.207|107\.72)|61\.211\.234\.41|202\.(?:181\.(97\.71|98\.162|105\.136)|222\.30\.222)|210\.188\.205\.212|210\.224\.165\.36|219\.94\.(?:128\.(?:45|51|173|188)|129\.91|132\.(?:7|107)|133\.242|143\.3[2-5]|144\.71|148\.176|162\.142|163\.153|167\.177))|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:www2{0,1}\.skynetdm\.com|www933\.sakura\.ne\.jp|sv1\.mhai\.jp)) /
 describe DIRECTSAKURAWEB directly received spam from SAKURAWEB
 score DIRECTSAKURAWEB 3.5
 
