@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1143 2008/09/06 12:14:32 yoh Exp $
+# $Id: user_prefs,v 1.1144 2008/09/13 12:55:44 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -630,6 +630,18 @@ score FHURI_XBL 7.0
 
 meta FHURI_HLDYNIP FAKEHOSTURI && HELO_DYNAMIC_IPADDR
 score FHURI_HLDYNIP 7.0
+
+
+# added 2008.09.13 by [yoh]
+rawbody MANYSLASHURI /http:\/\/.+(?:\/{5,}|[\(\)]{5,})/
+score MANYSLASHURI 4.5
+meta MANYDCC MANYSLASHURI && DCC_CHECK
+score MANYDCC 3.5
+meta MANYPROXY MANYSLASHURI && RCVD_IN_NJABL_PROXY
+meta MANYMULTI MANYSLASHURI && MULTIPART_ALTERNATIVE
+score MANYMULTI 3.5
+meta MANYFRGN MANYSLASHURI && (LACNIC||AFRINIC)
+score MANYFRGN 2.5
 
 
 score ADVANCE_FEE_1 1.0
