@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1144 2008/09/13 12:55:44 yoh Exp $
+# $Id: user_prefs,v 1.1145 2008/09/13 23:06:03 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -642,6 +642,41 @@ meta MANYMULTI MANYSLASHURI && MULTIPART_ALTERNATIVE
 score MANYMULTI 3.5
 meta MANYFRGN MANYSLASHURI && (LACNIC||AFRINIC)
 score MANYFRGN 2.5
+
+
+# added 2008.09.14 by [yoh]
+rawbody DOTREPLACE /(www\.){0,1}[a-z]{6,} {0,3}\[DOT\] {0,3}com/
+score DOTREPLACE 2.5
+
+meta DOTBOGUSMX DOTREPLACE && DNS_FROM_RFC_BOGUSMX
+score DOTBOGUSMX 2.5
+meta DOTDSN DOTREPLACE && DNS_FROM_RFC_DSN
+score DOTDSN 2.5
+meta DOTPBL DOTREPLACE && RCVD_IN_PBL
+score DOTPBL 2.5
+meta DOTXBL DOTREPLACE && RCVD_IN_XBL
+score DOTXBL 2.5
+meta DOTCBL DOTREPLACE && RCVD_IN_CBL
+score DOTCBL 2.5
+meta DOTCOP DOTREPLACE && RCVD_IN_BL_SPAMCOP_NET
+score DOTCOP 2.5
+meta DOTDUL DOTREPLACE && RCVD_IN_SORBS_DUL
+score DOTDUL 2.5
+meta DOTDCC DOTREPLACE && DCC_CHECK
+score DOTDCC 2.5
+meta DOTJMRM DOTREPLACE && JM_REACTOR_MAILER
+score DOTJMRM 2.5
+meta DOTAHBL DOTREPLACE && RCVD_IN_AHBL
+score DOTAHBL 2.5
+meta DOTAHPRXY DOTREPLACE && RCVD_IN_AHBL_PROXY
+score DOTAHPRXY 2.5
+
+meta JMRMPBL RCVD_IN_PBL && JM_REACTOR_MAILER
+score JMRMPBL 3.5
+
+meta DOSMXPBL DOS_OE_TO_MX && RCVD_IN_PBL
+score DOSMXPBL 3.5
+
 
 
 score ADVANCE_FEE_1 1.0
