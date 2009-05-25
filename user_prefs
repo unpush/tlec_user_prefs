@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1224 2009/05/17 10:26:21 yoh Exp $
+# $Id: user_prefs,v 1.1225 2009/05/22 21:02:23 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -5045,7 +5045,7 @@ score EXATTNET_IN 1.5
 # 125.16.0.0 - 125.23.255.255
 # 203.145.128.0 - 203.145.191.255
 # header BHARTI_IN X-Spam-Relays-Untrusted =~ /ip=((59\.14[45]|61\.246|125\.(1[6-9]|2[0-3]))(\.\d{1,3}){2}|203\.101\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[45]|61\.246|125\.(?:1[6-9]|2[0-3]))(?:\.\d{1,3}){2}|122\.169\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|203\.101\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[45]|61\.246|122\.168|125\.(?:1[6-9]|2[0-3]))(?:\.\d{1,3}){2}|122\.169\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|203\.101\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe BHARTI_IN [IN]Bharti Broadband networks Limited
 score BHARTI_IN 1.5
 
