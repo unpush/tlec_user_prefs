@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1226 2009/05/31 00:13:51 yoh Exp $
+# $Id: user_prefs,v 1.1230 2009/06/08 12:22:30 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -154,7 +154,7 @@ bayes_auto_learn_threshold_spam 12.0
 
 # added 2009.05.31 by [yoh]
 # for checking Yahoo! Japan webmail spam.
-trusted_networks 124.83.168.15/32 124.83.168.16/29 124.83.168.24/30 124.83.168.28/31 124.83.168.32/29 124.83.168.40/30 124.83.168.44/31 124.83.168.46/32 124.83.200.48/28 124.83.200.64/29 124.83.200.72/30 124.83.200.76/31 124.83.212.21/32 124.83.212.22/31 124.83.212.24/29 124.83.212.32/30 124.83.212.81/32 124.83.212.82/31 124.83.212.84/30 124.83.212.88/29
+trusted_networks 124.83.168.15/32 124.83.168.16/29 124.83.168.24/30 124.83.168.28/31 124.83.168.32/29 124.83.168.40/30 124.83.168.44/31 124.83.168.46/32 124.83.200.48/28 124.83.200.64/29 124.83.200.72/30 124.83.200.76/31 124.83.212.21/32 124.83.212.22/31 124.83.212.24/29 124.83.212.32/30 124.83.212.81/32 124.83.212.82/31 124.83.212.84/30 124.83.212.88/29 203.216.226.171/32 203.216.226.172/30 203.216.226.176/28 203.216.226.192/31 203.216.226.194/32 203.216.249.201/32 203.216.249.202/31 203.216.249.204/30 203.216.249.208/29
 
 # 
 # - tuning internal rules score
@@ -4141,7 +4141,7 @@ header KGT_TW X-Spam-Relays-Untrusted =~ /^\[ ip=211\.78\.(3[2-9]|[45]\d|6[0-3])
 describe KGT_TW [TW]KGEx.com
 score KGT_TW 1.5
 
-header TAIWANMOBILE_NET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=115\.8[0-3](\.\d{1,3}){2} /
+header TAIWANMOBILE_NET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.8[0-3]|117\.19)(?:\.\d{1,3}){2} /
 describe TAIWANMOBILE_NET_TW [TW]taiwanmobile-net
 score TAIWANMOBILE_NET_TW 1.5
 
@@ -4518,7 +4518,8 @@ score CHINANET 1.0
 # (\.[0-9]{1,3}){2,2}
 # 61.240.0.0 - 61.243.255.255
 # header UNICOM Received =~ /from .+(211\.9[0-7]|220\.(19[2-9]|20[0-7]))(\.[0-9]{1,3}){2,2}[\)\] ]/
-header UNICOM X-Spam-Relays-Untrusted =~ /ip=(61\.24[0-3]|211\.9[0-7]|220\.(19[2-9]|20[0-7]))(\.[0-9]{1,3}){2,2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header UNICOM X-Spam-Relays-Untrusted =~ /ip=(61\.24[0-3]|119\.16[4-7]|211\.9[0-7]|220\.(19[2-9]|20[0-7]))(\.[0-9]{1,3}){2,2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header UNICOM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.24[0-3]|119\.16[4-7]|211\.9[0-7]|220\.(?:19[2-9]|20[0-7]))(?:\.\d{1,3}){2} /
 describe UNICOM [CN]China United Telecommunications Corporation
 score UNICOM 1.0
 
@@ -4573,7 +4574,7 @@ score GLOBAL_CN 1.5
 # 219.235.64.0 - 219.235.127.255
 # header DQTNET_CN X-Spam-Relays-Untrusted =~ /ip=(203\.90\.(12[89]|1[3-9]\d|2[01]\d|22[0-3])\.\d{1,3}|61\.47\.(12[89]|1[3-8]\d|19[01])\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 # header DQTNET_CN X-Spam-Relays-Untrusted =~ /ip=(?:61\.47\.(?:12[89]|1[3-8]\d|19[01])|125\.58\.(?:12[89]|1[3-9]\d|2\d\d)|203\.90\.(?:12[89]|1[3-9]\d|2[01]\d|22[0-3])|219\.235\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7]))\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header DQTNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.47\.(?:12[89]|1[3-8]\d|19[01])|125\.58\.(?:12[89]|1[3-9]\d|2\d\d)|203\.90\.(?:12[89]|1[3-9]\d|2[01]\d|22[0-3])|219\.235\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7]))\.\d{1,3} /
+header DQTNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.252\.\d{1,3}|61\.47\.(?:12[89]|1[3-8]\d|19[01])|125\.58\.(?:12[89]|1[3-9]\d|2\d\d)|203\.90\.(?:12[89]|1[3-9]\d|2[01]\d|22[0-3])|219\.235\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7]))\.\d{1,3} /
 describe DQTNET_CN [CN]Daqing Zhongji Petroleum Communication Construction Co.,Ltd.
 score DQTNET_CN 1.5
 
@@ -4769,7 +4770,7 @@ header CHINANETCENTER_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:123\.103\.(?:\d|\
 describe CHINANETCENTER_CN [CN]ChinaNetCenter Ltd.
 score CHINANETCENTER_CN 1.5
 
-header CTTNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:123\.(?:6[4-9]|[78]\d|9[0-5])(?:\.\d{1,3}){2}) /
+header CTTNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:12[23]\.(?:6[4-9]|[78]\d|9[0-5])(?:\.\d{1,3}){2}) /
 describe CTTNET_CN [CN]China TieTong Telecommunications Corporation
 score CTTNET_CN 1.5
 
@@ -5165,7 +5166,7 @@ score NWTNET 1.5
 # 218.188.0.0 - 218.189.255.255
 # 210.3.0.0 - 210.3.255.255
 # header HGC_HK Received =~ /from .+218\.19[01](\.[0-9]{1,3}){2,2}/
-header HGC_HK X-Spam-Relays-Untrusted =~ /^\[ ip=((210\.3|218\.1(8[89]|9[01])|221\.12[4-7])(\.\d{1,3}){2}|210\.0\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+header HGC_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:118\.14[0-3]|210\.3|218\.1(?:8[89]|9[01])|221\.12[4-7])(?:\.\d{1,3}){2}|210\.0\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe HGC_HK [HK]Hutchison Global Communications
 score HGC_HK 1.5
 
@@ -6246,7 +6247,7 @@ header DIRECTK_OPTICOM X-Spam-Relays-Untrusted =~ /^\[ ip=58\.188\.(?!(96\.(2[24
 describe DIRECTK_OPTICOM directly received spam from K-Opticom Corporation
 score DIRECTK_OPTICOM 1.5
 
-header DIRECTJCN X-Spam-Relays-Untrusted =~ /^\[ ip=118\.87(?:\.\d{1,3}){2} /
+header DIRECTJCN X-Spam-Relays-Untrusted =~ /^\[ ip=118\.8[37](?:\.\d{1,3}){2} /
 describe DIRECTJCN directly received spam from JAPAN CABLENET LIMITED
 score DIRECTJCN 1.5
 
