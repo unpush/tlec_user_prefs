@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1234 2009/06/15 06:06:34 yoh Exp $
+# $Id: user_prefs,v 1.1235 2009/06/16 06:30:34 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -5680,6 +5680,11 @@ score MSGIDLOCALMTA 0.1
 meta KEITAILOCALMTA JPHANDPHONE && MSGIDLOCALMTA
 describe KEITAILOCALMTA JPHANDPHONE && MSGIDLOCALMTA
 score KEITAILOCALMTA 3.0
+
+
+# added 2009.06.16 by [yoh]
+meta KEITAIASIA JPHANDPHONE && ___KOREATAIWANCHINA
+score KEITAIASIA 5.0
 
 
 # thrown away 2005.09.14 by [yoh]
