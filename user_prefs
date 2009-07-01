@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1236 2009/06/21 05:59:03 yoh Exp $
+# $Id: user_prefs,v 1.1238 2009/07/01 12:54:38 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -553,7 +553,8 @@ describe UKGEOCITIES http://uk.geocities.com/Hoge_Hoge/?Fuga=tekitou
 score UKGEOCITIES 0.5
 
 # meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_SORBS_DUL || RCVD_IN_XBL || RCVD_IN_AHBL || RCVD_IN_WHOIS_INVALID || DNS_FROM_SECURITYSAGE || RCVD_IN_NJABL_DUL)
-meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_SORBS_DUL || RCVD_IN_XBL || RCVD_IN_AHBL )
+# meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_SORBS_DUL || RCVD_IN_XBL || RCVD_IN_AHBL )
+meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_XBL || RCVD_IN_AHBL )
 describe CHINAUKGEO UKGEOCITIES && RCVD_IN_CHINA
 score CHINAUKGEO 8.0
 
@@ -674,8 +675,8 @@ meta DOTCBL DOTREPLACE && RCVD_IN_CBL
 score DOTCBL 2.5
 meta DOTCOP DOTREPLACE && RCVD_IN_BL_SPAMCOP_NET
 score DOTCOP 2.5
-meta DOTDUL DOTREPLACE && RCVD_IN_SORBS_DUL
-score DOTDUL 2.5
+# meta DOTDUL DOTREPLACE && RCVD_IN_SORBS_DUL
+# score DOTDUL 2.5
 meta DOTDCC DOTREPLACE && DCC_CHECK
 score DOTDCC 2.5
 meta DOTJMRM DOTREPLACE && JM_REACTOR_MAILER
@@ -737,8 +738,8 @@ meta SHII_SPAMCOP SHORT_HELO_AND_INLINE_IMAGE && RCVD_IN_BL_SPAMCOP_NET
 score SHII_SPAMCOP 3.5
 meta SHII_DSBL SHORT_HELO_AND_INLINE_IMAGE && RCVD_IN_DSBL
 score SHII_DSBL 3.5
-meta SHII_DUL SHORT_HELO_AND_INLINE_IMAGE && RCVD_IN_SORBS_DUL
-score SHII_DUL 3.5
+# meta SHII_DUL SHORT_HELO_AND_INLINE_IMAGE && RCVD_IN_SORBS_DUL
+# score SHII_DUL 3.5
 
 
 # 
@@ -2250,8 +2251,8 @@ meta URLT_SPAMCOP URLTRANSFER && RCVD_IN_BL_SPAMCOP_NET
 score URLT_SPAMCOP 3.5
 meta URLT_DSBL URLTRANSFER && RCVD_IN_DSBL
 score URLT_DSBL 3.5
-meta URLT_DUL URLTRANSFER && RCVD_IN_SORBS_DUL
-score URLT_DUL 3.5
+# meta URLT_DUL URLTRANSFER && RCVD_IN_SORBS_DUL
+# score URLT_DUL 3.5
 
 meta URLT_PBL URLTRANSFER && RCVD_IN_PBL
 score URLT_PBL 3.5
@@ -2754,22 +2755,25 @@ score RCVD_IN_CHINA_KR          0.1
 # So, meta rules of bayes is needed while using this DNSBL.
 # 2005.1.28 by [yoh]
 
-score       RCVD_IN_SORBS_DUL     0.5
-score       RCVD_IN_SORBS_HTTP    1.0
-score       RCVD_IN_SORBS_MISC    0.5
-score       RCVD_IN_SORBS_SOCKS   1.0
-score       RCVD_IN_SORBS_WEB     1.0
+# SORBS will be closed.
+# 2009.7.1 by [yoh]
 
-meta SORBSDUL99 RCVD_IN_SORBS_DUL && BAYES_99
-describe SORBSDUL99 RCVD_IN_SORBS_DUL && BAYES_99
-score SORBSDUL99 2.0
+# score       RCVD_IN_SORBS_DUL     0.5
+# score       RCVD_IN_SORBS_HTTP    1.0
+# score       RCVD_IN_SORBS_MISC    0.5
+# score       RCVD_IN_SORBS_SOCKS   1.0
+# score       RCVD_IN_SORBS_WEB     1.0
 
-meta SORBSDUL00 RCVD_IN_SORBS_DUL && BAYES_00
-describe SORBSDUL00 RCVD_IN_SORBS_DUL && BAYES_00
-score SORBSDUL00 -2.0
+# meta SORBSDUL99 RCVD_IN_SORBS_DUL && BAYES_99
+# describe SORBSDUL99 RCVD_IN_SORBS_DUL && BAYES_99
+# score SORBSDUL99 2.0
 
-meta DYN_SORBSDUL RCVD_IN_SORBS_DUL && ___DYNAMICIP
-score DYN_SORBSDUL 3.5
+# meta SORBSDUL00 RCVD_IN_SORBS_DUL && BAYES_00
+# describe SORBSDUL00 RCVD_IN_SORBS_DUL && BAYES_00
+# score SORBSDUL00 -2.0
+
+# meta DYN_SORBSDUL RCVD_IN_SORBS_DUL && ___DYNAMICIP
+# score DYN_SORBSDUL 3.5
 
 
 # score       RCVD_IN_SORBS_SOCKS 1.50
@@ -2896,8 +2900,8 @@ meta BLACK_DCN ___DCN && URIBL_BLACK
 score BLACK_DCN 3.5
 meta SBL_DCN ___DCN && URIBL_SBL
 score SBL_DCN 3.5
-meta DUL_DCN ___DCN && RCVD_IN_SORBS_DUL
-score DUL_DCN 3.5
+# meta DUL_DCN ___DCN && RCVD_IN_SORBS_DUL
+# score DUL_DCN 3.5
 
 
 
@@ -2973,9 +2977,9 @@ score     URIBL_XS_SURBL   1.0
 
 
 # score RCVD_IN_SORBS_WEB 1.5
-meta SORBSWEB99 RCVD_IN_SORBS_WEB && BAYES_99
-describe SORBSWEB99 RCVD_IN_SORBS_WEB && BAYES_99
-score SORBSWEB99 1.5
+# meta SORBSWEB99 RCVD_IN_SORBS_WEB && BAYES_99
+# describe SORBSWEB99 RCVD_IN_SORBS_WEB && BAYES_99
+# score SORBSWEB99 1.5
 
 score URIBL_OB_SURBL 0.1
 
@@ -3748,7 +3752,8 @@ score KOREATELECOM 1.5
 # 123.212.0.0 - 123.215.255.255
 # 211.244.0.0 - 211.244.255.255
 # 211.33.0.0 - 211.33.127.255
-header HANAROTELECOM X-Spam-Relays-Untrusted =~ /ip=((58\.(12[0-7]|2(2[4-9]|3\d))|61\.(9[89]|105|25[35])|121\.12[45]|123\.21[2-5]|124\.111|211\.(49|5[289]|108|117|17[6-9]|20\d|21[0-5]|24[345])|218\.(3[89]|4[89]|5[0-5]|23[2-9])|219\.(24[0189]|25[0145])|221\.1(3[89]|4[0-3])|222\.23[2-9])(\.\d{1,3}){2}|(61\.254\.(\d|[1-9]\d|1[01]\d|12[0-7]|1[6-9]\d|2\d\d)|211\.33\.(\d|\d\d|1[01]\d|12[0-7])|211\.44\.(1[5-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-3])|211\.52\.1(2[89]|3\d|4[0-3]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header HANAROTELECOM X-Spam-Relays-Untrusted =~ /ip=((58\.(12[0-7]|2(2[4-9]|3\d))|61\.(9[89]|105|25[35])|121\.12[45]|123\.21[2-5]|124\.111|211\.(49|5[289]|108|117|17[6-9]|20\d|21[0-5]|24[345])|218\.(3[89]|4[89]|5[0-5]|23[2-9])|219\.(24[0189]|25[0145])|221\.1(3[89]|4[0-3])|222\.23[2-9])(\.\d{1,3}){2}|(61\.254\.(\d|[1-9]\d|1[01]\d|12[0-7]|1[6-9]\d|2\d\d)|211\.33\.(\d|\d\d|1[01]\d|12[0-7])|211\.44\.(1[5-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-3])|211\.52\.1(2[89]|3\d|4[0-3]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header HANAROTELECOM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:12[0-7]|2(?:2[4-9]|3\d))|61\.(?:9[89]|105|25[35])|116\.12[0-7]|121\.12[45]|123\.21[2-5]|124\.111|211\.(?:49|5[289]|108|117|17[6-9]|20\d|21[0-5]|24[345])|218\.(?:3[89]|4[89]|5[0-5]|23[2-9])|219\.(?:24[0189]|25[0145])|221\.1(?:3[89]|4[0-3])|222\.23[2-9])(?:\.\d{1,3}){2}|(?:61\.254\.(?:\d|\d\d|1[01]\d|12[0-7]|1[6-9]\d|2\d\d)|211\.33\.(?:\d|\d\d|1[01]\d|12[0-7])|211\.44\.(?:1[5-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-3])|211\.52\.1(?:2[89]|3\d|4[0-3]))\.\d{1,3}) /
 describe HANAROTELECOM [KR]Hanaro Telecom, Inc.(also AKA HANANET)
 score HANAROTELECOM 1.5
 
@@ -4356,7 +4361,7 @@ score DCNTWKRCN 6.5
 # 
 # 222\.(6[4-9]|[78]\d|9[0-5]|12[89]|1[34578]\d|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7])
 
-replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|113\.(?:[89]|6[4-9]|[78]\d|9[0-5])|114\.2(?:1[6-9]|2[0-3]|[45]\d)|115\.1(?:4[89]|5[01])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|60|1(?:1[2-7]|9[456])|2(?:2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-3]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|2[0-7]|3[0-7]|4[4-9]|5[0-6]|6[4-7]|7[0-5789]|8\d|9[01]))|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[6-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|1[34578]\d|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01])))\.\d{1,3})
+replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|113\.(?:[89]|6[4-9]|[78]\d|9[0-5])|114\.2(?:1[6-9]|2[0-3]|[45]\d)|115\.1(?:4[89]|5[01])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|60|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-3]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|2[0-7]|3[0-7]|4[4-9]|5[0-6]|6[4-7]|7[0-5789]|8\d|9[01]))|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[6-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|1[34578]\d|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01])))\.\d{1,3})
 
 header CNCGROUP X-Spam-Relays-Untrusted =~ /^\[ ip=<CNCGROUP_IPS> /
 describe CNCGROUP [CN]Japanese spammer's footstool: CNCGROUP
@@ -5421,8 +5426,8 @@ meta NULLGIF_SPAMCOP NULLTXTGIF && RCVD_IN_BL_SPAMCOP_NET
 score NULLGIF_SPAMCOP 3.5
 meta NULLGIF_DSBL NULLTXTGIF && RCVD_IN_DSBL
 score NULLGIF_DSBL 3.5
-meta NULLGIF_DUL NULLTXTGIF && RCVD_IN_SORBS_DUL
-score NULLGIF_DUL 3.5
+# meta NULLGIF_DUL NULLTXTGIF && RCVD_IN_SORBS_DUL
+# score NULLGIF_DUL 3.5
 
 
 # added 2008.02.01 by [yoh]
@@ -5438,8 +5443,8 @@ meta NUMURL_SPAMCOP NUMURLWITHWORDS && RCVD_IN_BL_SPAMCOP_NET
 score NUMURL_SPAMCOP 3.5
 meta NUMURL_DSBL NUMURLWITHWORDS && RCVD_IN_DSBL
 score NUMURL_DSBL 3.5
-meta NUMURL_DUL NUMURLWITHWORDS && RCVD_IN_SORBS_DUL
-score NUMURL_DUL 3.5
+# meta NUMURL_DUL NUMURLWITHWORDS && RCVD_IN_SORBS_DUL
+# score NUMURL_DUL 3.5
 
 # added 2008.03.01 by [yoh]
 # 
@@ -5452,8 +5457,8 @@ meta L_C_HTTP_SPAMCOP LONGCHARHTTP && RCVD_IN_BL_SPAMCOP_NET
 score L_C_HTTP_SPAMCOP 3.5
 meta L_C_HTTP_DSBL LONGCHARHTTP && RCVD_IN_DSBL
 score L_C_HTTP_DSBL 3.5
-meta L_C_HTTP_DUL LONGCHARHTTP && RCVD_IN_SORBS_DUL
-score L_C_HTTP_DUL 3.5
+# meta L_C_HTTP_DUL LONGCHARHTTP && RCVD_IN_SORBS_DUL
+# score L_C_HTTP_DUL 3.5
 
 # added 2008.03.03 by [yoh]
 # 
@@ -5466,8 +5471,8 @@ meta C_G_SPAMCOP CHATGIRL && RCVD_IN_BL_SPAMCOP_NET
 score C_G_SPAMCOP 3.5
 meta C_G_DSBL CHATGIRL && RCVD_IN_DSBL
 score C_G_DSBL 3.5
-meta C_G_DUL CHATGIRL && RCVD_IN_SORBS_DUL
-score C_G_DUL 3.5
+# meta C_G_DUL CHATGIRL && RCVD_IN_SORBS_DUL
+# score C_G_DUL 3.5
 
 meta C_G_PBL CHATGIRL && RCVD_IN_PBL
 score C_G_PBL 3.5
