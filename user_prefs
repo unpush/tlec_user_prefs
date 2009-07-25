@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1252 2009/07/22 17:58:40 yoh Exp $
+# $Id: user_prefs,v 1.1253 2009/07/25 13:58:06 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -5313,7 +5313,7 @@ score INFOVISION_PH 1.5
 # 61.28.128.0 - 61.28.191.255
 # 117.104.240.0 - 117.104.255.255
 # 116.50.128.0 - 116.50.255.255
-header ETPI_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.28\.1(?:2[89]|[3-8]\d|9[01])|113\.61\.(?:3[2-9]|[45]\d|6[0-3])|115\.84\.2(?:2[4-9]|[345]\d)|116\.50\.(?:12[89]|1[3-9]\d|2\d\d)|117\.104\.2[45]\d|202\.175\.(?:19[2-9]|2\d\d))\.\d{1,3} /
+header ETPI_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.28\.1(?:2[89]|[3-8]\d|9[01])|113\.61\.(?:3[2-9]|[45]\d|6[0-3])|115\.84\.2(?:2[4-9]|[345]\d)|116\.50\.(?:12[89]|1[3-9]\d|2\d\d)|117\.104\.2[45]\d|120\.89\.(?:\d|[1-5]\d|6[0-3])|202\.164\.(?:1[678]\d|19[01])|202\.175\.(?:19[2-9]|2\d\d))\.\d{1,3} /
 describe ETPI_PH [PH]Eastern Telecoms Philippines, Inc.
 score ETPI_PH 1.5
 
