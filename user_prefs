@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1256 2009/07/26 08:12:51 yoh Exp $
+# $Id: user_prefs,v 1.1258 2009/07/27 09:35:27 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -544,63 +544,77 @@ score MSES_ERRXM 1.0
 # describe TABLEPRE dot art spam using html table tag with pre tag.
 # score TABLEPRE 3.5
 
+
 # [a-z]{2,2}\.geocities\.com\/[a-zA-Z0-9]+\/
 
 # rawbody UKGEOCITIES /http:\/\/[a-z]{2,3}\.geocities\.com\/[A-Za-z0-9_-]+\/(\?{0,1}[A-Za-z0-9_-]+| |$)/
 # uri UKGEOCITIES /(geocities\.yahoo\.com\.br|[a-z]{2,3}\.geocities\.com)\/[A-Za-z0-9_-]+\/(\?{0,1}[A-Za-z0-9_-]+| |$)/
-uri UKGEOCITIES /(geocities\.yahoo\.com\.br|([a-z]{2,3}\.){0,1}geocities\.com)\/[A-Za-z0-9_-]+(\/\?{0,1}[A-Za-z0-9_-]+|\/ |\/$| |$)/
-describe UKGEOCITIES http://uk.geocities.com/Hoge_Hoge/?Fuga=tekitou
-score UKGEOCITIES 0.5
+
+# thrown away 2009.07.27 by [yoh]
+# uri UKGEOCITIES /(geocities\.yahoo\.com\.br|([a-z]{2,3}\.){0,1}geocities\.com)\/[A-Za-z0-9_-]+(\/\?{0,1}[A-Za-z0-9_-]+|\/ |\/$| |$)/
+# describe UKGEOCITIES http://uk.geocities.com/Hoge_Hoge/?Fuga=tekitou
+# score UKGEOCITIES 0.5
 
 # meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_SORBS_DUL || RCVD_IN_XBL || RCVD_IN_AHBL || RCVD_IN_WHOIS_INVALID || DNS_FROM_SECURITYSAGE || RCVD_IN_NJABL_DUL)
 # meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_SORBS_DUL || RCVD_IN_XBL || RCVD_IN_AHBL )
-meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_XBL || RCVD_IN_AHBL )
-describe CHINAUKGEO UKGEOCITIES && RCVD_IN_CHINA
-score CHINAUKGEO 8.0
 
-meta CHINANETUKGEO (CHINANET || CRTC) && UKGEOCITIES && BAYES_99
-describe CHINANETUKGEO (CHINANET || CRTC) && UKGEOCITIES && BAYES_99
-score CHINANETUKGEO 10
+# thrown away 2009.07.27 by [yoh]
+# meta CHINAUKGEO UKGEOCITIES && (RCVD_IN_CHINA || X_CHINESE_RELAY || RCVD_IN_XBL || RCVD_IN_AHBL )
+# describe CHINAUKGEO UKGEOCITIES && RCVD_IN_CHINA
+# score CHINAUKGEO 8.0
+
+# thrown away 2009.07.27 by [yoh]
+# meta CHINANETUKGEO (CHINANET || CRTC) && UKGEOCITIES && BAYES_99
+# describe CHINANETUKGEO (CHINANET || CRTC) && UKGEOCITIES && BAYES_99
+# score CHINANETUKGEO 10
 
 # full FAKEDREPLYMSG /[[:alpha:]]+[\r\n]+([[:print:]]{10,}[\r\n]+){1,}[[:alpha:]]+[\r\n]+ -+Original Message-+/
-full FAKEDREPLYMSG /[[:print:]]+[\r\n]+([[:print:]]{10,}[\r\n]+){1,}[[:alpha:]]+[\r\n]+ -+Original Message-+/
-describe FAKEDREPLYMSG faked reply message strings
-score FAKEDREPLYMSG 0.1
 
-meta UKGEOFORMAT FAKEDREPLYMSG && UKGEOCITIES && BAYES_99
-describe UKGEOFORMAT FAKEDREPLYMSG && UKGEOCITIES && BAYES_99
-score UKGEOFORMAT 3.5
+# thrown away 2009.07.27 by [yoh]
+# full FAKEDREPLYMSG /[[:print:]]+[\r\n]+([[:print:]]{10,}[\r\n]+){1,}[[:alpha:]]+[\r\n]+ -+Original Message-+/
+# describe FAKEDREPLYMSG faked reply message strings
+# score FAKEDREPLYMSG 0.1
+
+# thrown away 2009.07.27 by [yoh]
+# meta UKGEOFORMAT FAKEDREPLYMSG && UKGEOCITIES && BAYES_99
+# describe UKGEOFORMAT FAKEDREPLYMSG && UKGEOCITIES && BAYES_99
+# score UKGEOFORMAT 3.5
 
 # meta UKGEOFORMAT2 (FORGED_RCVD_HELO || SUBJECT_FUZZY_MEDS || FUZZY_PHARMACY) && MSGID_FROM_MTA_ID && UKGEOCITIES && BAYES_99
 # describe UKGEOFORMAT2 (FORGED_RCVD_HELO || SUBJECT_FUZZY_MEDS || FUZZY_PHARMACY) && MSGID_FROM_MTA_ID && UKGEOCITIES && BAYES_99
 # score UKGEOFORMAT2 10
 
 # header ___PLTXTUSASCII Content-Type =~/charset=\"?us-ascii/
-header ___PLTXTUSASCII Content-Type =~ /text\/plain.+charset=\"?us-ascii/i
+# thrown away 2009.07.27 by [yoh]
+# header ___PLTXTUSASCII Content-Type =~ /text\/plain.+charset=\"?us-ascii/i
 # score ___PLTXTUSASCII 0.1
 
-mimeheader ___MIMETXTUSASCII Content-Type =~ /text\/(plain|html).+charset=\"?us-ascii/i
+# thrown away 2009.07.27 by [yoh]
+# mimeheader ___MIMETXTUSASCII Content-Type =~ /text\/(plain|html).+charset=\"?us-ascii/i
 # score ___MIMETXTUSASCII 0.1
 
-meta UKGEOFORMAT3 CHINANETUKGEO && (___PLTXTUSASCII || ___MIMETXTUSASCII)
-describe UKGEOFORMAT3 ascii text mail from China with uk.geocities.com uri
-score UKGEOFORMAT3 10
+# thrown away 2009.07.27 by [yoh]
+# meta UKGEOFORMAT3 CHINANETUKGEO && (___PLTXTUSASCII || ___MIMETXTUSASCII)
+# describe UKGEOFORMAT3 ascii text mail from China with uk.geocities.com uri
+# score UKGEOFORMAT3 10
 
-meta SPF_UKGEO (SPF_HELO_SOFTFAIL || SPF_FAIL) && UKGEOCITIES
-score SPF_UKGEO 3.5
+# thrown away 2009.07.27 by [yoh]
+# meta SPF_UKGEO (SPF_HELO_SOFTFAIL || SPF_FAIL) && UKGEOCITIES
+# score SPF_UKGEO 3.5
 
-meta AHBL_UKGEO DNS_FROM_AHBL_RHSBL && UKGEOCITIES
-score AHBL_UKGEO 1.5
+# thrown away 2009.07.27 by [yoh]
+# meta AHBL_UKGEO DNS_FROM_AHBL_RHSBL && UKGEOCITIES
+# score AHBL_UKGEO 1.5
 # meta FIVETEN_UKGEO RCVD_IN_FIVETENSG && UKGEOCITIES
 # score FIVETEN_UKGEO 1.5
-meta COP_UKGEO RCVD_IN_BL_SPAMCOP_NET && UKGEOCITIES
-score COP_UKGEO 1.0
-meta SORTRCPS_UKGEO SORTED_RECIPS && UKGEOCITIES
-score SORTRCPS_UKGEO 2.0
-meta XYAHOO_UKGEO XYAHOOFILTEREDBULK && UKGEOCITIES
-score XYAHOO_UKGEO 2.5
-meta KTC_UKGEO ___KOREATAIWANCHINA && UKGEOCITIES
-score KTC_UKGEO 2.5
+# meta COP_UKGEO RCVD_IN_BL_SPAMCOP_NET && UKGEOCITIES
+# score COP_UKGEO 1.0
+# meta SORTRCPS_UKGEO SORTED_RECIPS && UKGEOCITIES
+# score SORTRCPS_UKGEO 2.0
+# meta XYAHOO_UKGEO XYAHOOFILTEREDBULK && UKGEOCITIES
+# score XYAHOO_UKGEO 2.5
+# meta KTC_UKGEO ___KOREATAIWANCHINA && UKGEOCITIES
+# score KTC_UKGEO 2.5
 
 # 
 # added 2006.10.12 by [yoh]
@@ -4572,7 +4586,7 @@ score BTV_BEIJING 1.5
 # 124.200.0.0 - 124.207.255.255
 # header DXTNET X-Spam-Relays-Untrusted =~ /ip=(219\.23[89]|60\.19[45])(\.[0-9]{1,3}){2,2} .+ident= envfrom= intl=0 .+auth= /
 # header DXTNET X-Spam-Relays-Untrusted =~ /ip=((219\.23[89]|60\.19[45]|218\.249)(\.\d{1,3}){2,2}|218\.247\.(\d|[12]\d|3[01])\.\d{1,3}) .+ident= envfrom= intl=0 .+auth= /
-header DXTNET X-Spam-Relays-Untrusted =~ /ip=((60\.19[45]|124\.(19[23]|20[0-7])|218\.249|219\.23[89])(\.\d{1,3}){2,2}|218\.247\.(\d|[12]\d|3[01])\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header DXTNET X-Spam-Relays-Untrusted =~ /ip=((60\.(19[45]|207)|124\.(19[23]|20[0-7])|218\.249|219\.23[89])(\.\d{1,3}){2,2}|218\.247\.(\d|[12]\d|3[01])\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 describe DXTNET [CN]Beijing Teletron Telecom Engineering Co., Ltd.
 score DXTNET 1.5
 
@@ -5717,7 +5731,7 @@ score WILLCOM 0.1
 
 
 
-header JPHANDPHONE From =~ /\@(ezweb|docomo|[a-z]\.vodafone)\.ne\.jp/
+header JPHANDPHONE From =~ /\@(ezweb|docomo|[a-z]\.vodafone|softbank)\.ne\.jp/
 describe JPHANDPHONE Mail from KEITAI
 score JPHANDPHONE 0.1
 
@@ -5879,7 +5893,8 @@ score DIRECTINTERSPIN 1.5
 # header DIRECTDION X-Spam-Relays-Untrusted =~ /(ip=(61\.117\.([6-9]|1[0-7]|(?!68)[2-9]\d|(?!103)1[01]\d|12[0-7])\.\d{1,3}|61\.202\.(?!(2|3|27|64|90|105)\.)(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|(59\.1(2[89]|3\d|40)|218\.222|222\.(\d|1[0-5]))(\.\d{1,3}){2}|219\.108\.(1[6-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3})|rdns=([A-Z]{1,2}\d{6}\.ppp|[a-zA-Z]{1,2}\d{12,14}\.(ec-){0,1}userreverse)\.dion\.ne\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
 # 211.18.0.0 - 211.18.190.255
 # 211.18.212.129 - 211.18.212.255
-header DIRECTDION X-Spam-Relays-Untrusted =~ /(ip=(210\.155\.83\.(6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.230\.216\.163|211\.18\.((\d|\d\d|1[0-8]\d|190)\.\d{1,3}|212\.(129|1[3-9]\d|2\d\d))|61\.117\.([6-9]|1[0-7]|(?!68)[2-9]\d|(?!103)1[01]\d|12[0-7])\.\d{1,3}|61\.202\.(?!(2|3|27|64|90|105)\.)(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|(59\.1(2[89]|3\d|40)|218\.222|222\.([0-24-9]|1[0-5]))(\.\d{1,3}){2}|219\.108\.(1[6-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3})|rdns=([A-Z]{1,2}\d{6}\.ppp|[a-zA-Z]{1,2}\d{12,14}\.(ec-){0,1}userreverse)\.dion\.ne\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+# header DIRECTDION X-Spam-Relays-Untrusted =~ /(ip=(210\.155\.83\.(6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.230\.216\.163|211\.18\.((\d|\d\d|1[0-8]\d|190)\.\d{1,3}|212\.(129|1[3-9]\d|2\d\d))|61\.117\.([6-9]|1[0-7]|(?!68)[2-9]\d|(?!103)1[01]\d|12[0-7])\.\d{1,3}|61\.202\.(?!(2|3|27|64|90|105)\.)(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|(59\.1(2[89]|3\d|40)|218\.222|222\.([0-24-9]|1[0-5]))(\.\d{1,3}){2}|219\.108\.(1[6-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3})|rdns=([A-Z]{1,2}\d{6}\.ppp|[a-zA-Z]{1,2}\d{12,14}\.(ec-){0,1}userreverse)\.dion\.ne\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+header DIRECTDION X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:210\.155\.83\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.230\.216\.163|211\.18\.(?:(?:\d|\d\d|1[0-8]\d|190)\.\d{1,3}|212\.(?:129|1[3-9]\d|2\d\d))|61\.117\.(?:[6-9]|1[0-7]|(?!68)[2-9]\d|(?!103)1[01]\d|12[0-7])\.\d{1,3}|61\.202\.(?!(?:2|3|27|64|90|105)\.)(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|(?:59\.1(?:2[89]|3\d|40)|218\.222|222\.(?:[0-24-9]|1[0-5]))(?:\.\d{1,3}){2}|219\.108\.(?:1[6-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=(?:[A-Z]{1,2}\d{6}\.ppp|[a-zA-Z]{1,2}\d{12,14}\.(?:ec-){0,1}userreverse)\.dion\.ne\.jp) /
 describe DIRECTDION directly received spam from DION
 score DIRECTDION 1.5
 
@@ -5901,7 +5916,8 @@ score DIRECTDION 1.5
 # ! 220.212.240.23 247.162 249.0/24 252.0/24 253.0/24
 # header DIRECTODN X-Spam-Relays-Untrusted =~ /(ip=((61\.116|211\.131|218\.218|219\.66)(\.\d{1,3}){2}|61\.209\.([4-9]|[1-9]\d|1[0-8]\d|190)\.\d{1,3}|210\.231\.(\d|[1-8]\d)\.\d{1,3}|211\.3.(?!(1[345]\.|49\.|1(0[02456]|3[457]|44|8[01]|9[45])|2(28|3[018]|47|5[35])))(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3}|211\.121\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|210\.169\.251\.(1[67]\d|181))|rdns=[A-Za-z0-9-]+\.ppp\d{2,2}\.odn\.ad\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
 # 61\.209\.([4-9]|[1-9]\d|1[0-8]\d|190)\.\d{1,3}
-header DIRECTODN X-Spam-Relays-Untrusted =~ /(ip=((61\.116|211\.131|218\.218|219\.66)(\.\d{1,3}){2}|61\.209\.([4-9]|[1235-9]\d|4[0-689]|1[0-8]\d|190|203)\.\d{1,3}|210\.231\.(\d|[1-8]\d)\.\d{1,3}|211\.3.(?!(1[345]\.|49\.|1(0[02456]|3[457]|44|8[01]|9[45])|2(28|3[018]|47|5[35])))(\d|[1-9]\d|[12]\d\d)\.\d{1,3}|211\.121\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|210\.169\.251\.(1[67]\d|181)|220\.212\.(\d|\d\d|1[01][0-5])\.\d{1,3}|220\.212\.(?!(240\.23[^\d]|247\.162|2(49|52|53)\.\d{1,3}))\d{1,3}\.\d{1,3})|rdns=[A-Za-z0-9-]+\.ppp\d{2,2}\.odn\.ad\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+# header DIRECTODN X-Spam-Relays-Untrusted =~ /(ip=((61\.116|211\.131|218\.218|219\.66)(\.\d{1,3}){2}|61\.209\.([4-9]|[1235-9]\d|4[0-689]|1[0-8]\d|190|203)\.\d{1,3}|210\.231\.(\d|[1-8]\d)\.\d{1,3}|211\.3.(?!(1[345]\.|49\.|1(0[02456]|3[457]|44|8[01]|9[45])|2(28|3[018]|47|5[35])))(\d|[1-9]\d|[12]\d\d)\.\d{1,3}|211\.121\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|210\.169\.251\.(1[67]\d|181)|220\.212\.(\d|\d\d|1[01][0-5])\.\d{1,3}|220\.212\.(?!(240\.23[^\d]|247\.162|2(49|52|53)\.\d{1,3}))\d{1,3}\.\d{1,3})|rdns=[A-Za-z0-9-]+\.ppp\d{2,2}\.odn\.ad\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+header DIRECTODN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:(?:61\.116|211\.131|218\.218|219\.66)(?:\.\d{1,3}){2}|61\.209\.(?:[4-9]|[1235-9]\d|4[0-689]|1[0-8]\d|190|203)\.\d{1,3}|210\.231\.(?:\d|[1-8]\d)\.\d{1,3}|211\.3.(?!(?:1[345]\.|49\.|1(?:0[02456]|3[457]|44|8[01]|9[45])|2(?:28|3[018]|47|5[35])))(?:\d|[1-9]\d|[12]\d\d)\.\d{1,3}|211\.121\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|210\.169\.251\.(?:1[67]\d|181)|220\.212\.(?:\d|\d\d|1[01][0-5])\.\d{1,3}|220\.212\.(?!(?:240\.23[^\d]|247\.162|2(?:49|52|53)\.\d{1,3}))\d{1,3}\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=[A-Za-z0-9-]+\.ppp\d{2,2}\.odn\.ad\.jp) /
 describe DIRECTODN directly received spam from ODN
 score DIRECTODN 1.5
 
@@ -5911,14 +5927,16 @@ score DIRECTODN 1.5
 # header DIRECTINFOSPHERE X-Spam-Relays-Untrusted =~ /(ip=(210\.165\.(12[89]|1[3-9]\d|2[0-4]\d|25[0-5])\.\d{1,3}|(61\.197|203\.138|219\.102)(\.\d{1,3}){2})|rdns=.+\.nttpc\.ne\.jp) .+ by=(mail\.flcl\.org|[a-z0-9]+\.nifty\.((ne|co|ad)\.jp|com)|(alt|dns|mta|ybbmta)\d\d\.mail\.((bbt|mci|tnz)\.){0,1}yahoo\.co\.jp|fm[1-6]\.freemail\.ne\.jp) ident= envfrom= intl=0 .+auth= /
 
 # 202.224.204.112-202.224.204.127
-header DIRECTINFOSPHERE X-Spam-Relays-Untrusted =~ /(ip=(61\,194\.206\.16[0-7]|61\.197\.(\d|\d\d|1[0-5]\d|16[01])\.\d{1,3}|210\.165\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|202\.212\.((9|1[237]|2[01]|7[4-9]|8[234]|9[023]|10[789]|11[01]|12[123]|156|16[4-7]|17[3-6]|18[56]|19[345]|23[67]|243|25[45])\.\d{1,3}|30\.(\d|[1-8]\d|9[0-5])|89\.1(2[89]|[34]\d|5[01])|91\.(\d|\d\d|1[0-4]\d|15[01])|1(19|40)\.(\d|[123]\d|4[0-7])|15[07]\.(\d|[1-5]\d|6[0-3])|183\.(\d|[12]\d|3[01])|184\.(\d|1[0-5])|242\.(\d|[1-3]\d|4[0-7])|252\.(\d|[1-5]\d|6[0-3]|12[89]|1[3-8]\d|19[01])|(35|169|221)\.(\d|\d\d|1[01]\d|12[0-7])|(36|87|120|140|157|179|180|184|25[01])\.1(2[89]|[345]\d))|202\.224\.204\.1(1[2-9]|2[0-79]|6\d|7[0-5])|202\.229\.(4[89]|5[01]|12[56]|13[2368]|14[0-3]|15[2-5]|16[4-7]|2(0\d|1[0-59]|2[1-9]|34|4[4-7]|5[345]))\.\d{1,3}|203\.138\.((92|114|16[89]|17[0-5])\.\d{1,3}|1(20|82)\.(\d|[1-5]\d|6[0-3])|17[69]\.(\d|\d\d|1[0-5]\d)|184\.(\d|[12]\d|3[01])|234\.(\d|\d\d|1[01]\d|12[0-7])|238\.(12[89]|1[345]\d)|240\.(12[89]|1[3-8]\d|19[01]))|210\.136\.(([0-3]|1[6-9]|2[0-389]|3[0-5]|8[4-9]|9[01]|12[89]|13[01]|14[0-3]|171|18[0-3]|19[6-9]|2[45]\d)\.\d{1,3}|13\.(\d|[12]\d|3[01])|36\.(6[4-9]7\d)|53\.(\d|[12]\d|3[01]|12[89]|1[345]\d)|82\.(129|1[3-9]\d|2\d\d)|186\.(\d|\d\d|10\d|11[01])|189\.(\d|[1-5]\d|6[0-3])|224\.(\d|[12]\d|3[01]|12[89]|1[3-8]\d|19[01])|234\.(\d|[1-5]\d|6[0-3])|238\.(20[89]|21\d|22[0-3]))|219\.102(\.\d{1,3}){2})|rdns=.+\.nttpc\.ne\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+# header DIRECTINFOSPHERE X-Spam-Relays-Untrusted =~ /(ip=(61\,194\.206\.16[0-7]|61\.197\.(\d|\d\d|1[0-5]\d|16[01])\.\d{1,3}|210\.165\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|202\.212\.((9|1[237]|2[01]|7[4-9]|8[234]|9[023]|10[789]|11[01]|12[123]|156|16[4-7]|17[3-6]|18[56]|19[345]|23[67]|243|25[45])\.\d{1,3}|30\.(\d|[1-8]\d|9[0-5])|89\.1(2[89]|[34]\d|5[01])|91\.(\d|\d\d|1[0-4]\d|15[01])|1(19|40)\.(\d|[123]\d|4[0-7])|15[07]\.(\d|[1-5]\d|6[0-3])|183\.(\d|[12]\d|3[01])|184\.(\d|1[0-5])|242\.(\d|[1-3]\d|4[0-7])|252\.(\d|[1-5]\d|6[0-3]|12[89]|1[3-8]\d|19[01])|(35|169|221)\.(\d|\d\d|1[01]\d|12[0-7])|(36|87|120|140|157|179|180|184|25[01])\.1(2[89]|[345]\d))|202\.224\.204\.1(1[2-9]|2[0-79]|6\d|7[0-5])|202\.229\.(4[89]|5[01]|12[56]|13[2368]|14[0-3]|15[2-5]|16[4-7]|2(0\d|1[0-59]|2[1-9]|34|4[4-7]|5[345]))\.\d{1,3}|203\.138\.((92|114|16[89]|17[0-5])\.\d{1,3}|1(20|82)\.(\d|[1-5]\d|6[0-3])|17[69]\.(\d|\d\d|1[0-5]\d)|184\.(\d|[12]\d|3[01])|234\.(\d|\d\d|1[01]\d|12[0-7])|238\.(12[89]|1[345]\d)|240\.(12[89]|1[3-8]\d|19[01]))|210\.136\.(([0-3]|1[6-9]|2[0-389]|3[0-5]|8[4-9]|9[01]|12[89]|13[01]|14[0-3]|171|18[0-3]|19[6-9]|2[45]\d)\.\d{1,3}|13\.(\d|[12]\d|3[01])|36\.(6[4-9]7\d)|53\.(\d|[12]\d|3[01]|12[89]|1[345]\d)|82\.(129|1[3-9]\d|2\d\d)|186\.(\d|\d\d|10\d|11[01])|189\.(\d|[1-5]\d|6[0-3])|224\.(\d|[12]\d|3[01]|12[89]|1[3-8]\d|19[01])|234\.(\d|[1-5]\d|6[0-3])|238\.(20[89]|21\d|22[0-3]))|219\.102(\.\d{1,3}){2})|rdns=.+\.nttpc\.ne\.jp) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+header DIRECTINFOSPHERE X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:61\,194\.206\.16[0-7]|61\.197\.(?:\d|\d\d|1[0-5]\d|16[01])\.\d{1,3}|210\.165\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|202\.212\.(?:(?:9|1[237]|2[01]|7[4-9]|8[234]|9[023]|10[789]|11[01]|12[123]|156|16[4-7]|17[3-6]|18[56]|19[345]|23[67]|243|25[45])\.\d{1,3}|30\.(?:\d|[1-8]\d|9[0-5])|89\.1(?:2[89]|[34]\d|5[01])|91\.(?:\d|\d\d|1[0-4]\d|15[01])|1(?:19|40)\.(?:\d|[123]\d|4[0-7])|15[07]\.(?:\d|[1-5]\d|6[0-3])|183\.(?:\d|[12]\d|3[01])|184\.(?:\d|1[0-5])|242\.(?:\d|[1-3]\d|4[0-7])|252\.(?:\d|[1-5]\d|6[0-3]|12[89]|1[3-8]\d|19[01])|(?:35|169|221)\.(?:\d|\d\d|1[01]\d|12[0-7])|(?:36|87|120|140|157|179|180|184|25[01])\.1(?:2[89]|[345]\d))|202\.224\.204\.1(?:1[2-9]|2[0-79]|6\d|7[0-5])|202\.229\.(?:4[89]|5[01]|12[56]|13[2368]|14[0-3]|15[2-5]|16[4-7]|2(?:0\d|1[0-59]|2[1-9]|34|4[4-7]|5[345]))\.\d{1,3}|203\.138\.(?:(?:92|114|16[89]|17[0-5])\.\d{1,3}|1(?:20|82)\.(?:\d|[1-5]\d|6[0-3])|17[69]\.(?:\d|\d\d|1[0-5]\d)|184\.(?:\d|[12]\d|3[01])|234\.(?:\d|\d\d|1[01]\d|12[0-7])|238\.(?:12[89]|1[345]\d)|240\.(?:12[89]|1[3-8]\d|19[01]))|210\.136\.(?:(?:[0-3]|1[6-9]|2[0-389]|3[0-5]|8[4-9]|9[01]|12[89]|13[01]|14[0-3]|171|18[0-3]|19[6-9]|2[45]\d)\.\d{1,3}|13\.(?:\d|[12]\d|3[01])|36\.(?:6[4-9]7\d)|53\.(?:\d|[12]\d|3[01]|12[89]|1[345]\d)|82\.(?:129|1[3-9]\d|2\d\d)|186\.(?:\d|\d\d|10\d|11[01])|189\.(?:\d|[1-5]\d|6[0-3])|224\.(?:\d|[12]\d|3[01]|12[89]|1[3-8]\d|19[01])|234\.(?:\d|[1-5]\d|6[0-3])|238\.(?:20[89]|21\d|22[0-3]))|219\.102(?:\.\d{1,3}){2})|(?:\d{1,3}\.){3}\d{1,3} rdns=.+\.nttpc\.ne\.jp) /
 describe DIRECTINFOSPHERE directly received spam from INFOSPHERE
 score DIRECTINFOSPHERE 2.0
 
 # header DIRECTSONETDYN Received =~ /from .+p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp[^a-z]+[0-9]{2,3}(\.[0-9]{1,3}){3,3}[^(a-z]{0,3}by (mail\.flcl\.org|[a-z0-9]+\.nifty\.((ne|co|ad)\.jp|com)|(alt|dns|mta|ybbmta)[0-9][0-9]\.mail\.((bbt|mci|tnz)\.){0,1}yahoo\.co\.jp|fm[1-6]\.freemail\.ne\.jp)/
 # header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp .+ by=(mail\.flcl\.org|[a-z0-9]+\.nifty\.((ne|co|ad)\.jp|com)|(alt|dns|mta|ybbmta)[0-9][0-9]\.mail\.((bbt|mci|tnz)\.){0,1}yahoo\.co\.jp|fm[1-6]\.freemail\.ne\.jp) ident= envfrom= intl=0 [^\[\]]+auth= /
 # header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /(rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp|ip=(59\.14[67](\.\d{1,3}){2}|202\.213\.208\.11[2-9]|202\.238\.(65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3})) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
-header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /(rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp|ip=(59\.14[67](\.\d{1,3}){2}|202\.213\.(208\.11[2-9]|247\.\d{1,3})|202\.238\.(65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3})) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+# header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /(rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp|ip=(59\.14[67](\.\d{1,3}){2}|202\.213\.(208\.11[2-9]|247\.\d{1,3})|202\.238\.(65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3})) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[67](?:\.\d{1,3}){2}|202\.213\.(?:208\.11[2-9]|247\.\d{1,3})|202\.238\.(?:65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(?:\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp) /
 describe DIRECTSONETDYN directly received spam from SO-NET
 score DIRECTSONETDYN 1.5
 
