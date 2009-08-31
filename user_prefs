@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1272 2009/08/28 23:06:42 yoh Exp $
+# $Id: user_prefs,v 1.1273 2009/08/30 12:27:51 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -628,23 +628,23 @@ score STILLPAYING 1.5
 meta STILL_DCN ___DCN && STILLPAYING
 score STILL_DCN 5
 
-meta STILL_UKGEO UKGEOCITIES && STILLPAYING
-score STILL_UKGEO 2.5
-meta STILL_SORT_UKGEO SORTRCPS_UKGEO && STILLPAYING
-score STILL_SORT_UKGEO 5
+# meta STILL_UKGEO UKGEOCITIES && STILLPAYING
+# score STILL_UKGEO 2.5
+# meta STILL_SORT_UKGEO SORTRCPS_UKGEO && STILLPAYING
+# score STILL_SORT_UKGEO 5
 
 
 meta STILL_EUDORA FORGED_MUA_EUDORA && STILLPAYING
 score STILL_EUDORA 5
 
-meta STILL_FUZREF FUZZY_REFINANCE && STILL_UKGEO && (___DCN || XYAHOOFILTEREDBULK)
-score STILL_FUZREF 5
+# meta STILL_FUZREF FUZZY_REFINANCE && STILL_UKGEO && (___DCN || XYAHOOFILTEREDBULK)
+# score STILL_FUZREF 5
 # meta STILL_TVDFUZREF TVD_FUZZY_FINANCE && STILL_UKGEO && (___DCN || XYAHOOFILTEREDBULK)
 # score STILL_TVDFUZREF 5
-meta STILL_FUZOBL FUZZY_OBLIGATION && STILL_UKGEO && (___DCN || XYAHOOFILTEREDBULK)
-score STILL_FUZOBL 5
-meta STILL_XYAHOO XYAHOOFILTEREDBULK && STILL_UKGEO && ___DCN
-score STILL_XYAHOO 5
+# meta STILL_FUZOBL FUZZY_OBLIGATION && STILL_UKGEO && (___DCN || XYAHOOFILTEREDBULK)
+# score STILL_FUZOBL 5
+# meta STILL_XYAHOO XYAHOOFILTEREDBULK && STILL_UKGEO && ___DCN
+# score STILL_XYAHOO 5
 
 
 body FAKEHOSTURI /http:\/\/[a-z]+\.com>\.[a-z0-9]+\.[a-z]+\.[a-z]{2,3}/
@@ -5639,8 +5639,8 @@ header ONLY1HOPDIRECTAFRINIC X-Spam-Relays-Untrusted =~ /^\[ ip=((41|196)(\.[0-9
 meta ONLY1DCN (ONLY1HOPDIRECTRIPE || ONLY1HOPDIRECTARIN || ONLY1HOPDIRECTLACNIC || ONLY1HOPDIRECTAFRINIC) && ___DCN
 score ONLY1DCN 3.0
 
-meta ONLY1UKGEO (ONLY1HOPDIRECTRIPE || ONLY1HOPDIRECTARIN || ONLY1HOPDIRECTLACNIC || ONLY1HOPDIRECTAFRINIC) && UKGEOCITIES
-score ONLY1UKGEO 2.0
+# meta ONLY1UKGEO (ONLY1HOPDIRECTRIPE || ONLY1HOPDIRECTARIN || ONLY1HOPDIRECTLACNIC || ONLY1HOPDIRECTAFRINIC) && UKGEOCITIES
+# score ONLY1UKGEO 2.0
 
 
 # 220.144.0.0 - 220.144.255.255
@@ -6269,8 +6269,8 @@ describe DIRECTPROX directly received spam from PROX SYSTEM DESIGN
 score DIRECTPROX 1.5
 
 # 202.51.8.0 - 202.51.15.255
-header DIRECTCLARA X-Spam-Relays-Untrusted =~ /(ip=202\.(45\.(161\.192|165\.128)|51\.10\.130)|rdns=(www\.air[wW]ork\.jp|ms\.savaway\.jp)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
-# header DIRECTCLARA X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.(?:45\.(?:161\.192|165\.128)|51\.10\.130))|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:www\.air[wW]ork\.jp|ms\.savaway\.jp)) /
+# header DIRECTCLARA X-Spam-Relays-Untrusted =~ /(ip=202\.(45\.(161\.192|165\.128)|51\.10\.130)|rdns=(www\.air[wW]ork\.jp|ms\.savaway\.jp)) [^\[\]]+ by=<MYMTA> ident= envfrom= intl=0 [^\[\]]+auth= /
+header DIRECTCLARA X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:202\.(?:45\.(?:161\.192|165\.128)|51\.10\.130))|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:www\.air[wW]ork\.jp|ms\.savaway\.jp)) /
 describe DIRECTCLARA directly received spam from Clara Online, Inc.
 score DIRECTCLARA 1.5
 
