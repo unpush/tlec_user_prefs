@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1275 2009/09/01 19:53:24 yoh Exp $
+# $Id: user_prefs,v 1.1276 2009/09/02 15:05:19 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -2158,8 +2158,7 @@ score KONOTABI 0.5
 meta DYN_KONOTABI ___DYNAMICIP && KONOTABI
 score DYN_KONOTABI 3.5
 
-rawbody NAIYOUHAIKA /EPO\?FbMF\$O0J2<\$N/
-# (?:DL|\$H\$\*)\$j/
+rawbody NAIYOUHAIKA /EPO\?FbMF\$O0J2<\$N(?:DL|\$H\$\*)\$j/
 score NAIYOUHAIKA 0.5
 
 meta DYN_NAIYOUHAIKA ___DYNAMICIP && NAIYOUHAIKA
