@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1295 2009/09/30 17:50:24 yoh Exp $
+# $Id: user_prefs,v 1.1296 2009/10/02 01:30:55 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -5586,7 +5586,8 @@ score C_G_DCN 3.5
 # full MPALTSJISQPONLY /\nContent-Type: multipart\/alternative;\n\tboundary=\"(--=.+(?:[a-zA-Z0-9]|=_))\"\n(.+\n){2,}\n--\1\nContent-Type: text\/plain; charset=\"shift_jis\"\nContent-Transfer-Encoding: quoted-printable\n\n(.*\n){2,}--\1--\n/
 # full MPALTSJISQPONLY /\nContent-Type: multipart\/alternative;\n\tboundary=\"(--=.+(?:[a-zA-Z0-9]|=_)|--[0-9]{14,})\"\n(.+\n){2,}\n--\1\nContent-Type: text\/plain; charset=\"shift_jis\"\nContent-Transfer-Encoding: quoted-printable\n\n(.*\n){2,}--\1--\n/
 # full MPALTSJISQPONLY /\nContent-Type: multipart\/alternative;\n\tboundary=\"(--=.+(?:[a-zA-Z0-9]|=_)|--[0-9]{14,})\"\n(.+\n){2,}\n--\1\nContent-Type: text\/plain;(?: charset=\"shift_jis\"){0,1}\nContent-Transfer-Encoding: quoted-printable\n\n(.*\n){2,}--\1--\n/
-full MPALTSJISQPONLY /\nContent-Type: multipart\/alternative;\n\tboundary=\"(--=.+(?:[a-zA-Z0-9]|=_)|--[0-9]{14,})\"\n(?:.+\n){2,}\n--\1\nContent-Type: text\/plain;(?: charset=\"shift_jis\"){0,1}\nContent-Transfer-Encoding: quoted-printable\n\n(?:(?!\1).+\n|\n){2,}--\1--\n/
+# full MPALTSJISQPONLY /\nContent-Type: multipart\/alternative;\n\tboundary=\"(--=.+(?:[a-zA-Z0-9]|=_)|--[0-9]{14,})\"\n(?:.+\n){2,}\n--\1\nContent-Type: text\/plain;(?: charset=\"shift_jis\"){0,1}\nContent-Transfer-Encoding: quoted-printable\n\n(?:(?!\1).+\n|\n){2,}--\1--\n/
+full MPALTSJISQPONLY /\nContent-Type: multipart\/alternative;\n\tboundary=\"(--=.+(?:[a-zA-Z0-9]|=_)|--[0-9]{14,}|--)\"\n(?:.+\n){2,}\n--\1\nContent-Type: text\/plain;(?: charset=\"shift_jis\"){0,1}\nContent-Transfer-Encoding: quoted-printable\n\n(?:(?!\n--\1\n).+\n|\n){2,}--\1--\n/
 
 meta M_A_S_Q_O_OTHER MPALTSJISQPONLY && (ARIN || RIPE_NCC || LACNIC || AFRINIC || ___KOREATAIWANCHINA )
 score M_A_S_Q_O_OTHER 3.5
