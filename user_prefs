@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1326 2010/01/02 03:49:29 yoh Exp $
+# $Id: user_prefs,v 1.1327 2010/01/04 02:16:57 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -1323,6 +1323,13 @@ score FORGED_OUTLOOK_TAGS 0
 # 2006.08.07 [yoh]
 score HTML_OBFUSCATE_05_10 0.1
 # score HTML_NONELEMENT_70_80 0.1
+
+# http://jvnrss.ise.chuo-u.ac.jp/csn/index.cgi?p=SpamAssassin%A4%CEFH_DATE_PAST_20XX
+# http://wiki.apache.org/spamassassin/Rules/FH_DATE_PAST_20XX
+# 2010.01.04 [yoh]
+score FH_DATE_PAST_20XX 0.0
+
+
 
 rawbody FAKEDWORD_ATMARK /(^| |\r|\n)[A-Za-z]{0,}(\@[A-Za-z]+){1,}(\.{0,1}$| |[:;\r\n])/
 describe FAKEDWORD_ATMARK ex. em@il (this rule is only for body)
@@ -4960,7 +4967,8 @@ describe INDONET_ID [ID]PT. IndoInternet
 score INDONET_ID 1.5
 
 # 222.124.0.0 - 222.124.255.255
-header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.12[0-7]|118\.9[67]|125\.16[0-3]|222\.124)(?:\.\d{1,3}){2}|125\.163\.1(?:2[89]|[3-8]\d|90)\.\d{1,3}|125\.163\.191\.(?:\d|1\d|2[0-5])) /
+# 203.130.192.0 - 203.130.255.255
+header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.12[0-7]|118\.9[67]|125\.16[0-3]|222\.124)(?:\.\d{1,3}){2}|125\.163\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|203\.130\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
 describe TELKOMNET_ID [ID]PT. TELEKOMUNIKASI INDONESIA
 score TELKOMNET_ID 1.5
 
