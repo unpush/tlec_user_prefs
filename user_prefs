@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1353 2010/01/24 06:30:42 yoh Exp $
+# $Id: user_prefs,v 1.1360 2010/02/11 14:47:49 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -1924,7 +1924,7 @@ score DYN_DAIHYOU 2.0
 # In SA 3.2.x, "body" rule has been changed.
 # So, for matching ISO-2022-JP strings, we have to change to "rawbody" rule.
 # 2008.05.24 by [yoh]
-rawbody BOSHUUWO /Jg\=8\$r/
+rawbody BOSHUUWO /(?:Bg){0,1}Jg\=8(?:\$r){0,1}/
 describe BOSHUUWO boshuuwo
 score BOSHUUWO 0.1
 
@@ -2299,7 +2299,8 @@ meta SJISJPSCAMURI SJIS_C && JPSCAMURI
 describe SJISJPSCAMURI SJIS_C && JPSCAMURI
 score SJISJPSCAMURI 10
 
-rawbody URLTRANSFER /(http:\/\/tinyurl\.com\/{0,1}|http:\/\/www\.google\.([a-z].|com|co\.[a-z].)\/pagead\/iclk\?sa=l\&ai=[A-Za-z]+\&num=\d+\&adurl=http:\/\/)/
+# rawbody URLTRANSFER /(http:\/\/tinyurl\.com\/{0,1}|http:\/\/www\.google\.([a-z].|com|co\.[a-z].)\/pagead\/iclk\?sa=l\&ai=[A-Za-z]+\&num=\d+\&adurl=http:\/\/)/
+rawbody URLTRANSFER /http:\/\/(?:tinyurl\.com\/{0,1}|www\.google\.(?:[a-z]{2}|com|co\.[a-z]{2})\/pagead\/iclk\?sa=l\&ai=[A-Za-z]+\&num=\d+\&adurl=http:\/\/|utun\.jp)/
 score URLTRANSFER 0.1
 
 meta DYN_URLTRANS ___DYNAMICIP && URLTRANSFER
@@ -4020,6 +4021,10 @@ header HCLC_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:124\.217\.(?:19[2-9]|2[01]\
 describe HCLC_KR [KR]395-65 Korea Computer BLDG F3 Sindaebang-dong Dongjak-gu Seoul
 score HCLC_KR 1.5
 
+header GDSYS_KR X-Spam-Relays-Untrusted =~ /^\[ ip=183\.86\.(?:19[2-9]|2\d\d)\.\d{1,3} /
+describe GDSYS_KR [KR]INCHON Incheon IT Tower Nam-gu Dohwa 1-dong Incheon
+score GDSYS_KR 1.5
+
 
 
 # 203.67.0.0 - 203.67.255.255
@@ -4177,7 +4182,7 @@ score FETNET_TW 1.5
 # CSLOXINFO || CNCGROUPNP || 
 
 
-meta ___KOREATAIWANCHINA CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN || IOLNET_IN || HUARUI_CN || KGT_TW || WM_CNCGROUP_CN || SGATHER_CN || TAIWANMOBILE_NET_TW || BM_ID || OPTUSINTERNET_AU || YYNET_CN || FETNET_TW || DCL_BD || ORTELCOMM_IN || INDOSAT_ID || CHINANETCENTER_CN || JARDIKNAS_ID || PTCL_PK || CTTNET_CN || BEAMCABLE_IN || HKCIX_HK || ETC_VNNIC_VN || GPRS_IN || HKNET_HK || CTINET_HK || PRIMANET_ID || PACENET_IN || HLJ_CN || GENESIS_HK || SINGTEL_HK || LINKDOTNET_PK || ISATNET_ID || FNCL_HK || GLOBALSPEED_PH || FPT_NET_VN || NEXTWEB_PH || WOTONE_CN || CYBERNET_PK || MULTINETBROADBAND_PK || SUNINFO_MDC_CN || FHGROUP_CN || WM_VAAN_KR || VAAN_KR || INTERISLANDNET_PH || BUDDYB_TH || HCLC_KR || CDKNET_CN 
+meta ___KOREATAIWANCHINA CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN || IOLNET_IN || HUARUI_CN || KGT_TW || WM_CNCGROUP_CN || SGATHER_CN || TAIWANMOBILE_NET_TW || BM_ID || OPTUSINTERNET_AU || YYNET_CN || FETNET_TW || DCL_BD || ORTELCOMM_IN || INDOSAT_ID || CHINANETCENTER_CN || JARDIKNAS_ID || PTCL_PK || CTTNET_CN || BEAMCABLE_IN || HKCIX_HK || ETC_VNNIC_VN || GPRS_IN || HKNET_HK || CTINET_HK || PRIMANET_ID || PACENET_IN || HLJ_CN || GENESIS_HK || SINGTEL_HK || LINKDOTNET_PK || ISATNET_ID || FNCL_HK || GLOBALSPEED_PH || FPT_NET_VN || NEXTWEB_PH || WOTONE_CN || CYBERNET_PK || MULTINETBROADBAND_PK || SUNINFO_MDC_CN || FHGROUP_CN || WM_VAAN_KR || VAAN_KR || INTERISLANDNET_PH || BUDDYB_TH || HCLC_KR || CDKNET_CN || CAT_TH || GDSYS_KR || FASTNET_ID || TATACOMM_IN 
 
 
 meta JPSUBJTWKRCN ___KOREATAIWANCHINA && SUBJ_ILLEGAL_CHARS && ISO2022JP_BODY
@@ -4371,7 +4376,7 @@ score DCNTWKRCN 3.5
 # 
 # 222\.(6[4-9]|[78]\d|9[0-5]|12[89]|1[34578]\d|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7])
 
-replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|112\.2(?:2[4-9]|[345]\d)|113\.(?:\d|1[2-5]|5[67]|6[4-9]|[789]\d|10\d|11[01]|24[89]|25[01])|114\.2(?:1[6-9]|2[0-3]|[45]\d)|115\.1(?:4[89]|5[01])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|6[0-3]|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|62|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-3]|7[6-9]|8\d|9[01]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|[23]\d|4[4-9]|5[0-6]|6[4-7]|7[0-5789]|8\d|9[01]))|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[2-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|183\.(?:6[4-9]|7[01]|9[2-5])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|13\d|14[0-3]|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|122\.102\.(?:6[4-9]|[78]\d|9[0-5])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01])))\.\d{1,3})
+replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3]|17[45])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|112\.2(?:2[4-9]|[345]\d)|113\.(?:\d|1[2-5]|5[67]|6[4-9]|[789]\d|10\d|11[01]|24[89]|25[01])|114\.2(?:1[6-9]|2[0-3]|[45]\d)|115\.1(?:4[89]|5[0-3])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|6[0-3]|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:126|14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|62|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-3]|7[6-9]|8\d|9[01]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|[23]\d|4[4-9]|5[0-6]|6[4-7]|7[0-5789]|8\d|9[01]))|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[2-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|183\.(?:6[4-9]|7[01]|9[2-5])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|13\d|14[0-3]|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|122\.102\.(?:6[4-9]|[78]\d|9[0-5])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01])))\.\d{1,3})
 
 header CNCGROUP X-Spam-Relays-Untrusted =~ /^\[ ip=<CNCGROUP_IPS> /
 describe CNCGROUP [CN]Japanese spammer's footstool: CNCGROUP
@@ -4876,7 +4881,8 @@ header ETC_VNNIC_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.(?:9[6-9]|10\d|11
 describe ETC_VNNIC_VN [VN]Electric Telecommunication Company
 score ETC_VNNIC_VN 1.5
 
-header FPT_NET_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:58\.18[67]|118\.(?:6[89]|7[01]))(?:\.\d{1,3}){2} /
+# header FPT_NET_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:58\.18[67]|118\.(?:6[89]|7[01]))(?:\.\d{1,3}){2} /
+header FPT_NET_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.18[67]|118\.(?:6[89]|7[01]))(?:\.\d{1,3}){2}|113\.23\.(\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
 describe FPT_NET_VN [VN]FPT Broadband Service
 score FPT_NET_VN 1.5
 
@@ -4890,7 +4896,7 @@ score INDONET_ID 1.5
 # 222.124.0.0 - 222.124.255.255
 # 203.130.192.0 - 203.130.255.255
 # 202.3.208.0 - 202.3.223.255
-header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.12[0-7]|118\.9[67]|125\.16[0-3]|222\.124)(?:\.\d{1,3}){2}|125\.163\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|202\.3\.2(?:0[89]|1\d|2[0-3])\.\d{1,3}|203\.130\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
+header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.12[0-7]|118\.9[67]|125\.16[0-3]|222\.124)(?:\.\d{1,3}){2}|110\.138\.(?:\d|[012]\d|3[01])\.\d{1,3}|125\.163\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|202\.3\.2(?:0[89]|1\d|2[0-3])\.\d{1,3}|203\.130\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
 describe TELKOMNET_ID [ID]PT. TELEKOMUNIKASI INDONESIA
 score TELKOMNET_ID 1.5
 
@@ -4921,7 +4927,13 @@ score PRIMANET_ID 1.5
 header ISATNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=58\.65\.245\.(?:8\d|9[0-5]) /
 describe ISATNET_ID [ID]PT Insan Sarana Telematika
 score ISATNET_ID 1.5
- 
+
+header FASTNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:111\.9[45]|118\.13[67])(?:\.\d{1,3}){2} /
+describe FASTNET_ID [ID]PT. First Media, Tbk. ISP Jakarta - 12950
+score FASTNET_ID 1.5
+
+
+
 
 # 203.109.128.0 - 203.109.255.255
 header TIG_NZ X-Spam-Relays-Untrusted =~ /ip=203\.109\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
@@ -4991,6 +5003,10 @@ score GNAXNET_US 1.5
 header PSINET_US X-Spam-Relays-Untrusted =~ /^\[ ip=38\.(?:99\.86|110\.146)\.\d{1,3} /
 describe PSINET_US [US]PSINet, Inc.
 score PSINET_US 1.5
+
+header AKANOC_US X-Spam-Relays-Untrusted =~ /^\[ ip=208\.77\.4[0-7]\.\d{1,3} /
+describe AKANOC_US [US]45535 Northport Loop East Fremont CA
+score AKANOC_US 1.5
 
 # 82.64.0.0 - 82.67.255.255
 # header PROXAD Received =~ /from .+[a-z0-9-]+(-[0-9]{1,3}){4,4}\.(fbx|adsl)\.proxad\.net/
@@ -5081,6 +5097,10 @@ header BUDDYB_TH X-Spam-Relays-Untrusted =~ /^\[ ip=58\.64\.(?:\d|\d\d|1[01]\d|1
 describe BUDDYB_TH [TH]BuddyB Broadband service network, Advance Datanetwork Communications Co.,Ltd.
 score BUDDYB_TH 1.5
 
+header CAT_TH X-Spam-Relays-Untrusted =~ /^\[ ip=61\.19(?:\.\d{1,3}){2} /
+describe CAT_TH [TH]CAT Telecom public company Ltd
+score CAT_TH 1.5
+
 
 # 202.83.32.0 - 202.83.63.255
 # 202.164.128.0 - 202.164.159.255
@@ -5124,7 +5144,7 @@ score EXATTNET_IN 1.5
 # 125.16.0.0 - 125.23.255.255
 # 203.145.128.0 - 203.145.191.255
 # header BHARTI_IN X-Spam-Relays-Untrusted =~ /ip=((59\.14[45]|61\.246|125\.(1[6-9]|2[0-3]))(\.\d{1,3}){2}|203\.101\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[45]|61\.246|122\.16[0-38]|125\.(?:1[6-9]|2[0-3]))(?:\.\d{1,3}){2}|122\.1(?:6\d|7[0-5])(?:\.\d{1,3}){2}|203\.101\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[45]|61\.246|122\.16[0-38]|125\.(?:1[6-9]|2[0-3]))(?:\.\d{1,3}){2}|122\.1(?:6\d|7[0-5])(?:\.\d{1,3}){2}|(?:122\.183|203\.101)\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe BHARTI_IN [IN]Bharti Broadband networks Limited
 score BHARTI_IN 1.5
 
@@ -5201,6 +5221,11 @@ score GPRS_IN 1.5
 header PACENET_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.89\.(?:3[2-9]|[45]\d|6[0-3])|203\.76\.(?:17[6-9]|18\d|19[01])|203\.115\.(?:6[4-9]|[78]\d|9[0-5]))\.\d{1,3} /
 describe PACENET_IN [IN]India's Premeir Broadband and IPTV services, Mumbai.
 score PACENET_IN 1.5
+
+header TATACOMM_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.1(?:0[89]|1[01])(?:\.\d{1,3}){2}|61\.12\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|61\.16\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+describe TATACOMM_IN [IN]TATA Communications formerly VSNL is Leading ISP, Data and Voice Carrier in India
+score TATACOMM_IN 1.5
+
 
 
 # 68.32.0.0 - 68.63.255.255
@@ -6229,7 +6254,7 @@ describe DIRECTUNKNOWN directly received spam from suspicious dynamic IP
 score DIRECTUNKNOWN 0.3
 
 
-meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN || DIRECTINFOSPHERE || DIRECTSONETDYN || DIRECTOCNDYN || DIRECTVECTANTDYN || DIRECTHI_HO || DIRECTUSENBROAD || DIRECTBBTEC || DIRECTINFOWEB || DIRECTDTI || DIRECTBIGLOBE || DIRECTALPHANET || DIRECTUNETSURF || DIRECTEDITNET || DIRECTDSNETWORKS || DIRECTGERAGERA || DIRECTGMOACCESS || DIRECTIIJ4U || DIRECTVIPLT || DIRECTVOICETOWN || DIRECTSST_BB || DIRECTASAHINET || DIRECTTCOMADSL || DIRECTXEXONNET || DIRECTBBEXCITE || DIRECTITSCOM || DIRECTSAINET_NET || DIRECTDORPHIN || DIRECTWILLCOM || DIRECTHYPERBOX || DIRECTINTERLINK || DIRECTLINKCLUB || DIRECTPLALA || DIRECTPOWEREDCOM || DIRECTARCSTAR || DIRECTINTERQ || DIRECTEACCESS || DIRECTCPI || DIRECTPROX || COMBZMAIL_JP || TOKU_NET || DIRECTSAKURAWEB || LOLIPOP || SOHO || CSIDENET || NICNAME || DATAHOTEL_JP || DIRECTCLARA || DIRECTSAVVIS || DIRECTATTGNS || DIRECTASIANETCOM || DIRECTSYSTEMDESIGN || DIRECTWAKWAK || DIRECTMEDIAWARS || DIRECTBITDRIVE || DIRECTXREA || DIRECTMEDEXCG || DIRECTADVANSCOPE || DIRECTDIGIROCK || DIRECTCOMMUFA || DIRECTEMOBILE || DIRECTKDDI || DIRECTSBIDC || DIRECTNTTMEDIAS ||DIRECTK_OPTICOM || DIRECTJCN || DIRECTDOMIRU ||FORGEDHELOYAHOO || ___KOREATAIWANCHINA || WAVEB_US || HOPONE_US || IWEBGROUP_US || SPCS_US || GNAXNET_US || PSINET_US || OTHER_FOOTSTOOL
+meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN || DIRECTINFOSPHERE || DIRECTSONETDYN || DIRECTOCNDYN || DIRECTVECTANTDYN || DIRECTHI_HO || DIRECTUSENBROAD || DIRECTBBTEC || DIRECTINFOWEB || DIRECTDTI || DIRECTBIGLOBE || DIRECTALPHANET || DIRECTUNETSURF || DIRECTEDITNET || DIRECTDSNETWORKS || DIRECTGERAGERA || DIRECTGMOACCESS || DIRECTIIJ4U || DIRECTVIPLT || DIRECTVOICETOWN || DIRECTSST_BB || DIRECTASAHINET || DIRECTTCOMADSL || DIRECTXEXONNET || DIRECTBBEXCITE || DIRECTITSCOM || DIRECTSAINET_NET || DIRECTDORPHIN || DIRECTWILLCOM || DIRECTHYPERBOX || DIRECTINTERLINK || DIRECTLINKCLUB || DIRECTPLALA || DIRECTPOWEREDCOM || DIRECTARCSTAR || DIRECTINTERQ || DIRECTEACCESS || DIRECTCPI || DIRECTPROX || COMBZMAIL_JP || TOKU_NET || DIRECTSAKURAWEB || LOLIPOP || SOHO || CSIDENET || NICNAME || DATAHOTEL_JP || DIRECTCLARA || DIRECTSAVVIS || DIRECTATTGNS || DIRECTASIANETCOM || DIRECTSYSTEMDESIGN || DIRECTWAKWAK || DIRECTMEDIAWARS || DIRECTBITDRIVE || DIRECTXREA || DIRECTMEDEXCG || DIRECTADVANSCOPE || DIRECTDIGIROCK || DIRECTCOMMUFA || DIRECTEMOBILE || DIRECTKDDI || DIRECTSBIDC || DIRECTNTTMEDIAS ||DIRECTK_OPTICOM || DIRECTJCN || DIRECTDOMIRU ||FORGEDHELOYAHOO || ___KOREATAIWANCHINA || WAVEB_US || HOPONE_US || IWEBGROUP_US || SPCS_US || GNAXNET_US || PSINET_US || AKANOC_US || OTHER_FOOTSTOOL 
 
 # 
 # 
