@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1371 2010/03/03 19:26:58 yoh Exp $
+# $Id: user_prefs,v 1.1372 2010/03/04 21:47:28 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -4379,7 +4379,7 @@ score DCNTWKRCN 3.5
 # 
 # 222\.(6[4-9]|[78]\d|9[0-5]|12[89]|1[34578]\d|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7])
 
-replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3]|17[45])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|111\.1(?:7[6-9]|8[0-3])|112\.2(?:2[4-9]|[345]\d)|113\.(?:\d|1[2-5]|5[67]|6[4-9]|[789]\d|10\d|11[01]|24[89]|25[01])|114\.(?:5[45]|2(?:1[6-9]|2[0-3]|[45]\d))|115\.1(?:4[89]|5[0-3])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|6[0-3]|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:12[0-6]|14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|62|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-7]|7[6-9]|8\d|9[01]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|[23]\d|4[4-9]|5[0-6]|6[4-7]|7[0-5789]|8\d|9[01])|24[4-9]|25\d)|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[2-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|183\.(?:6[4-9]|7[01]|9[2-5])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|13\d|14[0-3]|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:119\.148\.1(?:6\d|7[0-5])|121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|122\.102\.(?:6[4-9]|[78]\d|9[0-5])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01]))|219\.235\.(?:\d|[1-5]\d|6[0-3])|220\.231\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3})
+replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3]|17[45])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|111\.1(?:7[6-9]|8[0-3])|112\.2(?:2[4-9]|[345]\d)|113\.(?:\d|1[2-5]|5[67]|6[4-9]|[789]\d|10\d|11[01]|24[89]|25[01])|114\.(?:5[45]|2(?:1[6-9]|2[0-3]|[45]\d))|115\.1(?:4[89]|5[0-3])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|6[0-3]|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:12[0-6]|14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|62|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-7]|7[6-9]|8\d|9[01]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|9[67]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|[23]\d|4[4-9]|5[0-6]|6[4-7]|7[0-5789]|8\d|9[01])|24[4-9]|25\d)|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[2-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|183\.(?:6[4-9]|7[01]|9[2-5])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|13\d|14[0-3]|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:119\.148\.1(?:6\d|7[0-5])|121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|122\.102\.(?:6[4-9]|[78]\d|9[0-5])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01]))|219\.235\.(?:\d|[1-5]\d|6[0-3])|220\.231\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3})
 
 header CNCGROUP X-Spam-Relays-Untrusted =~ /^\[ ip=<CNCGROUP_IPS> /
 describe CNCGROUP [CN]Japanese spammer's footstool: CNCGROUP
@@ -4404,7 +4404,7 @@ score WM_CNCGROUP_CN 1.5
 # 61.232.0.0 - 61.237.255.255
 # 222.32.0.0 - 222.63.255.255
 
-header CRTC X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:61\.23[2-7]|221\.17[2-5]|222\.(?:3[2-9]|[45]\d|6[0-3]))(?:\.\d{1,3}){2}|58\.83\.1(?:1[2-9]|2[0-7])\.\d{1,3}) /
+header CRTC X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:61\.23[2-7]|122\.(?:6[4-9]|[78]\d|9[0-5])|221\.17[2-5]|222\.(?:3[2-9]|[45]\d|6[0-3]))(?:\.\d{1,3}){2}|58\.83\.1(?:1[2-9]|2[0-7])\.\d{1,3}) /
 describe CRTC [CN]CHINA RAILWAY TELECOMMUNICATIONS CENTER
 score CRTC 1.5
 
@@ -6256,13 +6256,18 @@ header DIRECTDOMIRU X-Spam-Relays-Untrusted =~ /^\[ ip=180\.131\.(?:6[4-9]|[789]
 describe DIRECTDOMIRU directly received spam from CRUST co.,Ltd.
 score DIRECTDOMIRU 1.5
 
+header DIRECTMIRAI X-Spam-Relays-Untrusted =~ /^\[ ip=210\.172\.19[2-5]\.\d{1,3} /
+describe DIRECTMIRAI directly received spam from Mirai Communication Network Inc.
+score DIRECTMIRAI 1.5
+
+
 
 header DIRECTUNKNOWN X-Spam-Relays-Untrusted =~ /^\[ ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns= /
 describe DIRECTUNKNOWN directly received spam from suspicious dynamic IP
 score DIRECTUNKNOWN 0.3
 
 
-meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN || DIRECTINFOSPHERE || DIRECTSONETDYN || DIRECTOCNDYN || DIRECTVECTANTDYN || DIRECTHI_HO || DIRECTUSENBROAD || DIRECTBBTEC || DIRECTINFOWEB || DIRECTDTI || DIRECTBIGLOBE || DIRECTALPHANET || DIRECTUNETSURF || DIRECTEDITNET || DIRECTDSNETWORKS || DIRECTGERAGERA || DIRECTGMOACCESS || DIRECTIIJ4U || DIRECTVIPLT || DIRECTVOICETOWN || DIRECTSST_BB || DIRECTASAHINET || DIRECTTCOMADSL || DIRECTXEXONNET || DIRECTBBEXCITE || DIRECTITSCOM || DIRECTSAINET_NET || DIRECTDORPHIN || DIRECTWILLCOM || DIRECTHYPERBOX || DIRECTINTERLINK || DIRECTLINKCLUB || DIRECTPLALA || DIRECTPOWEREDCOM || DIRECTARCSTAR || DIRECTINTERQ || DIRECTEACCESS || DIRECTCPI || DIRECTPROX || COMBZMAIL_JP || TOKU_NET || DIRECTSAKURAWEB || LOLIPOP || SOHO || CSIDENET || NICNAME || DATAHOTEL_JP || DIRECTCLARA || DIRECTSAVVIS || DIRECTATTGNS || DIRECTASIANETCOM || DIRECTSYSTEMDESIGN || DIRECTWAKWAK || DIRECTMEDIAWARS || DIRECTBITDRIVE || DIRECTXREA || DIRECTMEDEXCG || DIRECTADVANSCOPE || DIRECTDIGIROCK || DIRECTCOMMUFA || DIRECTEMOBILE || DIRECTKDDI || DIRECTSBIDC || DIRECTNTTMEDIAS ||DIRECTK_OPTICOM || DIRECTJCN || DIRECTDOMIRU ||FORGEDHELOYAHOO || ___KOREATAIWANCHINA || WAVEB_US || HOPONE_US || IWEBGROUP_US || SPCS_US || GNAXNET_US || PSINET_US || AKANOC_US || OTHER_FOOTSTOOL 
+meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN || DIRECTINFOSPHERE || DIRECTSONETDYN || DIRECTOCNDYN || DIRECTVECTANTDYN || DIRECTHI_HO || DIRECTUSENBROAD || DIRECTBBTEC || DIRECTINFOWEB || DIRECTDTI || DIRECTBIGLOBE || DIRECTALPHANET || DIRECTUNETSURF || DIRECTEDITNET || DIRECTDSNETWORKS || DIRECTGERAGERA || DIRECTGMOACCESS || DIRECTIIJ4U || DIRECTVIPLT || DIRECTVOICETOWN || DIRECTSST_BB || DIRECTASAHINET || DIRECTTCOMADSL || DIRECTXEXONNET || DIRECTBBEXCITE || DIRECTITSCOM || DIRECTSAINET_NET || DIRECTDORPHIN || DIRECTWILLCOM || DIRECTHYPERBOX || DIRECTINTERLINK || DIRECTLINKCLUB || DIRECTPLALA || DIRECTPOWEREDCOM || DIRECTARCSTAR || DIRECTINTERQ || DIRECTEACCESS || DIRECTCPI || DIRECTPROX || COMBZMAIL_JP || TOKU_NET || DIRECTSAKURAWEB || LOLIPOP || SOHO || CSIDENET || NICNAME || DATAHOTEL_JP || DIRECTCLARA || DIRECTSAVVIS || DIRECTATTGNS || DIRECTASIANETCOM || DIRECTSYSTEMDESIGN || DIRECTWAKWAK || DIRECTMEDIAWARS || DIRECTBITDRIVE || DIRECTXREA || DIRECTMEDEXCG || DIRECTADVANSCOPE || DIRECTDIGIROCK || DIRECTCOMMUFA || DIRECTEMOBILE || DIRECTKDDI || DIRECTSBIDC || DIRECTNTTMEDIAS ||DIRECTK_OPTICOM || DIRECTJCN || DIRECTDOMIRU || DIRECTMIRAI ||FORGEDHELOYAHOO || ___KOREATAIWANCHINA || WAVEB_US || HOPONE_US || IWEBGROUP_US || SPCS_US || GNAXNET_US || PSINET_US || AKANOC_US || OTHER_FOOTSTOOL 
 
 # 
 # 
