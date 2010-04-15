@@ -8,7 +8,7 @@
 # for details of what can be tweaked.
 # 
 # ~/.spamassassin/user_prefs
-# $Id: user_prefs,v 1.1391 2010/04/13 09:01:15 yoh Exp $
+# $Id: user_prefs,v 1.1393 2010/04/14 11:12:41 yoh Exp $
 # 
 # http://tlec.linux.or.jp/docs/user_prefs
 # Original source from:
@@ -164,9 +164,13 @@ trusted_networks 124.83.168.15/32 124.83.168.16/29 124.83.168.24/30 124.83.168.2
 # Bayes depends on learning.
 # So, autolearning too much spam makes false positive.
 
-score BAYES_80 4.0
-score BAYES_95 5.0
-score BAYES_99 5.5
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
+
+score BAYES_80 3.0
+score BAYES_95 4.0
+score BAYES_99 4.5
 
 score BAYES_00 0 0 -1.665 -6.0
 score BAYES_05 0 0 -0.925 -4.0
@@ -346,9 +350,13 @@ score XTRAXMAILER  22.0
 # score SUBJECT_ENCODED_TWICE 0.1
 
 score UNPARSEABLE_RELAY 0.5
+
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta UNPARSEABLERELAY99 UNPARSEABLE_RELAY && BAYES_99
 describe UNPARSEABLERELAY99 UNPARSEABLE_RELAY && BAYES_99
-score UNPARSEABLERELAY99 3.5
+score UNPARSEABLERELAY99 1.5
 
 # score X_MAILER_SPAM  3.0
 
@@ -736,16 +744,23 @@ meta PASTIMG DATE_IN_PAST_06_12 && ___HTMLIMG && BAYES_99
 score PASTIMG 5.0
 
 # meta HTMLIMG_FRGDHELO (FORGED_RCVD_HELO || RCVD_NUMERIC_HELO || RCVD_NUMERIC_HELO2)&& ___HTMLIMG && BAYES_99
+
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta HTMLIMG_FRGDHELO (RCVD_NUMERIC_HELO || RCVD_NUMERIC_HELO2)&& ___HTMLIMG && BAYES_99
 describe HTMLIMG_FRGDHELO FORGED_RCVD_HELO && HTML_IMAGE_ONLY_??
-score HTMLIMG_FRGDHELO 5.5
+score HTMLIMG_FRGDHELO 1.5
 
 rawbody HTML_FONT_SIZE_TINY2 /<FONT (face=\w+ |)size=\"{0,1}[0-3]\"{0,1}(>| )/i
 describe HTML_FONT_SIZE_TINY2 <FONT face=Arial size=2>
 score HTML_FONT_SIZE_TINY2 0.5
 
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta IMGONLYHTML1 HTML_FONT_SIZE_TINY2 && ___HTMLIMG && BAYES_99
-score IMGONLYHTML1 5.0
+score IMGONLYHTML1 1.0
 
 rawbody ___OBSCURED_TEXT1 /^(,|\!)($| \w)/
 rawbody ___OBSCURED_TEXT2 /\w (,|\!) \w/
@@ -792,8 +807,11 @@ rawbody FLOAT_A_HREF /^<A href=\"http:\/\/(www\.){0,1}\w+\.(com|net)">\w+<span s
 describe FLOAT_A_HREF <A href="http://www.h75h.net">Vi<span style="border: 0px; float
 score FLOAT_A_HREF 2.0
 
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta MULTIFLOAT99 MULTIPART_ALTERNATIVE && OBFUSCATING_FLOAT && BAYES_99
-score MULTIFLOAT99 3.5
+score MULTIFLOAT99 1.5
 
 meta OBFUSGEOFLOAT OBFUSCATING_FLOAT && (FLOATGEOCITIES || FLOAT_A_HREF)
 score OBFUSGEOFLOAT 3.5
@@ -1370,8 +1388,11 @@ score FAKEDWORD_BQONE 0.5
 
 full MULTIPART_EMPTY /(\r|\n){2}\-{6}=_NextPart_\d{3}_\d{4}_\w{8}\.\w{8}(\r|\n)Content\-Type: multipart\/alternative\;(\r|\n)\tboundary=\"\-{4}=_NextPart_\d{3}_\d{4}_\w{8}\.\w{8}\"(\r|\n){2,}\-{6}=_NextPart_\d{3}_\d{4}_\w{8}\.\w{8}(\r|\n)Content\-Type: text\/plain\;(\r|\n)\tcharset=\"Windows-1252\"(\r|\n)Content-Transfer-Encoding: quoted-printable(\r|\n){2,}/
 
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta MULTIEMPTY99 MULTIPART_EMPTY && BAYES_99
-score MULTIEMPTY99 5.0
+score MULTIEMPTY99 3.0
 
 meta MULTIEMPTYFUTURE DATE_IN_FUTURE_06_12 && MULTIPART_EMPTY
 score MULTIEMPTYFUTURE 3.5
@@ -2393,9 +2414,13 @@ meta RAZORPYZOR RAZOR2_CF_RANGE_51_100 && PYZOR_CHECK && BAYES_99
 describe RAZORPYZOR RAZOR2_CF_RANGE_51_100 && PYZOR_CHECK && BAYES_99
 score RAZORPYZOR 10.0
 
+
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta RAZOR99 RAZOR2_CF_RANGE_51_100 && BAYES_99
 describe RAZOR99 RAZOR2_CF_RANGE_51_100 && BAYES_99
-score RAZOR99 8.5
+score RAZOR99 1.5
 
 # 2009.09.29 by [yoh]
 meta DYN_RAZOR RAZOR2_CF_RANGE_51_100 && ___DYNAMICIP
@@ -2408,9 +2433,12 @@ score DYN_RAZOR 3.5
 score PYZOR_CHECK 1.5
 
 
+# Bayes engine needs frequently maintenance and balanced corpus.
+# So I decided setting low score.
+# 2010.04.14 by [yoh]
 meta PYZOR99 PYZOR_CHECK && BAYES_99
 describe PYZOR99 PYZOR_CHECK && BAYES_99
-score PYZOR99 5.5
+score PYZOR99 1.5
 
 # 2009.09.29 by [yoh]
 meta DYN_PYZOR PYZOR_CHECK && ___DYNAMICIP
@@ -2530,11 +2558,11 @@ score       X_KOREAN_RELAY      0.1
 
 meta XKOREAN99 X_KOREAN_RELAY && BAYES_99
 describe XKOREAN99 X_KOREAN_RELAY && BAYES_99
-score XKOREAN99 2.0
+score XKOREAN99 3.0
 
 meta XKOREANJP X_KOREAN_RELAY && (ISO2022JP_BODY || SJIS_BODY)
 describe XKOREANJP X_KOREAN_RELAY && (ISO2022JP_BODY || SJIS_BODY)
-score XKOREANJP 1.0
+score XKOREANJP 2.0
 
 # block.blars.org is not reliable. see http://check.jippg.org/rblchk.cgi
 # 
@@ -6229,7 +6257,7 @@ header DIRECTXREA X-Spam-Relays-Untrusted =~ /^\[ ip=(125\.53\.25\.(\d|[1-5]\d|6
 describe DIRECTXREA directly received spam from XREA(DIGIROCK,INC.)
 score DIRECTXREA 1.5
 
-header DIRECTMEDEXCG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.166\.235\.(?:1[0-24-9]|[23]\d|4[013]|5[4-7]|61|7[6-9]|8[01])|211\.13\.(?:204\.65|217\.133)) /
+header DIRECTMEDEXCG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.166\.235\.(?:1[0-24-9]|[23]\d|4[013]|5[4-7]|61|7[6-9]|8[01])|211\.13\.(?:204\.65|217\.133|221\.\d{1,3})) /
 describe DIRECTMEDEXCG directly received spam from Media Exchange Co., Inc.
 score DIRECTMEDEXCG 1.5
 
