@@ -10,7 +10,7 @@
 # ~/.spamassassin/user_prefs
 # $Id: user_prefs,v 1.1414 2010/05/04 08:42:30 yoh Exp $
 # 
-# http://tlec.linux.or.jp/docs/user_prefs
+# http://www.flcl.org/~yoh/user_prefs
 # Original source from:
 # http://www.linux.or.jp/~ukai/l-u-spam/local.cf
 # modified by MATSUDA Yoh-ichi [yoh] (yoh@flcl.org)
@@ -32,14 +32,9 @@
 # I hope happy E-mail world.
 # 
 # Notice for Japanese natives:
-# You have to read 
-# http://tlec.linux.or.jp/docs/spamassassin_setup_example.html
+# You should read 
+# http://spamassassin.jp/modules/xhnewbb/viewtopic.php?topic_id=64
 # before using this file.
-# 
-# [News for Japanese natives]
-# If you are Bayes filter beginner and you want sample spam, I made
-# a spams archive files for you:
-# http://www.flcl.org/~yoh/spam/jp/
 # 
 # _._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._
 # If you have any problem, questions or suggestions, email to: yoh@flcl.org
@@ -57,7 +52,7 @@
 # 
 #            How to use this file:
 # 
-# 1. wget -O ~/.spamassassin/user_prefs http://tlec.linux.or.jp/docs/user_prefs
+# 1. wget -O ~/.spamassassin/user_prefs http://www.flcl.org/~yoh/user_prefs
 # 
 # 2. write below rules in your ~/.spamassassin/private_prefs:
 # 
@@ -72,7 +67,7 @@
 # for more details, see http://spamassassin.jp/modules/xhnewbb/viewtopic.php?topic_id=9&post_id=47#forumpost47
 # 
 # sample private_prefs is available at
-# http://tlec.linux.or.jp/docs/private_prefs
+# http://www.flcl.org/~yoh/private_prefs
 # 
 # <<< ---NOTE---  ---NOTE---  ---NOTE---  ---NOTE--- >>>
 # 
@@ -2312,7 +2307,7 @@ score JPPORNSCAMFROM 7.0
 # combzmail\.jp|
 # |[a-z0-9]+
 
-rawbody JPSCAMURI /http:\/\/[a-z0-9-.]*(europe\.webmatrixhosting\.net|gogoway\.orgdns\.org|spread\.or\.tv|maga\.readymade\.jp|value\.webcordial\.com|pika\.tv|19191969\.com|093ana\.com|cam-cam\.net|candypop\.tv|deaiking\.com|milkymail\.net|purelove888\.com|secretoflove\.net|l1l9\.com|otegaruhp\.com\/cobra\/html\/hirokopr|online-jp\.net|outside-lover\.com|blue-ocean2004\.com|naturalget\.com|scoop-on\.(com|jp)|1092\.cn|1092\.gs|19190930\.com|i1i9\.net|l1l9\.com|yoso-zu\.com|rose-kiss\.com|members\.fortunecity\.com|up7\.cc|eyc\.jp|zl8\.jp|61\.96\.62\.167|pure1151\.com|bblive\.tv|ai-angel\.net|soku-aeru\.net|nightpita\.com|dejavu\.to|tada\.ph|peachat\.net|1919japan\.com|to-roku\.com|ceaw\.jp|59862777\.com|orange-rocket\.com|prin\.to|lolo\.ojiji\.net|ana093\.cc|eroero999\.com|love4deai\.com|kicks-ass\.net|is-a-geek\.org|lovemint\.net|e-hot-news\.jp|getget\.oops\.jp|upper\.jp|xx-mail\.jp|px\.a8\.net|pc\.lovefree\.tv|pure1107\.net|ljart\.net|(0-9a-z)+\.ifdef\.jp|(free24mail|365hdate)\.fc2\.com|odaiba-bbs\.jp|ai51\.e-city\.tv|bokumetu\.com|kissmi\.jp|party-jamjam\.org|hosting-geomax\.jp|sf-spot\.com|big-888\.com|o-oku-channel\.com|soresoreweb\.com|geocities\.jp\/(sayacchimail|poophy15)|websamba\.com|members\.lycos\.co\.uk\/cadlove|[a-z0-9-]+\.(tripod\.com|host\.sk)(\/top|\/main){0,1}|xid-love\.netfirms\.com|club-classico\.com|e-ezweb\.jp|rakuen-dx\.com|lover-kiss\.com|cross\.ne\.jp|j-sine\.com|swht\.jp|doxlive\.com|perfectharmony-ms\.org|1251\.us|servecounterstrike\.com|[a-z_-]*deai[a-z_-]*\.[a-z0-9-]+\.(jp|com|net|tv|sk|cn)|61\.197\.117\.99|redmax\.jp|morachao\.com|1251\.cc|formzu\.net|members\.ocry\.com|cbat\.page\.ne\.jp|889860\.com|89balls\.com|filltheblank\.com|members2\.jcom\.home\.ne\.jp\/3385927201|aru-aru\.jpn\.org|otz5678\.hn\.org|tinyurl\.com|choco2\.jp|buisinespp\.dyndns\.dk|abcwill\.dyn\.dhs\.org|yudoweb1\.freewebsitehosting\.com|umimono.no.sapo.pt|656566\.com|sss-japan\.co\.jp|home\.doramail\.com|www40\.brinkster\.com|shameme\.host\.sk|autocall\.jp|dm-mail\.net|www18\.ocn\.ne\.jp\/\~kio-pack|mo-v\.jp|www\.tactnet\.co\.jp|hiromirror-desighner\.net|fff\.lir\.dk|s-s\.kyed\.com|brandwholesaler\.com|nihon-cash\.com|dogyman\.com|yellowsanta\.jp|bottom-up1\.com|hime\.ontheweb\.nu|free-xx\.com|address-bank\.homeip\.net|agk-777\.jp|shotgunmarriage\.net|(minami|farewell|alstroemeria)\.dynu\.ca|kyousai\.squares\.net|gigamerimp\.net|boorats19\.info|sunnyday\.jp|life-line\.mods\.jp|lucavenus\.jp|e-shops\.jp|fox99\.staticcling\.org|e-net\.velvet\.jp|access\.main\.jp|webclick\.chu\.jp|www\.infotop\.jp|www\.mailbank\.biz|ladymaid\.net|new-homebiz\.com|777navi\.cc|riajet\.com|af-sv\.com|yy-life\.com|1151bbs\.jp|gambletips\.net|oogachi-t\.com|keiba-de-myhome-get\.seesaa\.net|pachipuro-m\.com|sugowaza\.jp|free-book\.jp|ippatu\.com|.\$B%a%k%:.\(B\.jp|data-jobbank\.from\.tv|deairooms\.com|1-coin\.jp|combzmail\.jp|insiderscoachingclub\.com|genkiclub\.net|viviani\.jp|sakakibara\.zz\.tc|miss-me\.findyou2\.net|at-soho\.rdy\.jp|pavbq\.com|kagurazaka\.biz|sc37\.vczln\.com|snsns\.my-sv\.net|e-bukken\.co\.jp|ji06\.gtwd\.biz|ktaisearch\.com|shop\.shenlihang\.info|baojpp\.com|sakuradvd\.com|oshirase-jp\.com|genkiclub1470\.com|shoppingjp\.net|rdnw\.net|i-ktai\.com|rkg\.(?:jp|cc)|megami\.hiho\.jp|infodirect\.bz|aboy\.jp|sakuses2012\.web\.fc2\.com|123direct\.info|freesianet\.co\.jp)\/{0,1}/
+rawbody JPSCAMURI /http:\/\/[a-z0-9-.]*(europe\.webmatrixhosting\.net|gogoway\.orgdns\.org|spread\.or\.tv|maga\.readymade\.jp|value\.webcordial\.com|pika\.tv|19191969\.com|093ana\.com|cam-cam\.net|candypop\.tv|deaiking\.com|milkymail\.net|purelove888\.com|secretoflove\.net|l1l9\.com|otegaruhp\.com\/cobra\/html\/hirokopr|online-jp\.net|outside-lover\.com|blue-ocean2004\.com|naturalget\.com|scoop-on\.(com|jp)|1092\.cn|1092\.gs|19190930\.com|i1i9\.net|l1l9\.com|yoso-zu\.com|rose-kiss\.com|members\.fortunecity\.com|up7\.cc|eyc\.jp|zl8\.jp|61\.96\.62\.167|pure1151\.com|bblive\.tv|ai-angel\.net|soku-aeru\.net|nightpita\.com|dejavu\.to|tada\.ph|peachat\.net|1919japan\.com|to-roku\.com|ceaw\.jp|59862777\.com|orange-rocket\.com|prin\.to|lolo\.ojiji\.net|ana093\.cc|eroero999\.com|love4deai\.com|kicks-ass\.net|is-a-geek\.org|lovemint\.net|e-hot-news\.jp|getget\.oops\.jp|upper\.jp|xx-mail\.jp|px\.a8\.net|pc\.lovefree\.tv|pure1107\.net|ljart\.net|(0-9a-z)+\.ifdef\.jp|(free24mail|365hdate)\.fc2\.com|odaiba-bbs\.jp|ai51\.e-city\.tv|bokumetu\.com|kissmi\.jp|party-jamjam\.org|hosting-geomax\.jp|sf-spot\.com|big-888\.com|o-oku-channel\.com|soresoreweb\.com|geocities\.jp\/(sayacchimail|poophy15)|websamba\.com|members\.lycos\.co\.uk\/cadlove|[a-z0-9-]+\.(tripod\.com|host\.sk)(\/top|\/main){0,1}|xid-love\.netfirms\.com|club-classico\.com|e-ezweb\.jp|rakuen-dx\.com|lover-kiss\.com|cross\.ne\.jp|j-sine\.com|swht\.jp|doxlive\.com|perfectharmony-ms\.org|1251\.us|servecounterstrike\.com|[a-z_-]*deai[a-z_-]*\.[a-z0-9-]+\.(jp|com|net|tv|sk|cn)|61\.197\.117\.99|redmax\.jp|morachao\.com|1251\.cc|formzu\.net|members\.ocry\.com|cbat\.page\.ne\.jp|889860\.com|89balls\.com|filltheblank\.com|members2\.jcom\.home\.ne\.jp\/3385927201|aru-aru\.jpn\.org|otz5678\.hn\.org|tinyurl\.com|choco2\.jp|buisinespp\.dyndns\.dk|abcwill\.dyn\.dhs\.org|yudoweb1\.freewebsitehosting\.com|umimono.no.sapo.pt|656566\.com|sss-japan\.co\.jp|home\.doramail\.com|www40\.brinkster\.com|shameme\.host\.sk|autocall\.jp|dm-mail\.net|www18\.ocn\.ne\.jp\/\~kio-pack|mo-v\.jp|www\.tactnet\.co\.jp|hiromirror-desighner\.net|fff\.lir\.dk|s-s\.kyed\.com|brandwholesaler\.com|nihon-cash\.com|dogyman\.com|yellowsanta\.jp|bottom-up1\.com|hime\.ontheweb\.nu|free-xx\.com|address-bank\.homeip\.net|agk-777\.jp|shotgunmarriage\.net|(minami|farewell|alstroemeria)\.dynu\.ca|kyousai\.squares\.net|gigamerimp\.net|boorats19\.info|sunnyday\.jp|life-line\.mods\.jp|lucavenus\.jp|e-shops\.jp|fox99\.staticcling\.org|e-net\.velvet\.jp|access\.main\.jp|webclick\.chu\.jp|www\.infotop\.jp|www\.mailbank\.biz|ladymaid\.net|new-homebiz\.com|777navi\.cc|riajet\.com|af-sv\.com|yy-life\.com|1151bbs\.jp|gambletips\.net|oogachi-t\.com|keiba-de-myhome-get\.seesaa\.net|pachipuro-m\.com|sugowaza\.jp|free-book\.jp|ippatu\.com|.\$B%a%k%:.\(B\.jp|data-jobbank\.from\.tv|deairooms\.com|1-coin\.jp|combzmail\.jp|insiderscoachingclub\.com|genkiclub\.net|viviani\.jp|sakakibara\.zz\.tc|miss-me\.findyou2\.net|at-soho\.rdy\.jp|pavbq\.com|kagurazaka\.biz|sc37\.vczln\.com|snsns\.my-sv\.net|e-bukken\.co\.jp|ji06\.gtwd\.biz|ktaisearch\.com|shop\.shenlihang\.info|baojpp\.com|sakuradvd\.com|oshirase-jp\.com|genkiclub1470\.com|shoppingjp\.net|rdnw\.net|i-ktai\.com|rkg\.(?:jp|cc)|megami\.hiho\.jp|infodirect\.bz|aboy\.jp|sakuses2012\.web\.fc2\.com|123direct\.info|freesianet\.co\.jp|sisoras\.info|fx-worldalliance\.com|w-net\.cc|yutori-bank\.com|jpn\.org|f\.msgs\.jp)\/{0,1}/
 describe JPSCAMURI Japanese scam site
 score JPSCAMURI 3.5
 
@@ -3206,6 +3201,17 @@ meta DYN_XKR X_KOREAN_RELAY && ___DYNAMICIP
 score DYN_XKR 3.5
 
 
+# 2010.06.25 by [yoh]
+meta DYN_CBL RCVD_IN_CBL && ___DYNAMICIP 
+score DYN_CBL 3.5
+
+meta DYN_RBLJP RCVD_IN_SHORT_RBL_JP && ___DYNAMICIP 
+score DYN_RBLJP 3.5
+
+meta DYN_BRBL RCVD_IN_BRBL_LASTEXT && ___DYNAMICIP 
+score DYN_BRBL 3.5
+
+
 # 
 # 
 # New rules from version 3.1.0
@@ -3725,7 +3731,10 @@ score DATAHOTEL_JP 1.5
 # 211.105.0.0 - 211.106.255.255
 # 210.92.0.0 - 210.92.63.255
 # header KOREATELECOM X-Spam-Relays-Untrusted =~ /ip=((59\.(\d|[12]\d|3[0-3])|61\.(7[2-9]|8[0-5])|115\.(1[6-9]|2[0-3])|118\.(3[2-9]|[45]\d|6[0-3])|121\.1(2[89]|[3-8]\d|9[01])|125\.1(2[89]|[345]\d)|128\.134|210\.(9[19]|105|113|123|183|22[23])|168\.126|211\.([34]8|19[2-9]|5[145]|10[567]|2(1[6-9]|2\d|3[01]))|218\.1(4[4-9]|5\d)|220\.([78]\d|9[0-5]|11[6-9]|12[0-7])|221\.1(4[4-9]|5\d|6[0-8])|222\.(9[6-9]|1([01]\d|2[012])))(\.\d{1,3}){2}|(203\.234\.(1(2[89]|[3-9]\d)|2([0-4]\d|5[0-5]))|203\.236\.(4[4-9]|[5-9]\d|1[01]\d|12[0-7])|203\.251\.(\d|\d\d|1[0-8]\d|19[01])|210\.92\.(\d|[1-5]\d|6[0-3])|(203\.2(28|32)|210\.(101|126|217))\.(\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header KOREATELECOM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.(?:\d|[12]\d|3[0-3])|61\.(?:7[2-9]|8[0-5])|112\.1(?:[678]\d|9[01])|115\.(?:1[6-9]|2[0-3])|118\.(?:3[2-9]|[45]\d|6[0-3])|119\.(?:19[2-9]|2[01]\d|22[0-3])|121\.1(?:2[89]|[3-8]\d|9[01])|125\.1(?:2[89]|[345]\d)|128\.134|168\.126|183\.(?:9[6-9]|1[01]\d|12[0-7])|210\.(?:9[19]|105|113|123|183|22[23])|211\.(?:[34]8|19[2-9]|5[145]|10[567]|2(?:1[6-9]|2\d|3[01]))|218\.1(?:4[4-9]|5\d)|220\.(?:[78]\d|9[0-5]|11[6-9]|12[0-7])|221\.1(?:4[4-9]|5\d|6[0-8])|222\.(?:9[6-9]|1(?:[01]\d|2[012])))(?:\.\d{1,3}){2}|(?:203\.234\.(?:1(?:2[89]|[3-9]\d)|2(?:[0-4]\d|5[0-5]))|203\.236\.(?:4[4-9]|[5-9]\d|1[01]\d|12[0-7])|203\.251\.(?:\d|\d\d|1[0-8]\d|19[01])|210\.92\.(?:\d|[1-5]\d|6[0-3])|(?:203\.2(?:28|32)|210\.(?:101|126|217))\.(?:\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) /
+
+# PUBNET-KR
+# Korea Telecom-PUBNET
+header KOREATELECOM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.(?:\d|[12]\d|3[0-3])|61\.(?:7[2-9]|8[0-5])|112\.1(?:[678]\d|9[01])|115\.(?:1[6-9]|2[0-3])|118\.(?:3[2-9]|[45]\d|6[0-3])|119\.(?:19[2-9]|2[01]\d|22[0-3])|121\.1(?:2[89]|[3-8]\d|9[01])|125\.1(?:2[89]|[345]\d)|128\.134|168\.126|175\.(?:19[2-9]|2\d\d)|183\.(?:9[6-9]|1[01]\d|12[0-7])|210\.(?:9[19]|105|113|123|183|22[23])|211\.(?:34|[34]8|19[2-9]|5[14-7]|10[567]|18[45]|2(?:1[6-9]|2\d|3[01]))|218\.1(?:4[4-9]|5\d)|220\.(?:[78]\d|9[0-5]|11[6-9]|12[0-7])|221\.1(?:4[4-9]|5\d|6[0-8])|222\.(?:9[6-9]|1(?:[01]\d|2[012])))(?:\.\d{1,3}){2}|(?:203\.234\.(?:1(?:2[89]|[3-9]\d)|2(?:[0-4]\d|5[0-5]))|203\.236\.(?:4[4-9]|[5-9]\d|1[01]\d|12[0-7])|203\.251\.(?:\d|\d\d|1[0-8]\d|19[01])|210\.92\.(?:\d|[1-5]\d|6[0-3])|211\.33\.(?:12[89]|1[3-9]\d|2\d\d)|(?:203\.2(?:28|32)|210\.(?:9[56]|10[14]|126|217))\.(?:\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) /
 describe KOREATELECOM [KR]Korea Telecom
 score KOREATELECOM 1.5
 
@@ -3768,7 +3777,7 @@ score KOREATELECOM 1.5
 # 211.244.0.0 - 211.244.255.255
 # 211.33.0.0 - 211.33.127.255
 # header HANAROTELECOM X-Spam-Relays-Untrusted =~ /ip=((58\.(12[0-7]|2(2[4-9]|3\d))|61\.(9[89]|105|25[35])|121\.12[45]|123\.21[2-5]|124\.111|211\.(49|5[289]|108|117|17[6-9]|20\d|21[0-5]|24[345])|218\.(3[89]|4[89]|5[0-5]|23[2-9])|219\.(24[0189]|25[0145])|221\.1(3[89]|4[0-3])|222\.23[2-9])(\.\d{1,3}){2}|(61\.254\.(\d|[1-9]\d|1[01]\d|12[0-7]|1[6-9]\d|2\d\d)|211\.33\.(\d|\d\d|1[01]\d|12[0-7])|211\.44\.(1[5-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-3])|211\.52\.1(2[89]|3\d|4[0-3]))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header HANAROTELECOM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:12[0-7]|2(?:2[4-9]|3\d))|61\.(?:9[89]|105|25[35])|110\.(?:[89]|1[0-5])|116\.12[0-7]|121\.12[45]|123\.21[2-5]|124\.111|175\.1(?:1[2-9]|2[0-7])|211\.(?:49|5[289]|108|117|17[6-9]|20\d|21[0-5]|24[345])|218\.(?:3[89]|4[89]|5[0-5]|23[2-9])|219\.(?:24[0189]|25[0145])|221\.1(?:3[89]|4[0-3])|222\.23[2-9])(?:\.\d{1,3}){2}|(?:61\.254\.(?:\d|\d\d|1[01]\d|12[0-7]|1[6-9]\d|2\d\d)|211\.33\.(?:\d|\d\d|1[01]\d|12[0-7])|211\.44\.(?:1[5-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-3])|211\.52\.1(?:2[89]|3\d|4[0-3]))\.\d{1,3}) /
+header HANAROTELECOM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:12[0-7]|2(?:2[4-9]|3\d))|61\.(?:9[89]|105|25[35])|110\.(?:[89]|1[0-5])|114\.20[0-7]|116\.12[0-7]|118\.2(?:1[6-9]|2[0-3])|121\.12[45]|123\.21[2-5]|12[34]\.111|175\.1(?:1[2-9]|2[0-7])|180\.(?:6[4-9]|7[01])|211\.(?:49|5[289]|108|117|17[6-9]|20\d|21[0-5]|24[345])|218\.(?:3[89]|4[89]|5[0-5]|23[2-9])|219\.(?:24[0189]|25[0145])|221\.1(?:3[89]|4[0-3])|222\.23[2-9])(?:\.\d{1,3}){2}|(?:61\.254\.(?:\d|\d\d|1[01]\d|12[0-7]|1[6-9]\d|2\d\d)|211\.33\.(?:\d|\d\d|1[01]\d|12[0-7])|211\.44\.(?:1[5-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-3])|211\.52\.1(?:2[89]|3\d|4[0-3]))\.\d{1,3}) /
 describe HANAROTELECOM [KR]Hanaro Telecom, Inc.(also AKA HANANET)
 score HANAROTELECOM 1.5
 
@@ -3781,9 +3790,10 @@ score HANAROTELECOM 1.5
 # header ELIMNET Received =~ /from .+(211\.36\.([0-9]|[1-5][0-9]|6[0-3])\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(211\.240\.60|211\.52\.113)\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))/
 # header ELIMNET X-Spam-Relays-Untrusted =~ /ip=(211\.36\.([0-9]|[1-5][0-9]|6[0-3])\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(211\.240\.60|211\.52\.113)\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])) rdns= .+ident= envfrom= intl=0 .+auth= /
 # header ELIMNET X-Spam-Relays-Untrusted =~ /ip=211\.(36\.([0-9]|[1-5][0-9]|6[0-3])|52\.(6[4-9]|[7-9][0-9]|1[01][0-9]|12[0-7])|174\.(12[89]|1[3-9][0-9]|2[0-4][0-9]|25[0-5])|240\.([0-9]|[1-9][0-9]|1[01][0-9]|12[0-7]))\.[0-9]{1,3} rdns= [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header ELIMNET X-Spam-Relays-Untrusted =~ /ip=(210\.219\.242\.\d{1,3}|211\.(36\.(\d|[1-5]\d|6[0-3])|52\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])|112\.(\d|[1-5]\d|6[0-3])|174\.(12[89]|1[3-9]\d|2\d\d)|240\.(\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) rdns= [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header ELIMNET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.219\.(?:19[2-9]|2\d\d)\.\d{1,3}|211\.(?:36\.(?:\d|[1-5]\d|6[0-3])|52\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|112\.(?:\d|[1-5]\d|6[0-3])|174\.(?:12[89]|1[3-9]\d|2\d\d)|210\.181\.2(?:2[4-9]|[345]\d)|211\.174\.(?:12[89]|1[3-9]\d|2\d\d)|240\.(?:\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3}) /
+header ELIMNET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.181\.2(?:2[4-9]|[345]\d)|210\.2(?:19|20)\.(?:19[2-9]|2\d\d)|211\.(?:36\.(?:\d|[1-5]\d|6[0-3])|52\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|112\.(?:\d|[1-5]\d|6[0-3])|174\.(?:12[89]|1[3-9]\d|2\d\d)|240\.(?:\d|\d\d|1[01]\d|12[0-7])))\.\d{1,3} /
 describe ELIMNET [KR]ELIMNET-IDC
-score ELIMNET 1.0
+score ELIMNET 1.5
 
 # 220.230.0.0 - 220.230.255.255
 # 59.150.0.0 - 59.150.255.255
@@ -3796,7 +3806,8 @@ score ELIMNET 1.0
 # header DREAMX X-Spam-Relays-Untrusted =~ /ip=(220\.230|59\.150|125\.57|211\.1(75|83))(\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])){2,2} rdns= .+ident= envfrom= intl=0 .+auth= /
 # 211.247.128.0 - 211.247.255.255
 # 61.103.0.0 - 61.103.255.255
-header DREAMX X-Spam-Relays-Untrusted =~ /ip=((220\.230|59\.150|61\.103|125\.57|211\.1(75|83))(\.\d{1,3}){2}|211\.(61|247)\.(12[89]|1[3-9]\d|2[0-4]\d|25[0-5])\.\d{1,3}) .+ ident= envfrom= intl=0 [^\[\]]+auth= /
+# header DREAMX X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:220\.230|59\.150|61\.103|125\.57|211\.1(?:75|83))(?:\.\d{1,3}){2}|(?:61\.96|211\.(?:61|247))\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+header DREAMX X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:220\.230|59\.150|61\.103|125\.57|211\.1(?:75|83))(?:\.\d{1,3}){2}|(?:(?:61\.96|211\.(?:61|247))\.(?:12[89]|1[3-9]\d|2\d\d)|211\.242\.(?:19[2-9]|2\d\d))\.\d{1,3}) /
 describe DREAMX [KR]DREAMLINE CO.
 score DREAMX 1.5
 
@@ -3816,9 +3827,10 @@ score DREAMX 1.5
 # header SHINBIRO X-Spam-Relays-Untrusted =~ /ip=((58\.180|61\.11[01]|211\.19[01]|61\.248)(\.\d{1,3}){2}|(61\.249\.(\d|[1-9]\d|1\d\d|2[0-3]\d|24[0-6])|203\.251\.(19[2-9]|2\d\d)|210\.111\.(\d|\d\d|1[01]\d|12[0-7])|210\.114\.2([234]\d|50)|210\.127\.2(0[4-9]|[1-5]\d)|(203\.240|211\.113)\.(12[89]|1[3-9]\d|2\d\d))\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 
 # 211.61.64.0 - 211.61.127.255
-header SHINBIRO X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.180|61\.11[01]|211\.19[01]|61\.248)(?:\.\d{1,3}){2}|(?:61\.249\.(?:\d|[1-9]\d|1\d\d|2[0-3]\d|24[0-6])|203\.251\.(?:19[2-9]|2\d\d)|210\.111\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.114\.2(?:[234]\d|50)|210\.127\.2(?:0[4-9]|[1-5]\d)|211\.61\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|(?:203\.240|211\.113)\.(?:12[89]|1[3-9]\d|2\d\d))\.\d{1,3}) /
+# header SHINBIRO X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.180|61\.11[01]|211\.19[01]|61\.248)(?:\.\d{1,3}){2}|(?:61\.249\.(?:\d|[1-9]\d|1\d\d|2[0-3]\d|24[0-6])|203\.251\.(?:19[2-9]|2\d\d)|210\.111\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.114\.2(?:[234]\d|50)|210\.127\.2(?:0[4-9]|[1-5]\d)|211\.61\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|(?:203\.240|211\.113)\.(?:12[89]|1[3-9]\d|2\d\d))\.\d{1,3}) /
+header SHINBIRO X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.180|61\.11[01]|211\.19[01]|61\.248)(?:\.\d{1,3}){2}|(?:61\.249\.(?:\d|[1-9]\d|1\d\d|2[0-3]\d|24[0-6])|113\.130\.(?:6[4-9]|[78]\d|9[0-5])|203\.228\.(?:12[89]|1[3-9]\d|2\d\d)|203\.251\.(?:19[2-9]|2\d\d)|210\.111\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.114\.(?:12[89]|1[3-9]\d|2\d\d)|210\.127\.2(?:0[4-9]|[1-5]\d)|211\.61\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|(?:203\.240|211\.113)\.(?:12[89]|1[3-9]\d|2\d\d))\.\d{1,3}) /
 describe SHINBIRO [KR]ONSE Telecom Co.
-score SHINBIRO 1.0
+score SHINBIRO 1.5
 
 
 # 219.252.0.0-219.253.255.255
@@ -3829,7 +3841,7 @@ score SHINBIRO 1.0
 # 124.0.0.0 - 124.1.255.255
 # 61.254.128.0 - 61.254.159.255
 # header SKNETWORKS X-Spam-Relays-Untrusted =~ /ip=((58\.10[23]|61\.104|124\.([01]|13[6-9])|219\.25[23])(\.\d{1,3}){2}|61\.254\.1(2[89]|[345]\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header SKNETWORKS X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.10[23]|61\.104|124\.(?:[01]|13[6-9])|219\.25[2-5])(?:\.\d{1,3}){2}|61\.254\.1(?:2[89]|[345]\d)\.\d{1,3}) /
+header SKNETWORKS X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.10[23]|61\.104|124\.(?:[0-3]|13[6-9])|211\.58|219\.25[2-5])(?:\.\d{1,3}){2}|(?:61\.254|210\.221)\.1(?:2[89]|[345]\d)\.\d{1,3}|(?:61\.101|211\.33)\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|210\.205\.(?:\d|[1-5]\d|6[0-3])\.\d{1,3}|211\.63\.(?:\d|[12]\d|3[01])\.\d{1,3}|218\.36\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe SKNETWORKS [KR]SK Networks co., Ltd
 score SKNETWORKS 1.5
 
@@ -3861,7 +3873,7 @@ score SKNETWORKS 1.5
 # 123.140.0.0 - 123.143.255.255
 # 210.98.128.0 - 210.98.191.255
 # header BORANET X-Spam-Relays-Untrusted =~ /ip=((58\.(7[2-9]|15[01]|184)|59\.18[67]|60\.19[67]|61\.(3[2-9]|4[0-3])|121\.6[4-7]|123\.14[0-3]|125\.2(4\d|5[01])|164\.124|203\.248\.(1(2[89]|[3-9]\d)|2\d\d)|210\.(10[78]|12[04]|182|216)|211\.(32|40|5[03]|1(1[89]|6[89]|7[01]|8[01])))(\.\d{1,3}){2}|210\.92\.(6[4-9]|[7-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3}|210\.98\.1(2[89]|[3-8]\d|9[01])\.\d{1,3}|210\.101\.(12[89]|1[3-8]\d|19[01])\.\d{1,3}|211\.45\.(19[2-9]|2[0-4]\d|25[0-5])\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header BORANET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:7[2-9]|15[01]|184)|59\.18[67]|60\.19[67]|61\.(?:3[2-9]|4[0-3])|112\.2(?:1[6-9]|2[0-3])|118\.1(?:2[89]|3[01])|121\.6[4-7]|123\.14[0-3]|125\.2(?:4\d|5[01])|164\.124|203\.248\.(?:1(?:2[89]|[3-9]\d)|2\d\d)|210\.(?:10[78]|12[04]|182|216)|211\.(?:32|40|5[03]|1(?:1[89]|6[89]|7[01]|8[01])))(?:\.\d{1,3}){2}|210\.92\.(?:6[4-9]|[7-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3}|210\.98\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|210\.101\.(?:12[89]|1[3-8]\d|19[01])\.\d{1,3}|211\.45\.(?:19[2-9]|2\d\d)\.\d{1,3}|211\.234\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
+header BORANET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:7[2-9]|15[01]|184)|59\.18[67]|60\.19[67]|61\.(?:3[2-9]|4[0-3])|112\.2(?:1[6-9]|2[0-3])|115\.(?:8[89]|9[0-5])|117\.11[01]|118\.1(?:2[89]|3[01])|121\.6[4-7]|123\.14[0-3]|125\.2(?:4\d|5[01])|164\.124|203\.248\.(?:1(?:2[89]|[3-9]\d)|2\d\d)|210\.(?:10[78]|12[04]|182|20[67]|216)|211\.(?:32|40|5[03]|1(?:1[89]|6[89]|7[01]|8[01])))(?:\.\d{1,3}){2}|110\.45\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|114\.108\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|121\.254\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|203\.252\.(?:\d|1[0-5])\.\d{1,3}|210\.92\.(?:6[4-9]|[7-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3}|210\.98\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|210\.101\.(?:12[89]|1[3-8]\d|19[01])\.\d{1,3}|211\.43\.(?:19[2-9]|2[01]\d|22[0-3])\.\d{1,3}|211\.45\.(?:19[2-9]|2\d\d)\.\d{1,3}|211\.115\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])\.\d{1,3}|211\.174\.(?:4[89]|5\d|6[0-3])\.\d{1,3}|211\.233\.(?:\d|[1-5]\d|6[0-3])\.\d{1,3}|211\.234\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|222\.231\.(?:\d|[1-5]\d|6[0-3])\.\d{1,3}) /
 describe BORANET [KR]DACOM Corp.
 score BORANET 1.5
 
@@ -3875,7 +3887,7 @@ describe HANVITINB [KR]Hanvitinb
 score HANVITINB 1.5
 
 # 58.140.0.0 - 58.143.255.255
-header CNM_COMM X-Spam-Relays-Untrusted =~ /ip=58\.14[0-3](\.[0-9]{1,3}){2,2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header CNM_COMM X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.14[0-3]|121\.88)(?:\.[0-9]{1,3}){2}|211\.172\.(?:\d|[12]\d|3[01])\.\d{1,3}) /
 describe CNM_COMM [KR]C&M Communication Co., Ltd.
 score CNM_COMM 1.5
 
@@ -3972,7 +3984,7 @@ score YONSEI_NET_KR 1.5
 # 116.32.0.0 - 116.47.255.255
 # /ip=(116\.(3[2-8]|4[0-7])|119\.(6[4-9]|7[01])|122\.(3[2-9]|4[0-7])|124\.(4[89]|5\d|6[0-3])|125\.1(7[6-9]|8\d|9[01]))(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
 
-header XPEED_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.(?:3[2-9]|4[0-7])|119\.(?:6[4-9]|7[01])|122\.(?:3[2-9]|4[0-7])|124\.(?:4[89]|5\d|6[0-3])|125\.1(?:7[6-9]|8\d|9[01]))(?:\.\d{1,3}){2} /
+header XPEED_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:112\.1(?:4[4-9]|5\d)|115\.1(?:3[6-9]|4[0-3])|116\.(?:3[2-9]|4[0-7])|119\.(?:6[4-9]|7[01])|122\.(?:3[2-9]|4[0-7])|124\.(?:4[89]|5\d|6[0-3])|125\.1(?:7[6-9]|8\d|9[01]))(?:\.\d{1,3}){2} /
 describe XPEED_KR [KR]POWERCOM
 score XPEED_KR 1.5
 
@@ -3989,7 +4001,7 @@ describe CHONNAM_NET_KR [KR]Chonnam National University
 score CHONNAM_NET_KR 1.5
 
 # 203.210.16.0 - 203.210.31.255
-header DOTNAME_KR X-Spam-Relays-Untrusted =~ /ip=203\.210\.(1[6-9]|2\d|3[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header DOTNAME_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:121\.0\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|203\.210\.(?:1[6-9]|2\d|3[01]))\.\d{1,3} /
 describe DOTNAME_KR [KR]Dotname Korea Corp
 score DOTNAME_KR 1.5
 
@@ -4000,17 +4012,17 @@ score DONGDAEMUN_KR 1.5
 
 # 58.145.0.0 - 58.145.127.255
 # 203.229.0.0 - 203.229.127.255
-header QRIXNET_KR X-Spam-Relays-Untrusted =~ /ip=(58\.145|203\.229)\.(\d|\d\d|1[01]\d|12[0-7])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header QRIXNET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.145|203\.229)\.(?:\d|\d\d|1[01]\d|12[0-7])|124\.254\.(?:12[89]|1[3-9]\d|2\d\d)|211\.189\.2(?:2[4-9]|[345]\d))\.\d{1,3} /
 describe QRIXNET_KR [KR]QRIXNET
 score QRIXNET_KR 1.5
 
 # 211.41.0.0-211.41.46.255
-header KITINET_KR X-Spam-Relays-Untrusted =~ /ip=211\.41\.(\d|[1-3]\d|4[0-6])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header KITINET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=211\.41\.(\d|[1-5]\d|6[0-3])\.\d{1,3} /
 describe KITINET_KR [KR]KITINET-INFRA
 score KITINET_KR 1.5
 
 # 124.198.0.0 - 124.198.127.255
-header HAIONNET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.144(?:\.\d{1,3}){2}|124\.198\.(\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|202\.133\.(?:1[6-9]|2\d|3[01])\.\d{1,3}) /
+header HAIONNET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:115\.144|121\.156)(?:\.\d{1,3}){2}|124\.198\.(\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|202\.133\.(?:1[6-9]|2\d|3[01])\.\d{1,3}) /
 describe HAIONNET_KR [KR]HAIonNet
 score HAIONNET_KR 1.5
 
@@ -4020,7 +4032,7 @@ score HAIONNET_KR 1.5
 # 203.230.128.0-203.230.255.255
 # 210.110.0.0-210.110.127.255
 # 220.66.0.0-220.66.127.255
-header KREN_KR X-Spam-Relays-Untrusted =~ /ip=(203\.230\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|210\.97\.1(3[4-9]|[45]\d)\.\d{1,3}|210\.110\.(\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|220\.6[6-9](\.\d{1,3}){2}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header KREN_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:203\.230\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|210\.93\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|210\.97\.1(?:3[4-9]|[45]\d)\.\d{1,3}|210\.110\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|220\.6[6-9](?:\.\d{1,3}){2}) /
 describe KREN_KR [KR]kyungdongjeongbodaehak
 score KREN_KR 1.5
 
@@ -4033,7 +4045,7 @@ describe HCN_KR [KR]HYUNDAI COMMUNICATIONS & NETWORK
 score HCN_KR 1.5
 
 
-replace_tag VAAN_IPS (?:58\.181\.(?:\d|[1-5]\d|6[0-3])|211\.56\.2(?:2[4-9]|[345]\d))\.\d{1,3}
+replace_tag VAAN_IPS (?:58\.181\.(?:\d|[1-5]\d|6[0-3])|(?:112\.136|122\.199)\.(?:12[89]|1[3-9]\d|2\d\d)|211\.47\.2(?:2[4-9]|3\d)|211\.45\.(?:9[6-9]|1[01]\d|12[0-7])|211\.56\.2(?:2[4-9]|[345]\d)|211\.232\.(?:\d|\d\d|1[0-8]\d|19[01])|221\.132\.(?:6[4-9]|[78]\d|9[0-5]))\.\d{1,3}
 
 # 211.56.224.0 - 211.56.255.255
 # 58.181.0.0 - 58.181.63.255
@@ -4049,7 +4061,7 @@ score WM_VAAN_KR 1.5
 
 # 124.217.192.0 - 124.217.223.255
 # 180.210.0.0 - 180.210.127.255
-header HCLC_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:124\.217\.(?:19[2-9]|2[01]\d|22[0-3])\.\d{1,3}|180\.210\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
+header HCLC_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:110\.4|113\.30)\.(?:6[4-9]|1[01]\d|12[0-7])|124\.217\.(?:19[2-9]|2[01]\d|22[0-3])|180\.210\.(?:\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3} /
 describe HCLC_KR [KR]395-65 Korea Computer BLDG F3 Sindaebang-dong Dongjak-gu Seoul
 score HCLC_KR 1.5
 
@@ -4061,13 +4073,72 @@ header BOLU_TELECOM_KR X-Spam-Relays-Untrusted =~ /^\[ ip=202\.173\.2(?:2[4-9]|[
 describe BOLU_TELECOM_KR [KR]DONGGUAN BOLU TELECOM SCIENCE&TECHNOLOGY CORPORATINOLTD
 score BOLU_TELECOM_KR 1.5
 
-header JNDINFO_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.1(?:[678]\d|9[01])|110\.93\.1(?:1[2-9]|2[0-7])|110\.165\.(?:\d|[12]\d|3[01])|175\.106\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|211\.174\.(?:3[2-9]|4[0-7]))\.\d{1,3} /
+header JNDINFO_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.1(?:[678]\d|9[01])|110\.93\.1(?:1[2-9]|2[0-7])|110\.165\.(?:\d|[12]\d|3[01])|115\.85\.1(?:[678]\d|9[01])|175\.106\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|211\.174\.(?:3[2-9]|4[0-7])|223\.130\.(?:12[89]|1[3-9]\d|2\d\d))\.\d{1,3} /
 describe JNDINFO_KR [KR]JND Communication
 score JNDINFO_KR 1.5
 
-header DITIZONE_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.2(?:2[4-9]|3\d)|113\.199\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.97\.1(?:6\d|[78]\d|9[01]))\.\d{1,3} /
+header DITIZONE_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.2(?:2[4-9]|3\d)|113\.199\.(?:\d|\d\d|1[01]\d|12[0-7])|210\.97\.1(?:6\d|[78]\d|9[01])|211\.111\.2(?:2[4-9]|[345]\d))\.\d{1,3} /
 describe DITIZONE_KR [KR]ABN 23-3, Jeongja-dong, Seongnam-Si, Bundang-gu, GYEONGGI-DO
 score DITIZONE_KR 1.5
+
+header SEJONGNET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.100\.(?:\d|\d\d|1[0-8]\d|19[01])|61\.250\.(?:6[4-9]|[78]\d|9[0-5])|61\.252\.1(?:[678]\d|9[01])|(?:203\.227|210\.109)\.\d{1,3}|203\.2(?:3[589]|48)\.(?:\d|\d\d|1[01]\d|12[0-7])|(?:61\.109|203\.243|210\.103)\.(?:12[89]|1[3-9]\d|2\d\d)|211\.115\.(?:19[2-9]|20[0-7])|211\.172\.(?:9[6-9]|10\d|11[01])|211\.189\.1(?:[678]\d|9[01])|211\.238\.(?:\d|[12]\d|3[01])|211\.239\.(?:\d|\d\d|1[0-8]\d|19[01]))\.\d{1,3} /
+describe SEJONGNET_KR [KR]SEJONG TELECOM
+score SEJONGNET_KR 1.5
+
+header KINXINC_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:121\.78(?:\.\d{1,3}){2}|122\.49\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.84\.2[45]\d\.\d{1,3}|203\.238\.1(?:7[6-9]|8\d|9[01])\.\d{1,3}) /
+describe KINXINC_KR [KR]KINX 5F, Daelim Acrotel, Dogok-Dong, Gangnam-gu,SEOUL
+score KINXINC_KR 1.5
+
+header SAMSUNGSDS_KR X-Spam-Relays-Untrusted =~ /^\[ ip=211\.189\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3} /
+describe SAMSUNGSDS_KR [KR]SamsungSDS Inc.
+score SAMSUNGSDS_KR 1.5
+
+header RAYNET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:122\.129\.2[45]\d|211\.238\.(?:3[2-9]|[45]\d|6[0-3]))\.\d{1,3} /
+describe RAYNET_KR [KR]GORayNet
+score RAYNET_KR 1.5
+
+# HANINTERNET
+header DURUAN_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:121\.0\.(?:12[89]|1[3-9]\d|2\d\d)|211\.(?:63\.(?:7[6-9]|8\d|9[0-5])|237\.(?:3[2-9]|4[0-7])|238\.1(?:2[89]|3\d|4[0-3])))\.\d{1,3} /
+describe DURUAN_KR [KR]Duruan
+score DURUAN_KR 1.5
+
+# header HINETWORKS_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.250\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|211\.241\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|(?:211\.254|218\.36)\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
+header HINETWORKS_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:61\.250|211\.241)\.(?:12[89]|1[3-9]\d|2\d\d)|211\.235\.2(?:2[4-9]|[345]\d)|(?:211\.254|218\.36)\.(?:\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3} /
+describe HINETWORKS_KR [KR]HiLine Internet Service Inc.
+score HINETWORKS_KR 1.5
+
+# header OK_NET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.1(?:1[2-9]|2[0-7])|125\.7\.(?:19[2-9]|2\d\d)|210\.221\.(?:19[2-9]|2[01]\d|22[0-3]))\.\d{1,3} /
+header OK_NET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.1(?:1[2-9]|2[0-7])|125\.7\.(?:19[2-9]|2\d\d)|210\.221\.(?:19[2-9]|2[01]\d|22[0-3])|211\.238\.2[45]\d)\.\d{1,3} /
+describe OK_NET_KR [KR]OK-NET Co,. Ltd
+score OK_NET_KR 1.5
+
+header KTNET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.217\.1(?:2[89]|[345]\d)|211\.37\.(?:19[2-9]|2[01]\d|22[0-3]))\.\d{1,3} /
+describe KTNET_KR [KR]Korea Trade Network
+score KTNET_KR 1.5
+
+header EHOSTIDC_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.97\.2[45]\d|180\.150\.2(?:2[4-9]|3[01]))\.\d{1,3} /
+describe EHOSTIDC_KR [KR]EHOST IDC 916 Newticastle Geumcheon-gu Gasan-dong Seoul
+score EHOSTIDC_KR 1.5
+
+header GYEONG_NET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=203\.255\.(?:\d|[1-5]\d|6[0-3])\.\d{1,3} /
+describe GYEONG_NET_KR [KR]GyeongSang National University
+score GYEONG_NET_KR 1.5
+
+header SMILESERV_KR X-Spam-Relays-Untrusted =~ /^\[ ip=115\.68(?:\.\d{1,3}){2} /
+describe SMILESERV_KR [KR]2F Daeryung Techno Tower 2-cha Gasan-dong Geumcheon-gu
+score SMILESERV_KR 1.5
+
+header PETINET_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:210\.180\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|211\.182(?:\.\d{1,3}){2}) /
+describe PETINET_KR [KR]BUSAN EDUCATION RESEARCH & INFORMATION CENTER 
+score PETINET_KR 1.5
+
+header CDNETWORKS_KR X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.193\.(?:8\d|9[0-5])|118\.107\.1(?:6\d|7[0-5]))\.\d{1,3} /
+describe CDNETWORKS_KR [KR]828-7 Yeoksam 1-dong gangnamgu Seoul
+score CDNETWORKS_KR 1.5
+
+header KAIST_KR X-Spam-Relays-Untrusted =~ /^\[ ip=143\.248\.(?:\.\d{1,3}){2} /
+describe KAIST_KR [KR]Korea Advanced Institute of Science and Technology
+score KAIST_KR 1.5
 
 
 # 203.67.0.0 - 203.67.255.255
@@ -4099,7 +4170,8 @@ score SEEDNET 1.0
 # header APOL X-Spam-Relays-Untrusted =~ /(ip=((210\.20[0-2]|218\.187)(\.[0-9]{1,3}){2,2}|210\.203\.([0-9]|[1-9][0-9]|1[01][0-9]|12[0-7])\.[0-9]{1,3})|rdns=.+(vdsl\.static|dialup\.dynamic)\.apol\.com\.tw) .+ident= envfrom= intl=0 .+auth= /
 # 222.156.0.0 - 222.157.255.255
 # 219.91.0.0 - 219.91.127.255
-header APOL X-Spam-Relays-Untrusted =~ /(ip=((124\.218|210\.20[0-2]|218\.(3[45]|187)|222\.15[67])(\.\d{1,3}){2}|(210\.203|219\.91)\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3})|rdns=.+(vdsl\.static|(cm|dialup)\.dynamic)\.apol\.com\.tw) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header APOL X-Spam-Relays-Untrusted =~ /^\[ (ip=((124\.218|210\.20[0-2]|218\.(3[45]|187)|222\.15[67])(\.\d{1,3}){2}|(210\.203|219\.91)\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3})|rdns=.+(vdsl\.static|(cm|dialup)\.dynamic)\.apol\.com\.tw) /
+header APOL X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:124\.218|210\.20[0-2]|218\.(?:3[45]|187)|222\.15[67])(?:\.\d{1,3}){2}|(?:124\.219|210\.203|219\.91)\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|\d{2,3}(?:\.\d{1,3}){3} rdns=.+(?:vdsl\.static|(?:cm|dialup)\.dynamic)\.apol\.com\.tw) /
 describe APOL [TW]Asia Pacific On-line Services Inc.
 score APOL 1.5
 
@@ -4108,7 +4180,7 @@ score APOL 1.5
 
 # header NCICNET Received =~ /from .+220\.22[89](\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])){2,2}/
 # 122.146.0.0 - 122.147.255.255
-header NCICNET X-Spam-Relays-Untrusted =~ /ip=(122\.14[67]|218\.21[01]|220\.22[89])(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header NCICNET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:113\.196|122\.14[67]|218\.21[01]|220\.22[89])(?:\.\d{1,3}){2}|211\.78\.1(?:[678]\d|9[01])\.\d{1,3}) /
 describe NCICNET [TW]New Centry InfoComm Tech. Co., Ltd.
 score NCICNET 1.5
 
@@ -4146,7 +4218,8 @@ score ASIAINFRA 1.0
 # 122.120.0.0 - 122.127.255.255
 # 125.224.0.0 - 125.231.255.255
 # header HINET_TW X-Spam-Relays-Untrusted =~ /(ip=(59\.1(1[2-9]|2[0-7])|60\.2(4[89]|5[01])|61\.2(1[6-9]|2\d|3[01])|122\.12[0-7]|125\.2(2[4-9]|3[0-3])|211\.75|218\.1(6\d|7[0-5])|220\.1(2[89]|3\d|4[0-3]))(\.\d{1,3}){2}|rdns=\d{2,3}(\-\d{1,3}){3}\.dynamic\.hinet\.net) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header HINET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:59\.1(?:1[2-9]|2[0-7])|60\.2(?:4[89]|5[01])|61\.2(?:1[6-9]|2\d|3[01])|118\.1(?:6[89]|7[01])|122\.12[0-7]|125\.2(?:2[4-9]|3[0-3])|211\.75|218\.1(?:6\d|7[0-5])|220\.1(?:2[89]|3\d|4[0-3]))(?:\.\d{1,3}){2} /
+# header HINET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:59\.1(?:1[2-9]|2[0-7])|60\.2(?:4[89]|5[01])|61\.2(?:1[6-9]|2\d|3[01])|114\.(?:3[2-9]|4[0-7])|118\.1(?:6[89]|7[01])|122\.1(?:1[67]|2[0-7])|125\.2(?:2[4-9]|3[0-3])|203\.66|210\.242|211\.(?:20|7[25])|218\.1(?:6\d|7[0-5])|220\.1(?:2[89]|3\d|4[0-3]))(?:\.\d{1,3}){2} /
+header HINET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.1(?:1[2-9]|2[0-7])|60\.2(?:4[89]|5[01])|61\.2(?:1[6-9]|2\d|3[01])|114\.(?:3[2-9]|4[0-7])|118\.1(?:6[89]|7[01])|122\.1(?:1[67]|2[0-7])|125\.2(?:2[4-9]|3[0-3])|203\.66|210\.242|211\.(?:20|7[25])|218\.1(?:6\d|7[0-5])|220\.1(?:2[89]|3\d|4[0-3]))(?:\.\d{1,3}){2}|210\.71\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe HINET_TW [TW]CHTD, Chunghwa Telecom Co.,Ltd.
 score HINET_TW 1.5
 
@@ -4161,7 +4234,8 @@ score ETWEBS_TW 1.5
 # 124.8.0.0 - 124.12.255.255
 # 219.80.0.0 - 219.81.255.255
 # 219.86.0.0 - 219.87.255.255
-header TFN_NET_TW X-Spam-Relays-Untrusted =~ /ip=(61\.3[01]|124\.([89]|1[012])|219\.8[0167])(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header TFN_NET_TW X-Spam-Relays-Untrusted =~ /ip=(61\.3[01]|124\.([89]|1[012])|219\.8[0167])(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header TFN_NET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:61\.3[01]|124\.(?:[89]|1[012])|219\.8[0167])(?:\.\d{1,3}){2}|211\.79\.(?:\d|[12]\d|3[01])\.\d{1,3}) /
 describe TFN_NET_TW [TW]Taiwan Fixed Network CO.,LTD.
 score TFN_NET_TW 1.5
 
@@ -4217,7 +4291,7 @@ header TAIWANMOBILE_NET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.8[0-3]|117
 describe TAIWANMOBILE_NET_TW [TW]taiwanmobile-net
 score TAIWANMOBILE_NET_TW 1.5
 
-header FETNET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.20|118\.231)(?:\.\d{1,3}){2} /
+header FETNET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.20|110\.(?:2[4-9]|3[01])|118\.231)(?:\.\d{1,3}){2} /
 describe FETNET_TW [TW]Far EasTone Telecommunication Co., Ltd.
 score FETNET_TW 1.5
 
@@ -4225,11 +4299,27 @@ header GMO_TW X-Spam-Relays-Untrusted =~ /^\[ ip=122\.255\.81\.\d{1,3} /
 describe GMO_TW [TW]GMO Hosting&Security, Inc Sinhuya-ku. Tokyo, 150-8512 Taiwan
 score GMO_TW 1.5
 
+header UNIGATENET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.(?:55|133)\.2(?:2[4-9]|[345]\d)|202\.153\.(?:1[6-9]\d|20[0-7]))\.\d{1,3} /
+describe UNIGATENET_TW [TW]Network topology of Unigate Telecom Inc.
+score UNIGATENET_TW 1.5
+
+header TWGATE_TW X-Spam-Relays-Untrusted =~ /^\[ ip=203\.78\.1(?:7[6-9]|8\d|9[01])\.\d{1,3} /
+describe TWGATE_TW [TW]Taiwan Internet Gateway Chunghwa Telecom - International Business Group (CHTI)
+score TWGATE_TW 1.5
+
+header TANET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:120\.(?:9[6-9]|1[01]\d|12[0-7])|140\.1(09|[12]\d|3[0-8])|203\.(?:68|7[12])|210\.70)(?:\.\d{1,3}){2}|210\.62\.(?:6[4-9]|[78]\d|9[0-5])\.\d{1,3}|210\.71\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
+describe TANET_TW [TW]Ministry of Education Computer Center
+score TANET_TW 1.5
+
+header UBBNET_TW X-Spam-Relays-Untrusted =~ /^\[ ip=119\.77\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3} /
+describe UBBNET_TW [TW]UNION BROADBAND NETWORK
+score UBBNET_TW 1.5
+
 
 # CSLOXINFO || CNCGROUPNP || 
 
 
-meta ___KOREATAIWANCHINA CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN || IOLNET_IN || HUARUI_CN || KGT_TW || WM_CNCGROUP_CN || SGATHER_CN || TAIWANMOBILE_NET_TW || BM_ID || OPTUSINTERNET_AU || YYNET_CN || FETNET_TW || DCL_BD || ORTELCOMM_IN || INDOSAT_ID || CHINANETCENTER_CN || JARDIKNAS_ID || PTCL_PK || CTTNET_CN || BEAMCABLE_IN || HKCIX_HK || ETC_VNNIC_VN || GPRS_IN || HKNET_HK || CTINET_HK || PRIMANET_ID || PACENET_IN || HLJ_CN || GENESIS_HK || SINGTEL_HK || LINKDOTNET_PK || ISATNET_ID || FNCL_HK || GLOBALSPEED_PH || FPT_NET_VN || NEXTWEB_PH || WOTONE_CN || CYBERNET_PK || MULTINETBROADBAND_PK || SUNINFO_MDC_CN || FHGROUP_CN || WM_VAAN_KR || VAAN_KR || INTERISLANDNET_PH || BUDDYB_TH || HCLC_KR || CDKNET_CN || CAT_TH || GDSYS_KR || FASTNET_ID || TATACOMM_IN || NOVA_CN || GMO_TW || P4NETWORKS_IN || BOLU_TELECOM_KR || SDHT_NET_CN || PACNET_TH || JNDINFO_KR || HAOWEIGAOKE_CN || DITIZONE_KR || COMCLARK_PH || MOBILEONE_SG 
+meta ___KOREATAIWANCHINA CNCGROUP || KOREATELECOM || HANAROTELECOM || ELIMNET || DREAMX || SHINBIRO || SEEDNET || SKNETWORKS || BORANET || HANVITINB || APOL || NCICNET || CRTC || CHINATELECOM || CHINANET || UNICOM || SEEHULINE || KDD_HK || NWTNET || HGC_HK || TW_61_56_71 || XDSLSTREAMYX || CN_211_136_167 || ASIAINFRA || CNM_COMM || DXTNET || CPCNET_HK || THRUNET || HKCABLE_HK || CN_202_127 || DEFENSNET || LOXINFO_TH || BTV_BEIJING || SINNET_CN || BAYANTELDSL_AP || ISP_TH || TACHYNET || GLOBAL_CN || DQTNET_CN || BSNLNET_IN || VSNL_IN || EXATTNET_IN || HINET_TW || HTXX_CN || TOPWAY_NET_CN || CERNET_CN || BHARTI_IN || NGNNET_CN || ETWEBS_TW || SINGNET_SG || SKYCABLENET_PH || RELIANCE_IN || IQARANET_IN || WASU_HZDTV_COM_CN || CMNET_CN || TFN_NET_TW || GWBN_CN || BEELINK_CN || THAINET_TH || VIETEL_VNNIC_VN || CNNIC_CN || SKYINET_PH || CHINACOMM_CN || SINGTEL_TW || CHEONANVITSSEN_KR || TELKOMNET_ZA || CABLELINE_KR || SIAMIDC_TH || ICNDIGITAL_KR || TBROAD_KR || SILNET_IN || KNCTV_KR || HFCCABLE_AU || KHUNET_KR || WORLDCALL_PK || BGCTVNET_CN || KRNIC_KR || CNNIC_CN || SCSNET_KR || VNPT_VNNIC_VN || IPG_PH || NBIP_CN || CHUNGNAM_KR || YONSEI_NET_KR || SGCABLEVISION_SG || XPEED_KR || CHONNAM_NET_KR || PLDTDSL_PH || INDONET_ID || INFOCOM_PH || DOTNAME_KR || LKTELECOM_LK || WASU_CN || TELKOMNET_ID || BBNET_CN || SIFYNET_IN || CJWXNET_CN || HRXT_CN || GLOBET_PH || COLNET_CN || TM_IDC_MY || DONGDAEMUN_KR || QRIXNET_KR || COMNETTH || PI_PH || KITINET_KR || ASIANET_ID || STPI_IN || CONS_PH || INET_CO_TH || HCMPT_NET_VN || TRIDEL_TECH_PH || STN_CN || SONET_TW || HAIONNET_KR || TUNGHO_NET_TW || GIGAMEDIA_TW || TIG_NZ || KREN_KR || TTN_TW || AIMS_MY || TOT_IP_NET_TH || EXTREME_MY || TBCOM_NET_TW || HATHWAY_NET_IN || PI_IN || INFOVISION_PH || NLSS_CN || FOUNDERBN_CN || BJJSNET_CN || ETPI_PH || AORONG_CN || THBA_CN || DRCSCNET_CN || HCN_KR || RINGLINK_CN || GDJS_CN || YOUTELE_IN || KE_ING_NET_TW || TOPNEWNET_CN || TYNET_CN || TUNET_CN || IOLNET_IN || HUARUI_CN || KGT_TW || WM_CNCGROUP_CN || SGATHER_CN || TAIWANMOBILE_NET_TW || BM_ID || OPTUSINTERNET_AU || YYNET_CN || FETNET_TW || DCL_BD || ORTELCOMM_IN || INDOSAT_ID || CHINANETCENTER_CN || JARDIKNAS_ID || PTCL_PK || CTTNET_CN || BEAMCABLE_IN || HKCIX_HK || ETC_VNNIC_VN || GPRS_IN || HKNET_HK || CTINET_HK || PRIMANET_ID || PACENET_IN || HLJ_CN || GENESIS_HK || SINGTEL_HK || LINKDOTNET_PK || ISATNET_ID || FNCL_HK || GLOBALSPEED_PH || FPT_NET_VN || NEXTWEB_PH || WOTONE_CN || CYBERNET_PK || MULTINETBROADBAND_PK || SUNINFO_MDC_CN || FHGROUP_CN || WM_VAAN_KR || VAAN_KR || INTERISLANDNET_PH || BUDDYB_TH || HCLC_KR || CDKNET_CN || CAT_TH || GDSYS_KR || FASTNET_ID || TATACOMM_IN || NOVA_CN || GMO_TW || P4NETWORKS_IN || BOLU_TELECOM_KR || SDHT_NET_CN || PACNET_TH || JNDINFO_KR || HAOWEIGAOKE_CN || DITIZONE_KR || COMCLARK_PH || MOBILEONE_SG || CNI_ID || CAPITALNETWORK_CN || UNIGATENET_TW || APACSERVER_HK || QALA_SG || TRUENET_TH || PRIMETELECOM_CN || TELSTRAINTERNET_AU || TWGATE_TW || NETVIGATOR_HK || MTNLISP_IN || HKDNET_CN || SEJONGNET_KR || SNW_HK || TANET_TW || SIMCENT_HK || KINXINC_KR || SAMSUNGSDS_KR || RAYNET_KR || DURUAN_KR || HINETWORKS_KR || OK_NET_KR || NTCPKNET_PK || ADI_HK || SCTV_VN || BTTB_BD || RWTS_AU || BITNET_CN || DIGITELONE_PH || KTNET_KR || EHOSTIDC_KR || GYEONG_NET_KR || SMILESERV_KR || UBBNET_TW || PIRADIUS_MY || PETINET_KR || PROENNET_TH || GTPL_IN || IPC_NEWTT_HK || SKYDIO_SG || EQUINIXAP_NET_SG || GEMNET_MN || NEWMEDIAEXPRESS_SG || CDNETWORKS_KR || MAXISNET_MY || AIS_TH || KAIST_KR 
 
 
 meta JPSUBJTWKRCN ___KOREATAIWANCHINA && SUBJ_ILLEGAL_CHARS && ISO2022JP_BODY
@@ -4423,7 +4513,7 @@ score DCNTWKRCN 3.5
 # 
 # 222\.(6[4-9]|[78]\d|9[0-5]|12[89]|1[34578]\d|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7])
 
-replace_tag CNCGROUP_IPS (?:(?:58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3]|17[45])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|111\.(?:7[2-9]|1(?:7[6-9]|8[0-3]))|112\.(?:8[0-7]|2(?:2[4-9]|[345]\d))|113\.(?:\d|1[2-5]|5[67]|6[4-9]|[789]\d|10\d|11\d|13[2-9]|14[0-3]|24[89]|25[01])|114\.(?:5[45]|8\d|9[0-5]|2(?:1[6-9]|[2-5]\d))|115\.1(?:4[89]|5[0-3])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|6[0-3]|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:11[2-9]|12[0-6]|14[4-7]|18\d|19[0-5]|24[4-7])|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|62|8[4-7]|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-7]|7[6-9]|8\d|9[01]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3])|122\.(?:[4-7]|9[67]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|[23]\d|4[4-9]|5\d|6[4-7]|7[0-5789]|8\d|9[01])|24[4-9]|25\d)|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[014-7]|)|2(?:2[4567]|3[4-9]))|125\.(?:3[2-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|183\.(?:\d|[1-6]\d|7[01]|9[2-5])|202\.(?:9[6-9]|10\d|11[01])|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|13\d|14[0-3]|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:119\.148\.1(?:6\d|7[0-5])|121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|122\.102\.(?:6[4-9]|[78]\d|9[0-5])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01]))|219\.235\.(?:\d|[1-5]\d|6[0-3])|220\.231\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3})
+replace_tag CNCGROUP_IPS (?:(?:27\.(?:3[6-9]|4[0-7])|58\.(?:1[6-9]|2[0-3]|3[2-9]|[45]\d|6[0-3]|2(?:0[89]|1\d|2[0-3]|[45]\d))|59\.(?:3[2-9]|[45]\d|6[0-3]|17[45])|60\.(?:\d|[12]\d|3[01]|1(?:[678]\d|9[01])|2(?:0[89]|1\d|2[0-3]))|61\.(?:4[89]|5[0-5]|1(?:2[89]|[3-8]\d|9[01]))|111\.(?:7[2-9]|1(?:6[0-7]|7[6-9]|8[0-3]))|112\.(?:8[0-7]|9[89]|2(?:2[4-9]|[345]\d))|113\.(?:\d|1[2-5]|5[67]|6[4-9]|[789]\d|10\d|11\d|13[2-9]|14[0-3]|19[45]|22[4-9]|23\d|24[89]|25[01])|114\.(?:5[45]|8\d|9[0-5]|2(?:1[6-9]|[2-5]\d))|115\.1(?:4[89]|5[0-3])|116\.(?:[1-9]|1[016-9]|2\d|3[01]|5[2-5]|6[0-3]|1(?:1[2-7]|9[456])|2(?:0[789]|1[01]|2[4-9]|3\d))|117\.(?:[89]|1[0-5]|2[1-9]|3\d|4[0-5]|6[4-9]|[78]\d|9[0-5])|118\.(?:11[2-9]|12[0-6]|14[4-7]|18\d|19[0-5]|239|24[4-9]|25\d)|119\.(?:[4-7]|3[2-9]|4[014589]|5[0-5]|6[02]|8[4-7]|9[6-9]|1(?:0[0-389]|1[2-9]|[23]\d|4[0-7]|7[6-9]|8\d|9[01]))|120\.8[0-7]|121\.(?:[89]|[12]\d|3[0-5]|6[0-3]|20[4-7]|22[4-9]|23\d)|122\.(?:[4-7]|9[67]|1(?:[35][6-9]|4[0-3]|5[6-9]|9[2-5])|2(?:2[4-9]|3\d))|123\.(?:[4-9]|1[0-5]|5[2-5]|9[67]|1(?:1[2-9]|[23]\d|4[4-9]|[56]\d|7[0-5789]|8\d|9[01])|24[4-9]|25\d)|124\.(?:6[4-7]|7[2-9]|8[89]|9[0-5]|1(?:1[234589]|2[89]|3[0-5]|6[0-7]|)|2(?:2[4567]|3[2-9]))|125\.(?:3[2-9]|4[0-7]|6[4-9]|[78]\d|9[0-5]|1(?:0[4-9]|1\d|2[0-7])|211)|129\.1(?:2[89]|3[0-7]|4[1-9]|5[0-3])|180\.(?:9[6-9]|1[01]\d|12[0-7])|183\.(?:\d|[1-6]\d|7[01]|9[2-5])|202\.(?:9[6-9]|10\d|11[01])|203\.93|210\.(?:1[23]|2[12]|5[123]|8[23])|218\.(?:\d|[12]\d|3[01]|5[6-9]|[678]\d|9[0-7]|10[4-7])|219\.(?:12[89]|1[345]\d|23[234])|220\.(?:1[678]\d|19[01]|24[2389]|25\d)|221\.(?:\d|1[0-5]|19[2-9]|2[0-3]\d)|222\.(?:6[4-9]|[78]\d|9[0-5]|12[89]|13\d|14[0-3]|16[0-8]|19[01]|20[89]|21\d|22[0-3]|24[0-7]))(?:\.\d{1,3}){2}|(?:116\.255\.(?:12[89]|1[3-9]\d|2\d\d)|119\.59\.1(?:2[89]|[3-9]\d|2\d\d)|119\.148\.1(?:6\d|7[0-5])|120\.88\.(?:[89]|1[0-5])|121\.58\.(?:\d|\d\d|1[01]\d|12[0-7])|122\.102\.(?:6[4-9]|[78]\d|9[0-5])|210\.(?:14\.(?:1[6-9]\d|2\d\d)|15\.(?:\d|\d\d|1[0-8]\d|19[01])|74\.(?:9[6-9]|1[0-5]\d)|78\.(?:\d|[12]\d|3[01]))|219\.235\.(?:\d|[1-5]\d|6[0-3])|220\.231\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3})
 
 header CNCGROUP X-Spam-Relays-Untrusted =~ /^\[ ip=<CNCGROUP_IPS> /
 describe CNCGROUP [CN]Japanese spammer's footstool: CNCGROUP
@@ -4884,6 +4974,22 @@ header HAOWEIGAOKE_CN X-Spam-Relays-Untrusted =~ /^\[ ip=114\.114(?:\.\d{1,3}){2
 describe HAOWEIGAOKE_CN [CN]FHAOWEIGAOKE TECHOLOGIES CO.,LTD
 score HAOWEIGAOKE_CN 1.5
 
+header CAPITALNETWORK_CN X-Spam-Relays-Untrusted =~ /^\[ ip=211\.102(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3} /
+describe CAPITALNETWORK_CN [CN]Capital network, LTD
+score CAPITALNETWORK_CN 1.5
+
+header PRIMETELECOM_CN X-Spam-Relays-Untrusted =~ /^\[ ip=203\.(?:1[3-9]\d|20[0-8])(?:\.\d{1,3}){2} /
+describe PRIMETELECOM_CN [CN]Beijing Primezone Technologies Inc.
+score PRIMETELECOM_CN 1.5
+
+header HKDNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:183\.182\.(?:\d|[12]\d|3[01])|202\.131\.(?:4[89]|5\d|6[0-3]))\.\d{1,3} /
+describe HKDNET_CN [CN]HongKong Dragon-NET InternaTional Co., Ltd.
+score HKDNET_CN 1.5
+
+header BITNET_CN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.18[123](?:\.\d{1,3}){2}|211\.103\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+describe BITNET_CN [CN]Beijing Bitone United Networks Technology Service Co.,Ltd
+score BITNET_CN 1.5
+
 
 # 60.48.0.0 -  60.54.255.255
 # 202.75.32.0 - 202.75.63.255
@@ -4902,7 +5008,7 @@ describe XDSLSTREAMYX [MY]Telekom Malaysia Berhad
 score XDSLSTREAMYX 1.5
 
 # 210.48.144.0 - 210.48.159.255 
-header TM_IDC_MY X-Spam-Relays-Untrusted =~ /ip=210\.48\.1(4[89]|5\d)\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 /
+header TM_IDC_MY X-Spam-Relays-Untrusted =~ /^\[ ip=(?:119\.110\.(?:9[6-9]|10\d|11[01])|210\.48\.1(?:4[89]|5\d))\.\d{1,3} /
 describe TM_IDC_MY [MY]TM NET SDN BHD
 score TM_IDC_MY 1.5
 
@@ -4916,10 +5022,18 @@ header EXTREME_MY X-Spam-Relays-Untrusted =~ /ip=203\.188\.23[2-9]\.\d{1,3} [^\[
 describe EXTREME_MY [MY]Extreme Broadband Sdn. Bhd.
 score EXTREME_MY 1.5
 
+header PIRADIUS_MY X-Spam-Relays-Untrusted =~ /^\[ ip=124\.217\.2(?:2[4-9]|[345]\d)\.\d{1,3} /
+describe PIRADIUS_MY [MY]PIRADIUS NET Unit 21-3A, Level 21 Plaza DNP 59, Jalan Abdullah Tahir Taman Century Garden 80300 Johor Bahru, Johor Malaysia
+score PIRADIUS_MY 1.5
+
+header MAXISNET_MY X-Spam-Relays-Untrusted =~ /^\[ ip=(?:121\.123\.1(?:2[89]|3\d|4[0-3])|202\.75\.1(?:2[89]|[345]\d))\.\d{1,3} /
+describe MAXISNET_MY [MY]Maxis Broadband Sdn Bhd Jalan Delima 1/1 Subang Hi-Tech Industrial Park 40000 Shah Alam, Selangor, Malaysia
+score MAXISNET_MY 1.5
+
 
 # 203.113.128.0 - 203.113.191.255
 # header VIETEL_VNNIC_VN X-Spam-Relays-Untrusted =~ /ip=203\.113\.1(2[89]|[3-8]\d|9[01])\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 /
-header VIETEL_VNNIC_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:117\.[0-7](?:\.\d{1,3}){2}|203\.113\.1(2[89]|[3-8]\d|9[01])\.\d{1,3}) /
+header VIETEL_VNNIC_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:117\.[0-7]|125\.235)(?:\.\d{1,3}){2}|203\.113\.1(2[89]|[3-8]\d|9[01])\.\d{1,3}) /
 describe VIETEL_VNNIC_VN [VN]Vietel Corporation - Internet service/exchange provider
 score VIETEL_VNNIC_VN 1.5
 
@@ -4944,6 +5058,9 @@ header FPT_NET_VN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.18[67]|118\.(?:6[
 describe FPT_NET_VN [VN]FPT Broadband Service
 score FPT_NET_VN 1.5
 
+header SCTV_VN X-Spam-Relays-Untrusted =~ /^\[ ip=112\.197(?:\.\d{1,3}){2} /
+describe SCTV_VN [VN]SaiGon Tourist Cable Television
+score SCTV_VN 1.5
 
 
 # 202.159.0.0 - 202.159.127.255
@@ -4954,7 +5071,8 @@ score INDONET_ID 1.5
 # 222.124.0.0 - 222.124.255.255
 # 203.130.192.0 - 203.130.255.255
 # 202.3.208.0 - 202.3.223.255
-header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.12[0-7]|118\.9[67]|125\.16[0-7]|182\.(?:\d|1[0-5])|222\.124)(?:\.\d{1,3}){2}|110\.138\.(?:\d|[012]\d|3[01])\.\d{1,3}|125\.163\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|202\.3\.2(?:0[89]|1\d|2[0-3])\.\d{1,3}|203\.130\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
+# header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.12[0-7]|118\.9[67]|125\.16[0-7]|182\.(?:\d|1[0-5])|222\.124)(?:\.\d{1,3}){2}|110\.138\.(?:\d|[012]\d|3[01])\.\d{1,3}|125\.163\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|202\.3\.2(?:0[89]|1\d|2[0-3])\.\d{1,3}|203\.130\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
+header TELKOMNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:110\.137|114\.12[0-7]|118\.9[67]|125\.16[0-7]|182\.(?:\d|1[0-5])|222\.124)(?:\.\d{1,3}){2}|110\.136\.1(?:1[2-9]|[23]\d|4[0-3])\.\d{1,3}|110\.138\.(?:\d|[012]\d|3[01])\.\d{1,3}|125\.163\.1(?:2[89]|[3-8]\d|9[01])\.\d{1,3}|202\.3\.2(?:0[89]|1\d|2[0-3])\.\d{1,3}|203\.130\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
 describe TELKOMNET_ID [ID]PT. TELEKOMUNIKASI INDONESIA
 score TELKOMNET_ID 1.5
 
@@ -4969,7 +5087,7 @@ score BM_ID 1.5
 
 # 219.83.0.0 - 219.83.127.255
 # 114.56.0.0 - 114.59.255.255
-header INDOSAT_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.5[6-9]|120\.1(?:[678]\d|9[01]))(?:\.\d{1,3}){2}|202\.155\.(?:9[6-9]|1[01]\d|12[0-7])\.\d{1,3}|219\.83\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
+header INDOSAT_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:114\.5[6-9]|120\.1(?:[678]\d|9[01]))(?:\.\d{1,3}){2}|202\.155\.(?:9[6-9]|1[01]\d|12[0-7])\.\d{1,3}|(?:124\.195|219\.83)\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
 describe INDOSAT_ID [ID]Indosat Internet Service Provider
 score INDOSAT_ID 1.5
 
@@ -4990,6 +5108,9 @@ header FASTNET_ID X-Spam-Relays-Untrusted =~ /^\[ ip=(?:111\.9[45]|118\.13[67])(
 describe FASTNET_ID [ID]PT. First Media, Tbk. ISP Jakarta - 12950
 score FASTNET_ID 1.5
 
+header CNI_ID X-Spam-Relays-Untrusted =~ /^\[ ip=116\.66\.20[0-7]\.\d{1,3} /
+describe CNI_ID [ID]PT Cyber Network Indonesia
+score CNI_ID 1.5
 
 
 
@@ -5109,7 +5230,7 @@ score ASIANET_TH 2.0
 # 202.149.96.0 - 202.149.127.255
 # header COMNETTH Received =~ /from .+203\.155(\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])){2,2}[\)\] ]/
 # header COMNETTH X-Spam-Relays-Untrusted =~ /ip=(202\.149\.(9[6-9]|1[01]\d|12[0-7])\.\d{1,3}|203\.155(\.\d{1,3}){2}|203\.188\.(\d|[1-5]\d|6[0-3]).\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header COMNETTH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.149\.(?:9[6-9]|1[01]\d|12[0-7])\.\d{1,3}|203\.209\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|203\.155(?:\.\d{1,3}){2}|203\.188\.(?:\d|[1-5]\d|6[0-3]).\d{1,3}) /
+header COMNETTH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:58\.181\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|202\.149\.(?:9[6-9]|1[01]\d|12[0-7])\.\d{1,3}|203\.209\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|203\.155(?:\.\d{1,3}){2}|203\.188\.(?:\d|[1-5]\d|6[0-3]).\d{1,3}) /
 describe COMNETTH [TH]KSC Commercial Internet Co. Ltd.
 score COMNETTH 1.5
 
@@ -5149,7 +5270,7 @@ score INET_CO_TH 1.5
 
 # 125.24.0.0 - 125.24.255.255
 # header TOT_IP_NET_TH X-Spam-Relays-Untrusted =~ /ip=125\.24(\.\d{1,3}){2} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header TOT_IP_NET_TH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:118\.17[2-5]|125\.24)(?:\.\d{1,3}){2}|118\.210\.21[6-9]\.\d{1,3}|203\.113\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
+header TOT_IP_NET_TH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:118\.17[2-5]|125\.24)(?:\.\d{1,3}){2}|118\.210\.21[6-9]\.\d{1,3}|203\.113\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|221\.128\.(?:8[89]|9\d|1[01]\d)\.\d{1,3}) /
 describe TOT_IP_NET_TH [TH]tot ip network ip address pool for adsl services
 score TOT_IP_NET_TH 1.5
 
@@ -5161,16 +5282,29 @@ header CAT_TH X-Spam-Relays-Untrusted =~ /^\[ ip=61\.19(?:\.\d{1,3}){2} /
 describe CAT_TH [TH]CAT Telecom public company Ltd
 score CAT_TH 1.5
 
-header PACNET_TH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:203\.121\.1(?:2[89]|[3-8]\d|9[01])|203\.152\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3} /
+header PACNET_TH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.47\.(?:\d|\d\d|1[01]\d|12[0-7])|202\.64\.\d{1,3}|203\.121\.1(?:2[89]|[3-8]\d|9[01])|203\.152\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3} /
 describe PACNET_TH [TH]PACNET
 score PACNET_TH 1.5
+
+header TRUENET_TH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.87\.(\d|\d\d|1[01]\d|12[0-7])|202\.133\.1(?:2[89]|[3-8]\d|9[01]))\.\d{1,3} /
+describe TRUENET_TH [TH]True Internet Co., Ltd.
+score TRUENET_TH 1.5
+
+header PROENNET_TH X-Spam-Relays-Untrusted =~ /^\[ ip=112\.121\.1(?:2[89]|[345]\d)\.\d{1,3} /
+describe PROENNET_TH [TH]Proen Internet, Internet Service Provider, Bangkok, Thailand
+score PROENNET_TH 1.5
+
+header AIS_TH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:110\.49\.(?:4[89]|5\d|6[0-3])|119\.31\.(?:6[4-9]|7\d)|182\.232\.\d{1,3})\.\d{1,3} /
+describe AIS_TH [TH]Advanced Info Service Public Company Limited NMC, 1291/1 Phaholyothin Road, Phayathai, Bangkok 10400, THAILAND
+score AIS_TH 1.5
 
 
 # 202.83.32.0 - 202.83.63.255
 # 202.164.128.0 - 202.164.159.255
 # header ASIANET_IN Received =~ /from .+202\.83\.(3[2-9]|[4-7][0-9]|8[0-3])\.[0-9]{1,3}[\)\] ]/
 # header ASIANET_IN X-Spam-Relays-Untrusted =~ /ip=202\.83\.(3[2-9]|[4-7][0-9]|8[0-3])\.[0-9]{1,3} .+ident= envfrom= intl=0 .+auth= /
-header ASIANET_IN X-Spam-Relays-Untrusted =~ /ip=202\.(83\.(3[2-9]|[4-7][0-9]|8[0-3])|164\.1(2[89]|[345]\d))\.[0-9]{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+# header ASIANET_IN X-Spam-Relays-Untrusted =~ /ip=202\.(83\.(3[2-9]|[4-7][0-9]|8[0-3])|164\.1(2[89]|[345]\d))\.[0-9]{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header ASIANET_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:111\.92\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|202\.(?:83\.(?:3[2-9]|[4-7]\d|8[0-3])|164\.1(?:2[89]|[345]\d))\.\d{1,3}) /
 describe ASIANET_IN [IN]Asianet ISP providing broadband internet access through Cable Network
 score ASIANET_IN 1.5
 
@@ -5208,7 +5342,7 @@ score EXATTNET_IN 1.5
 # 125.16.0.0 - 125.23.255.255
 # 203.145.128.0 - 203.145.191.255
 # header BHARTI_IN X-Spam-Relays-Untrusted =~ /ip=((59\.14[45]|61\.246|125\.(1[6-9]|2[0-3]))(\.\d{1,3}){2}|203\.101\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[45]|61\.246|110\.22[4-7]|122\.16[0-38]|125\.(?:1[6-9]|2[0-3]))(?:\.\d{1,3}){2}|122\.1(?:6\d|7[0-5])(?:\.\d{1,3}){2}|(?:122\.183|203\.101)\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|203\.192\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
+header BHARTI_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[45]|61\.246|110\.22[4-7]|117\.98|122\.16[0-38]|125\.(?:1[6-9]|2[0-3]))(?:\.\d{1,3}){2}|122\.1(?:6\d|7[0-5])(?:\.\d{1,3}){2}|(?:122\.183|203\.101)\.(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|203\.145\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|203\.192\.(?:19[2-9]|2\d\d)\.\d{1,3}) /
 describe BHARTI_IN [IN]Bharti Broadband networks Limited
 score BHARTI_IN 1.5
 
@@ -5287,13 +5421,21 @@ describe PACENET_IN [IN]India's Premeir Broadband and IPTV services, Mumbai.
 score PACENET_IN 1.5
 
 # header TATACOMM_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.1(?:0[89]|1\d)(?:\.\d{1,3}){2}|61\.12\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|61\.16\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
-header TATACOMM_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:115\.1(?:0[89]|1\d)|182\.156)(?:\.\d{1,3}){2}|61\.12\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|61\.16\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
+header TATACOMM_IN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:115\.1(?:0[89]|1\d)|121\.24[0-7]|182\.156)(?:\.\d{1,3}){2}|61\.12\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}|61\.16\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}) /
 describe TATACOMM_IN [IN]TATA Communications formerly VSNL is Leading ISP, Data and Voice Carrier in India
 score TATACOMM_IN 1.5
 
 header P4NETWORKS_IN X-Spam-Relays-Untrusted =~ /^\[ ip=183\.87(?:\.\d{1,3}){2} /
 describe P4NETWORKS_IN [IN]Parshwa Purushotam Parind Parekh Networks Limited
 score P4NETWORKS_IN 1.5
+
+header MTNLISP_IN X-Spam-Relays-Untrusted =~ /^\[ ip=59\.1(?:7[6-9]|8[0-5])(?:\.\d{1,3}){2} /
+describe MTNLISP_IN [IN]MTNL CAT B ISP
+score MTNLISP_IN 1.5
+
+header GTPL_IN X-Spam-Relays-Untrusted =~ /^\[ ip=182\.237\.(?:[89]|1[0-5])\.\d{1,3} /
+describe GTPL_IN [IN]Gujarat Telelink Pvt Ltd.
+score GTPL_IN 1.5
 
 
 # 68.32.0.0 - 68.63.255.255
@@ -5320,7 +5462,7 @@ score KDD_HK 1.5
 # 210.245.128.0 - 210.245.255.255
 # 59.188.0.0 - 59.188.255.255
 # 210.209.64.0 - 210.209.127.255
-header NWTNET X-Spam-Relays-Untrusted =~ /^\[ ip=(59\.188(\.\d{1,3}){2}|(210\.209\.(6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.245\.(1(2[89]|[3-9]\d)|2\d\d))\.\d{1,3}) /
+header NWTNET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:59\.188(?:\.\d{1,3}){2}|(?:58\.64\.(?:12[89]|1[3-9]\d|2\d\d)|210\.209\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.245\.(?:1(?:2[89]|[3-9]\d)|2\d\d))\.\d{1,3}) /
 describe NWTNET [HK]New World Telephone
 score NWTNET 1.5
 
@@ -5334,7 +5476,7 @@ describe HGC_HK [HK]Hutchison Global Communications
 score HGC_HK 1.5
 
 # 202.66.0.0 - 202.66.255.255
-header CPCNET_HK X-Spam-Relays-Untrusted =~ /^\[ ip=202\.66(\.[0-9]{1,3}){2} /
+header CPCNET_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.66|203\.85)(\.[0-9]{1,3}){2} /
 describe CPCNET_HK [HK]CPCNet Hong Kong Ltd.
 score CPCNET_HK 1.5
 
@@ -5350,7 +5492,7 @@ header HKCIX_HK X-Spam-Relays-Untrusted =~ /^\[ ip=202\.181\.(?:12[89]|1[3-9]\d|
 describe HKCIX_HK [HK]Hongkong Commercial Internet Exchange
 score HKCIX_HK 1.5
 
-header HKNET_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.67|203\.169)\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3} /
+header HKNET_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:121\.127\.2(?:4[89]|5[01])|(?:202\.67|203\.169)\.(?:12[89]|1[3-9]\d|2\d\d))\.\d{1,3} /
 describe HKNET_HK [HK]HKNet Company Ltd.
 score HKNET_HK 1.5
 
@@ -5359,7 +5501,7 @@ header CTINET_HK X-Spam-Relays-Untrusted =~ /^\[ ip=203\.80\.250\.1(?:2[89]|[345
 describe CTINET_HK [HK]City Telecom (H.K.) Ltd.
 score CTINET_HK 1.5
 
-header GENESIS_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.65\.(?:19[2-9]|20[0-7])|219\.90\.1(?:1[2-9]|2[0-7]))\.\d{1,3} /
+header GENESIS_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:114\.142\.1(?:4[4-9]|5\d)|202\.65\.(?:19[2-9]|2[01]\d|22[0-3])|219\.90\.1(?:1[2-9]|2[0-7]))\.\d{1,3} /
 describe GENESIS_HK [HK]Genesis Net Limited
 score GENESIS_HK 1.5
 
@@ -5371,6 +5513,30 @@ header FNCL_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.212\.11[2-8]|118\.102\
 describe FNCL_HK [HK]First Network Communications Limited, ISP at HK
 score FNCL_HK 1.5
 
+header APACSERVER_HK X-Spam-Relays-Untrusted =~ /^\[ ip=111\.68\.(?:\d|1[0-5])\.\d{1,3} /
+describe APACSERVER_HK [HK]ASIA PACIFIC SERVER COMPANY
+score APACSERVER_HK 1.5
+
+header NETVIGATOR_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:116\.4[89]|218\.10[23]|220\.241)(?:\.\d{1,3}){2}|(?:(?:113\.28|202\.85)\.(?:\d|\d\d|1[01]\d|12[0-7])|125\.214\.(?:19[2-9]|2\d\d)|125\.215\.(?:12[89]|1[3-9]\d|2\d\d)|210\.176\.(?:4[89]|[5-9]\d|1[01]\d|12[0-7]))\.\d{1,3}) /
+describe NETVIGATOR_HK [HK]PCCW Limited
+score NETVIGATOR_HK 1.5
+
+header SNW_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:112\.213\.(?:9[6-9]|1[01]\d|12[0-7])|121\.54\.16[89]|210\.56\.(?:4[89]|5\d|6[0-3]))\.\d{1,3} /
+describe SNW_HK [HK]Sun Network (Hong Kong) Limited
+score SNW_HK 1.5
+
+header SIMCENT_HK X-Spam-Relays-Untrusted =~ /^\[ ip=112\.121\.1(?:[678]\d|9[01])\.\d{1,3} /
+describe SIMCENT_HK [HK]Simcentric Solutions, Internet Service Provider
+score SIMCENT_HK 1.5
+
+header ADI_HK X-Spam-Relays-Untrusted =~ /^\[ ip=183\.90\.1(?:8[4-9]|9[01])\.\d{1,3} /
+describe ADI_HK [HK]Asia Data (Hong kong) Inc. Limited
+score ADI_HK 1.5
+
+header IPC_NEWTT_HK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.160\.1(?:2[89]|[3-8]\d|9[01])|202\.126\.2(?:0[89]|1\d|2[0-3])|202\.130\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|202\.131\.(?:6[4-9]|7\d)|202\.155\.(?:19[2-9]|2\d\d)|210\.5\.1(?:[678]\d|9[01]))\.\d{1,3} /
+describe IPC_NEWTT_HK [HK]Wharf T&T Limited Fixed Telecommunication Network Service (FTNS) Harbour City, Hong Kong SAR
+score IPC_NEWTT_HK 1.5
+
 
 # 203.215.80.0-203.215.95.255
 # 203.115.144.0-203.115.159.255
@@ -5378,14 +5544,14 @@ score FNCL_HK 1.5
 # 203.115.176.0-203.115.191.255
 # 203.115.128.0-203.115.191.255
 # 121.96.0.0 - 121.97.255.255
-header SKYINET_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(121\.9[67](\.\d{1,3}){2}|203\.(115\.1(2[89]|[3-8]\d|9[01])|215\.(8[0-9]|9[0-5]))\.\d{1,3}) /
+header SKYINET_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:121\.9[67](?:\.\d{1,3}){2}|114\.108\.(?:19[2-9]|2\d\d)\.\d{1,3}|203\.(?:115\.1(?:2[89]|[3-8]\d|9[01])|215\.(?:8[0-9]|9[0-5]))\.\d{1,3}) /
 describe SKYINET_PH [PH]Bayan Telecommunications Inc.
-score SKYINET_PH 1.0
+score SKYINET_PH 1.5
 
 # 203.82.16.0 - 203.82.23.255
 header DEFENSNET X-Spam-Relays-Untrusted =~ /^\[ ip=203\.82\.(1[6-9]|2[0-3])\.\d{1,3} /
 describe DEFENSNET [PH]DEFENSNET, Hosting Service and Content Provider from Antonio Defensor Consulting
-score DEFENSNET 1.0
+score DEFENSNET 1.5
 
 # 210.4.0.0 - 210.4.63.255
 header BAYANTELDSL_AP X-Spam-Relays-Untrusted =~ /^\[ ip=210\.4\.(\d|[1-5]\d|6[0-3])\.\d{1,3} /
@@ -5451,17 +5617,17 @@ score INFOVISION_PH 1.5
 # 117.104.240.0 - 117.104.255.255
 # 116.50.128.0 - 116.50.255.255
 # 203.167.64.0 - 203.167.95.255
-header ETPI_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.28\.1(?:2[89]|[3-8]\d|9[01])|112\.199\.(?:\d|\d\d|1[01]\d|12[0-7])|113\.61\.(?:3[2-9]|[45]\d|6[0-3])|115\.(?:84\.2(?:2[4-9]|[345]\d)|85\.(?:\d|[1-5]\d|6[0-3]))|116\.50\.(?:12[89]|1[3-9]\d|2\d\d)|117\.104\.2[45]\d|120\.89\.(?:\d|[1-5]\d|6[0-3])|202\.164\.(?:1[678]\d|19[01])|202\.175\.(?:19[2-9]|2\d\d)|203\.167\.(?:6[4-9]|[78]\d|9[0-5]))\.\d{1,3} /
+header ETPI_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.28\.1(?:2[89]|[3-8]\d|9[01])|112\.199\.(?:\d|\d\d|1[01]\d|12[0-7])|113\.61\.(?:3[2-9]|[45]\d|6[0-3])|115\.(?:84\.2(?:2[4-9]|[345]\d)|85\.(?:\d|[1-5]\d|6[0-3]))|116\.50\.(?:12[89]|1[3-9]\d|2\d\d)|117\.104\.2[45]\d|120\.89\.(?:\d|[1-5]\d|6[0-3])|180\.232\.\d{1,3}|202\.164\.(?:1[678]\d|19[01])|202\.175\.(?:19[2-9]|2\d\d)|203\.167\.(?:6[4-9]|[78]\d|9[0-5]))\.\d{1,3} /
 describe ETPI_PH [PH]Eastern Telecoms Philippines, Inc.
 score ETPI_PH 1.5
 
-header GLOBALSPEED_PH X-Spam-Relays-Untrusted =~ /^\[ ip=180\.94\.(?:\d|[12]\d|3[01])\.\d{1,3} /
+header GLOBALSPEED_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:180\.94\.(?:\d|[12]\d|3[01])|182\.54\.1(?:2[89]|[345]\d))\.\d{1,3} /
 describe GLOBALSPEED_PH [PH]GLOBALSPEED-PH
 score GLOBALSPEED_PH 1.5
 
 # 110.232.160.0-110.232.175.255
 # 122.202.96.0 - 122.202.127.255
-header NEXTWEB_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:110\.232\.1(?:6\d|7[0-5])|112\.109\.(?:\d|1[0-5])|113\.20\.1(?:[678]\d|9[01])|122\.202\.(?:9[6-9]|1[01]\d|12[0-7]))\.\d{1,3} /
+header NEXTWEB_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:110\.232\.1(?:6\d|7[0-5])|112\.109\.(?:\d|1[0-5])|113\.20\.1(?:[678]\d|9[01])|122\.202\.(?:9[6-9]|1[01]\d|12[0-7])|182\.255\.(?:3[2-9]|[45]\d|6[0-3]))\.\d{1,3} /
 describe NEXTWEB_PH [PH]NEXT WEB PHIL
 score NEXTWEB_PH 1.5
 
@@ -5470,27 +5636,51 @@ header INTERISLANDNET_PH X-Spam-Relays-Untrusted =~ /^\[ ip=219\.90\.(?:6[4-9]|[
 describe INTERISLANDNET_PH [PH]INTERISLANDNET Internet Service Provider
 score INTERISLANDNET_PH 1.5
 
-header COMCLARK_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:111\.125\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.4\.(?:9[6-9]|1[01]\d|12[0-7]))\.\d{1,3} /
+# 121.58.192.0 - 121.58.255.255
+header COMCLARK_PH X-Spam-Relays-Untrusted =~ /^\[ ip=(?:111\.125\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|121\.58\.(?:19[2-9]|2\d\d)|210\.4\.(?:9[6-9]|1[01]\d|12[0-7]))\.\d{1,3} /
 describe COMCLARK_PH [PH]Comclark Bldg. Pres. M.A. Roxas Hi-way, CSEZ Clarkfield, Pampanga
 score COMCLARK_PH 1.5
+
+header DIGITELONE_PH X-Spam-Relays-Untrusted =~ /^\[ ip=115\.147\.(?:19[2-9]|2\d\d)\.\d{1,3} /
+describe DIGITELONE_PH [PH]Digitel Philippines
+score DIGITELONE_PH 1.5
+
 
 
 # 220.255.0.0 - 220.255.255.255
 # 219.74.0.0 - 219.75.127.255
 # 121.6.0.0 - 121.7.255.255
-header SINGNET_SG X-Spam-Relays-Untrusted =~ /ip=((121\.[67]|219\.74|220\.255)(\.\d{1,3}){2}|219\.75\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
+header SINGNET_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.185|121\.[67]|203\.127|219\.74|220\.255)(?:\.\d{1,3}){2}|116\.12\.(?:12[89]|1[3-9]\d|2\d\d)\.\d{1,3}|(?:203\.125|219\.75)\.(?:\d|\d\d|1[01]\d|12[0-7])\.\d{1,3}) /
 describe SINGNET_SG [SG]SingNet Pte Ltd
 score SINGNET_SG 1.5
 
 # 222.164.0.0 - 222.165.127.255
 # header SGCABLEVISION_SG X-Spam-Relays-Untrusted =~ /ip=(222\.164(\.\d{1,3}){2}|222\.165\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}) [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header SGCABLEVISION_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:222\.164(\.\d{1,3}){2}|222\.165\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}) /
+header SGCABLEVISION_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:203\.11[67]|218\.186|222\.164)(\.\d{1,3}){2}|61\.8\.(?:19[2-9]|2\d\d)\.\d{1,3}|124\.155\.(?:19[2-9]|2[01]\d|22[0-3])\.\d{1,3}|203\.118\.(\d|[1-5]\d|6[0-3])\.\d{1,3}|222\.165\.(\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}) /
 describe SGCABLEVISION_SG [SG]StarHub Cable Vision Ltd Singapore Broadband Access Provider
 score SGCABLEVISION_SG 1.5
 
-header MOBILEONE_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.197\.(?:19[2-9]|2\d\d)|124\.197\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7]))\.\d{1,3} /
+header MOBILEONE_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:116\.197\.(?:19[2-9]|2\d\d)|124\.197\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|180\.129\.(?:\d|\d\d|1[01]\d|12[0-7]))\.\d{1,3} /
 describe MOBILEONE_SG [SG]MobileOne Ltd
 score MOBILEONE_SG 1.5
+
+# SPARKSTATION PTE LTD
+# AIDI-SG
+header QALA_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:112\.140\.18[4-7]|120\.50\.(?:3[2-9]|4[0-7])|180\.210\.20[0-7]|(?:202\.63|203\.211)\.1(?:2[89]|[345]\d)|210\.193\.(?:\d|[1-5]\d|6[0-3]))\.\d{1,3} /
+describe QALA_SG [SG]M1 CONNECT PTE. LTD.
+score QALA_SG 1.5
+
+header SKYDIO_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:114\.129\.(?:3[2-9]|4[0-7])|203\.83\.250|203\.169\.[67])\.\d{1,3} /
+describe SKYDIO_SG [SG]Skydio Pte Ltd, Server Hosting Provider, Singapore
+score SKYDIO_SG 1.5
+
+header EQUINIXAP_NET_SG X-Spam-Relays-Untrusted =~ /^\[ ip=(?:122\.50\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|202\.177\.(?:19[2-9]|2[01]\d|22[0-3])|203\.190\.2(?:2[4-9]|3\d))\.\d{1,3} /
+describe EQUINIXAP_NET_SG [SG]Equinix Asia Pacific
+score EQUINIXAP_NET_SG 1.5
+
+header NEWMEDIAEXPRESS_SG X-Spam-Relays-Untrusted =~ /^\[ ip=202\.150\.2(?:0[89]|1\d|2[0-3])\.\d{1,3} /
+describe NEWMEDIAEXPRESS_SG [SG]NewMedia Express Pte Ltd, Singapore Web Hosting
+score NEWMEDIAEXPRESS_SG 1.5
 
 
 # 203.208.64.0 - 203.208.127.255
@@ -5502,11 +5692,18 @@ header OPTUSINTERNET_AU X-Spam-Relays-Untrusted =~ /^\[ ip=114\.7[2-5](\.\d{1,3}
 describe OPTUSINTERNET_AU [AU]OPTUS INTERNET - RETAIL INTERNET SERVICES
 score OPTUSINTERNET_AU 1.5
 
+header TELSTRAINTERNET_AU X-Spam-Relays-Untrusted =~ /^\[ ip=203\.4[0-7](\.\d{1,3}){2} /
+describe TELSTRAINTERNET_AU [AU]Telstra Internet
+score TELSTRAINTERNET_AU 1.5
+
+header RWTS_AU X-Spam-Relays-Untrusted =~ /^\[ ip=114\.141\.(?:9[6-9]|10\d|11[01])\.\d{1,3} /
+describe RWTS_AU [AU]Real World Internet
+score RWTS_AU 1.5
 
 
 # 203.81.192.0 - 203.81.239.255
 # header WORLDCALL_PK X-Spam-Relays-Untrusted =~ /ip=203\.81\.(19[2-9]|2[0-3]\d)\.\d{1,3} [^\[\]]+ident= envfrom= intl=0 [^\[\]]+auth= /
-header WORLDCALL_PK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:117\.102\.(?:\d|[1-5]\d|6[0-3])|203\.81\.(19[2-9]|2[0-3]\d))\.\d{1,3} /
+header WORLDCALL_PK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:115\.186\.(?:\d|\d\d|1[01]\d|12[0-7])|117\.102\.(?:\d|[1-5]\d|6[0-3])|203\.81\.(19[2-9]|2[0-3]\d))\.\d{1,3} /
 describe WORLDCALL_PK [PK]WorldCALL Multimedia Ltd
 score WORLDCALL_PK 1.5
 
@@ -5516,7 +5713,7 @@ header PTCL_PK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.103|119\.15[2-9])(?:
 describe PTCL_PK [PK]Pakistan Telecommunication Company Limited
 score PTCL_PK 1.5
 
-header LINKDOTNET_PK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:119\.73\.(?:\d|\d\d|1[01]\d|12[0-7])|203\.223\.1(?:6\d|7[0-5])|210\.2\.(?:12[89]|1[3-8]\d|19[01]))\.\d{1,3} /
+header LINKDOTNET_PK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:119\.30\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|119\.73\.(?:\d|\d\d|1[01]\d|12[0-7])|203\.223\.1(?:6\d|7[0-5])|210\.2\.(?:12[89]|1[3-8]\d|19[01]))\.\d{1,3} /
 describe LINKDOTNET_PK [PK]LINKdotNET Telecom Limited
 score LINKDOTNET_PK 1.5
 
@@ -5524,13 +5721,18 @@ header CYBERNET_PK X-Spam-Relays-Untrusted =~ /^\[ ip=61\.5\.1(?:2[89]|[345]\d)\
 describe CYBERNET_PK [PK]CYBER INTERNET SERVICES (PVT.) LTD. PAKISTAN BASED ISP
 score CYBERNET_PK 1.5
 
-header MULTINETBROADBAND_PK X-Spam-Relays-Untrusted =~ /^\[ ip=125\.209\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])\.\d{1,3} /
+# SNET-PK
+header MULTINETBROADBAND_PK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:118\.107\.1(?:2[89]|3\d|4[0-3])|125\.209\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7]))\.\d{1,3} /
 describe MULTINETBROADBAND_PK [PK]MULTINETBROADBAND Karachi
 score MULTINETBROADBAND_PK 1.5
 
+header NTCPKNET_PK X-Spam-Relays-Untrusted =~ /^\[ ip=202\.83\.1(?:6\d|7[0-5])\.\d{1,3} /
+describe NTCPKNET_PK [PK]National Telecom Corporation Sector F 5/1, Islamabad Pakistan
+score NTCPKNET_PK 1.5
+
 
 # 222.165.128.0 - 222.165.191.255
-header LKTELECOM_LK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:124\.43(?:\.\d{1,3})|222\.165\.(?:12[89]|1[3-8]\d|139[01])\.\d{1,3}) /
+header LKTELECOM_LK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:112\.13[45]|124\.43)\.\d{1,3}|222\.165\.(?:12[89]|1[3-8]\d|139[01]))\.\d{1,3} /
 describe LKTELECOM_LK [LK]Sri Lanka Telecom Internet Service Provider in Sri Lanka
 score LKTELECOM_LK 1.5
 
@@ -5538,6 +5740,15 @@ score LKTELECOM_LK 1.5
 header DCL_BD X-Spam-Relays-Untrusted =~ /^\[ ip=202\.4\.(?:9[6-9]|1[01]\d|12[0-7])\.\d{1,3} /
 describe DCL_BD [BD]DhakaCom Limited
 score DCL_BD 1.5
+
+header BTTB_BD X-Spam-Relays-Untrusted =~ /^\[ ip=123\.49\.(?:\d|[1-5]\d|6[0-3])\.\d{1,3} /
+describe BTTB_BD [BD]Bangladesh Telecommunications Company Ltd. (BTCL)
+score BTTB_BD 1.5
+
+header GEMNET_MN X-Spam-Relays-Untrusted =~ /^\[ ip=180\.149\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])\.\d{1,3} /
+describe GEMNET_MN [MN]Code M building #305
+score GEMNET_MN 1.5
+
 
 
 # 200.74.0.0 - 200.74.127.255
@@ -5675,6 +5886,13 @@ meta M_A_S_Q_O_DCN MPALTSJISQPONLY && ___DCN
 score M_A_S_Q_O_DCN 3.5
 
 
+# added 2010.06.26 by [yoh]
+full RTFONLY /\nContent-Type: application\/octet-stream; name=\"[a-z]+\.rtf\"\nContent-Transfer-Encoding: base64\n(?:.+\n){0,}\n[A-Za-z0-9]{69,}\n/
+meta RTFOLDCN RTFONLY && ___DCN
+score RTFOLDCN 3.5
+meta DYN_RTFOL RTFONLY && ___DYNAMICIP
+score DYN_RTFOL 3.5
+
 
 # added 2007.08.11 by [yoh]
 # 
@@ -5688,7 +5906,9 @@ full HTMLPDF /(-{6}=_NextPart_000_00[0-9A-F]{2}_[0-9A-F]{8}\.[0-9A-F]{8})\nConte
 
 # http://www.iana.org/assignments/ipv4-address-space
 
-replace_tag RIPE_NCC_IPS (?:(?:62|7[789]|8\d|9[0-5]|151|178|188|19[345]|21[237])(?:\.\d{1,3}){3}|(?:95\.(?:2[4-9]|3[01]|5[2-5])|109\.65|150\.140|156\.17|159\.14[789]|168\.187|188\.(?:4[89]|5[0-5]))(?:\.\d{1,3}){2})
+# 109\.(?:65|8[23]|197)|
+
+replace_tag RIPE_NCC_IPS (?:(?:62|7[789]|8\d|9[0-5]|109|151|178|188|19[345]|21[237])(?:\.\d{1,3}){3}|(?:95\.(?:2[4-9]|3[01]|5[2-5])|150\.140|156\.17|159\.14[789]|168\.187|188\.(?:4[89]|5[0-5]))(?:\.\d{1,3}){2})
 header RIPE_NCC X-Spam-Relays-Untrusted =~ /^\[ ip=<RIPE_NCC_IPS> /
 describe RIPE_NCC Mail from RIPE NCC area (Russia, Italy, Spain...)
 score RIPE_NCC 0.1
@@ -5700,7 +5920,8 @@ score SJIS_RIPE_NCC 5.5
 header ONLY1HOPDIRECTRIPE X-Spam-Relays-Untrusted =~ /^\[ ip=<RIPE_NCC_IPS> [^\[\]]+ \]$/
 
 # 96.12.0.0 - 96.15.255.255
-replace_tag ARIN_IPS (?:(?:8|12|24|38|6[3-9]|7[0-6]|99|1(?:6[45]|99)|20[4-9]|216)(?:\.\d{1,3}){3}|96\.1[2-5](?:\.\d{1,3}){2}|98\.10[4-7](?:\.\d{1,3}){2}|128\.(?:[1-689]|1[0-5789]|2\d|3[0-8]|4[2346-9]|5\d|6[0-4]|8[0-589]|9[0124-79]|1(?:[01]\d|2[0-35-9]|3[235-8]|4[3-9]|[56]\d|7[0-57]|8[0-35-9]|9[0-8])|2(?:0[235-9]|1[0-35-9]|2\d|3[0135-9]|4[1245789]|5[1-5]))(?:\.\d{1,3}){2}|140\.99(?:\.\d{1,3}){2}|146\.(?:[15-9]|1[02-8]|2[02-9]|3\d|4[0-79]|5[34578]|6[13589]|7[134689]|8[245689]|9[1-689]|1(?:1[1345]|2[1235-9]|3[0125789]|4[235-9]|5[0-467]|6[035-8]|7[04]|8[0134679]|9[0789])|2(?:0\d|1[4578]|2[2359]|3[35-9]|4[0-6]|5[02]))(?:\.\d{1,3}){2}|152\.(?:[1-9]|[2-5]\d|6[0-57-9]|7[0259]|8[02567]|97|100|11[3679]|12\d|13[0-35-8]|14[0124568]|15[145789]|16[0-5]|17[6-9]|1[89]\d|20[89]|21\d|22[0-5789])(?:\.\d{1,3}){2}|161\.159(?:\.\d{1,3}){2}|166\.82(?:\.\d{1,3}){2}|169\.227(?:\.\d{1,3}){2}|173\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|174\.(?:3[67]|139)(?:\.\d{1,3}){2}|184\.7[6-9](?:\.\d{1,3}){2})
+# replace_tag ARIN_IPS (?:(?:8|12|24|38|6[3-9]|7[0-6]|9[689]|1(?:6[45]|73|99)|20[4-9]|216)(?:\.\d{1,3}){3}|96\.1[2-5](?:\.\d{1,3}){2}|98\.10[4-7](?:\.\d{1,3}){2}|128\.(?:[1-689]|1[0-5789]|2\d|3[0-8]|4[2346-9]|5\d|6[0-4]|8[0-589]|9[0124-79]|1(?:[01]\d|2[0-35-9]|3[235-8]|4[3-9]|[56]\d|7[0-57]|8[0-35-9]|9[0-8])|2(?:0[235-9]|1[0-35-9]|2\d|3[0135-9]|4[1245789]|5[1-5]))(?:\.\d{1,3}){2}|140\.99(?:\.\d{1,3}){2}|146\.(?:[15-9]|1[02-8]|2[02-9]|3\d|4[0-79]|5[34578]|6[13589]|7[134689]|8[245689]|9[1-689]|1(?:1[1345]|2[1235-9]|3[0125789]|4[235-9]|5[0-467]|6[035-8]|7[04]|8[0134679]|9[0789])|2(?:0\d|1[4578]|2[2359]|3[35-9]|4[0-6]|5[02]))(?:\.\d{1,3}){2}|152\.(?:[1-9]|[2-5]\d|6[0-57-9]|7[0259]|8[02567]|97|100|11[3679]|12\d|13[0-35-8]|14[0124568]|15[145789]|16[0-5]|17[6-9]|1[89]\d|20[89]|21\d|22[0-5789])(?:\.\d{1,3}){2}|161\.159(?:\.\d{1,3}){2}|166\.82(?:\.\d{1,3}){2}|169\.227(?:\.\d{1,3}){2}|173\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|174\.(?:3[6-9]|4[0-3]|139)(?:\.\d{1,3}){2}|184\.7[6-9](?:\.\d{1,3}){2})
+replace_tag ARIN_IPS (?:(?:8|12|24|38|6[3-9]|7[0-6]|9[689]|1(?:6[45]|73|84|9[89])|20[4-9]|216)(?:\.\d{1,3}){3}|(?:96\.1[2-5]|98\.10[4-7]|128\.(?:[1-689]|1[0-5789]|2\d|3[0-8]|4[2346-9]|5\d|6[0-4]|8[0-589]|9[0124-79]|1(?:[01]\d|2[0-35-9]|3[235-8]|4[3-9]|[56]\d|7[0-57]|8[0-35-9]|9[0-8])|2(?:0[235-9]|1[0-35-9]|2\d|3[0135-9]|4[1245789]|5[1-5]))|130\.94|140\.99|142\.(?:4[5-9]|50)|146\.(?:[15-9]|1[02-8]|2[02-9]|3\d|4[0-79]|5[34578]|6[13589]|7[134689]|8[245689]|9[1-689]|1(?:1[1345]|2[1235-9]|3[0125789]|4[235-9]|5[0-467]|6[035-8]|7[04]|8[0134679]|9[0789])|2(?:0\d|1[4578]|2[2359]|3[35-9]|4[0-6]|5[02]))|152\.(?:[1-9]|[2-5]\d|6[0-57-9]|7[0259]|8[02567]|97|100|11[3679]|12\d|13[0-35-8]|14[0124568]|15[145789]|16[0-5]|17[6-9]|1[89]\d|20[89]|21\d|22[0-5789])|160\.7|161\.159|162\.39|166\.82|169\.227|173\.(?:1[6-9]|2\d|3[01])|174\.(?:3[6-9]|4[0-3]|139)|184\.7[6-9])(?:\.\d{1,3}){2})
 header ARIN X-Spam-Relays-Untrusted =~ /^\[ ip=<ARIN_IPS> /
 describe ARIN Mail from ARIN area (USA)
 score ARIN 0.1
@@ -5940,7 +6161,7 @@ score DIRECTINTERSPIN 1.5
 # 222.3.140.*
 # 2009.10.01 by [yoh]
 
-header DIRECTDION X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:210\.155\.83\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.230\.216\.163|211\.18\.(?:(?:(?:\d|\d\d|1[0-8]\d|190)\.\d{1,3}|207\.1(?:6\d|7[0-5]))|212\.(?:129|1[3-9]\d|2\d\d))|61\.117\.(?:[6-9]|1[0-7]|(?!68)[2-9]\d|(?!103)1[01]\d|12[0-7])\.\d{1,3}|61\.202\.(?!(?:2|3|27|64|90|105)\.)(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|(?:59\.1(?:2[89]|3\d|40)|218\.222|222\.(?:[0-24-9]|1[0-5]))(?:\.\d{1,3}){2}|219\.108\.(?:1[6-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=(?:[A-Z]{1,2}\d{6}\.ppp|[a-zA-Z]{1,2}\d{12,14}\.(?:ec-){0,1}userreverse)\.dion\.ne\.jp) /
+header DIRECTDION X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:210\.155\.83\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])|210\.230\.216\.163|211\.18\.(?:(?:(?:\d|\d\d|1[0-8]\d|190)\.\d{1,3}|211\.18\.252\.(?:9[6-9]|10\d|11[01])|207\.1(?:6\d|7[0-5]))|212\.(?:129|1[3-9]\d|2\d\d)|252\.(?:9[6-9]|10\d|11[01]))|61\.117\.(?:[6-9]|1[0-7]|(?!68)[2-9]\d|(?!103)1[01]\d|12[0-7])\.\d{1,3}|61\.202\.(?!(?:2|3|27|64|90|105)\.)(?:\d|[1-9]\d|1[01]\d|12[0-7])\.\d{1,3}|(?:59\.1(?:2[89]|3\d|40)|218\.222|222\.(?:[0-24-9]|1[0-5]))(?:\.\d{1,3}){2}|219\.108\.(?:1[6-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5])\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=(?:[A-Z]{1,2}\d{6}\.ppp|[a-zA-Z]{1,2}\d{12,14}\.(?:ec-){0,1}userreverse)\.dion\.ne\.jp) /
 describe DIRECTDION directly received spam from DION
 score DIRECTDION 1.5
 
@@ -5965,7 +6186,8 @@ header DIRECTINFOSPHERE X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:61\,194\.206\.1
 describe DIRECTINFOSPHERE directly received spam from INFOSPHERE
 score DIRECTINFOSPHERE 2.0
 
-header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[67](?:\.\d{1,3}){2}|202\.213\.(?:208\.11[2-9]|247\.\d{1,3})|202\.238\.(?:65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(?:\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp) /
+# header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.14[67](?:\.\d{1,3}){2}|202\.213\.(?:208\.11[2-9]|247\.\d{1,3})|202\.238\.(?:65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(?:\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3})|(?:\d{1,3}\.){3}\d{1,3} rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp) /
+header DIRECTSONETDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:59\.14[67](?:\.\d{1,3}){2}|121\.[23](?:\.\d{1,3}){2}|202\.213\.(?:208\.11[2-9]|247\.\d{1,3})|202\.238\.(?:65|7[0345]|8[01789]|9[0-8]|101|11[02-9]|12[0-7])\.\d{1,3}|210\.174\.(?:\d|1[01378]|[2-5]\d|6[0-3])\.\d{1,3}|(?:\d{1,3}\.){3}\d{1,3} rdns=p[a-z0-9]{5,6}\.[a-z0-9]{7,8}\.ap\.so-net\.ne\.jp) /
 describe DIRECTSONETDYN directly received spam from SO-NET
 score DIRECTSONETDYN 1.5
 
@@ -6001,18 +6223,28 @@ score DIRECTSONETDYN 1.5
 # 211.129.14.* 222.146.51.* 
 # 2009.10.01 by [yoh]
 
-header DIRECTOCNDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:88|9[01245])|60\.(?:3[39]|4[04])|122\.26|123\.2(?:16|20)|124\.8[47]|125\.17[2-5]|219\.16[0-5]|221\.188|220\.(?:9[678]|10[4-7])|222\.(?:14[457-9]|15[01]))(?:\.\d{1,3}){2}|(?:60\.32\.(?:1[6-9]|2[01]|3[89]|[45]\d|6[0-3])|60\.37\.(?:6[4-9]|[789]\d|\d\d\d)|60\.38\.(?:\d|\d\d|10[0-5]|11[4-9]|1[2-9]\d|2\d\d)|60\.45\.(?:\d|\d\d|1[0-3]\d|14[0-8]|15[5-9]|1[67]\d|18[0-7]|19[2-9]|2\d\d)|60\.46\.(?:\d|\d\d|1[01]\d|12[0-7])|61\.112\.(?:6[89]|[7-9]\d|\d\d\d)|61\.199\.(?:\d|\d\d|1[01]\d|12[0-7])|61\.207\.(?:5[6-9]|[6-9]\d|1[0-57-9]\d|16[0-8]|20[04-9]|2[1-5]\d)|118\.15\.(?:1(?:2[89]|[3-8]\d|9[01])|2[45]\d)|124\.85\.(?:\d|[1-3]\d|4[01]|5[89]|[6-9]\d|[12]\d\d)|124\.86\.(?:\d|\d\d|1\d\d|20\d|21[0-8]|22[789]|2[3-5]\d)|124\.(?:96\.(?:[016-9]|[1-4789]\d|5[0124-7]|6[0-36-9]|10[16-9]|11[0-3789]|(?:1[236-9]|2\d)\d|14[02-9]|15[012])|97\.(?:\d|[1-8]\d|9[0-6]|10[5-9]|(?:1[1-9]|2\d)\d)|98\.(?:\d|1\d|2[04-7]|4[1-9]|[5-9]\d|1[0-57]\d|16[0124-9]|18[0-3]|19[01]|22[4-9]|23[013-9]|24[014-9]|25[0145])|99\.(?:[0-5]|1[0-7]|2[2-689]|5[0-3]|[34]\d|7[2-9]|8[0-8]|9[4-9]|[12]\d\d)|100\.\d{1,3}|101\.(?:[3-6]|1[1-489]|[23789]\d|4[0-5]|5[12]|6[3-9]|1[04-7]\d|11[0-4]|18[0-6]|20[2-9]|2[1-5]\d)|102\.(?:\d|\d\d|17[016-9]|1[0-689]\d|2\d\d)|103\.(?:\d|[1-8]\d|9[01]|10[2-5]|11[0-389]|1[235-9]\d|14[0-5]|2[0-4]\d))|218\.43\.118|219\.114\.(?:\d|[1-57-9]\d)|220\.99\.(?:\d|[1-5]\d|6[0-3])|220\.111\.(?:4[89]|[5-9]\d|\d\d\d)|222\.146\.(?:12[89]|1[3-9]\d|2[0-4]\d|25[0-5]))\.\d{1,3}|60\.37\.51\.(?:7|254)|61\.199\.212\.20[1-6]|118\.23\.108\.11|125\.206\.117\.1(?:25|33)|219\.166\.29\.(?:8[89]|9[0-5])|220\.110\.34\.3[2-9]|221\.184\.(?:6[4-7]|8[4-9]|9\d|1[01]\d|12[0-7])\.\d{1,3}|221\.186\.251\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])) /
+header DIRECTOCNDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:58\.(?:88|9[01245])|60\.(?:3[39]|4[04])|122\.26|123\.2(?:16|20)|124\.8[47]|125\.17[2-5]|219\.16[0-5]|221\.188|220\.(?:9[678]|10[4-7])|222\.(?:14[457-9]|15[01]))(?:\.\d{1,3}){2}|(?:60\.32\.(?:1[6-9]|2[01]|3[89]|[45]\d|6[0-3])|60\.37\.(?:6[4-9]|[789]\d|\d\d\d)|60\.38\.(?:\d|\d\d|10[0-5]|11[4-9]|1[2-9]\d|2\d\d)|60\.45\.(?:\d|\d\d|1[0-3]\d|14[0-8]|15[5-9]|1[67]\d|18[0-7]|19[2-9]|2\d\d)|60\.46\.(?:\d|\d\d|1[01]\d|12[0-7])|61\.112\.(?:6[89]|[7-9]\d|\d\d\d)|61\.199\.(?:\d|\d\d|1[01]\d|12[0-7])|61\.207\.(?:5[6-9]|[6-9]\d|1[0-57-9]\d|16[0-8]|20[04-9]|2[1-5]\d)|118\.15\.(?:1(?:2[89]|[3-8]\d|9[01])|2[45]\d)|124\.85\.(?:\d|[1-3]\d|4[01]|5[89]|[6-9]\d|[12]\d\d)|124\.86\.(?:\d|\d\d|1\d\d|20\d|21[0-8]|22[789]|2[3-5]\d)|124\.(?:96\.(?:[016-9]|[1-4789]\d|5[0124-7]|6[0-36-9]|10[16-9]|11[0-3789]|(?:1[236-9]|2\d)\d|14[02-9]|15[012])|97\.(?:\d|[1-8]\d|9[0-6]|10[5-9]|(?:1[1-9]|2\d)\d)|98\.(?:\d|1\d|2[04-7]|4[1-9]|[5-9]\d|1[0-57]\d|16[0124-9]|18[0-3]|19[01]|22[4-9]|23[013-9]|24[014-9]|25[0145])|99\.(?:[0-5]|1[0-7]|2[2-689]|5[0-3]|[34]\d|7[2-9]|8[0-8]|9[4-9]|[12]\d\d)|100\.\d{1,3}|101\.(?:[3-6]|1[1-489]|[23789]\d|4[0-5]|5[12]|6[3-9]|1[04-7]\d|11[0-4]|18[0-6]|20[2-9]|2[1-5]\d)|102\.(?:\d|\d\d|17[016-9]|1[0-689]\d|2\d\d)|103\.(?:\d|[1-8]\d|9[01]|10[2-5]|11[0-389]|1[235-9]\d|14[0-5]|2[0-4]\d))|218\.43\.118|219\.114\.(?:\d|[1-57-9]\d)|220\.99\.(?:\d|[1-5]\d|6[0-3])|220\.111\.(?:4[89]|[5-9]\d|\d\d\d)|222\.146\.(?:12[89]|1[3-9]\d|2[0-4]\d|25[0-5]))\.\d{1,3}|60\.37\.51\.(?:7|254)|61\.199\.212\.20[1-6]|118\.22\.2\.(?:4[89]|5[0-5])|118\.23\.108\.11|125\.206\.117\.1(?:25|33)|219\.166\.29\.(?:8[89]|9[0-5])|220\.110\.34\.3[2-9]|221\.184\.(?:6[4-7]|8[4-9]|9\d|1[01]\d|12[0-7])\.\d{1,3}|219\.166\.160\.1(?:6[89]|7[0-5])|221\.186\.251\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])) /
 describe DIRECTOCNDYN directly received spam from OCN
 score DIRECTOCNDYN 1.5
 
 replace_tag VECTANT_115_179 115\.179\.(?:1|2[89]|[3-8]\d|9[01]|1(?:0[89]|[1-9]\d)|2(?:0[0-7]|1[0-3]|21))\.\d{1,3}
 replace_tag VECTANT_120_51 120\.51\.(?:[0-389]|1\d|2[5-9]|3[0-589]|[4-9]\d|1\d\d|20[0129]|21[01])\.\d{1,3}
 replace_tag VECTANT_124_110 124\.110\.(?:\d|[1-5]\d|6[137]|9[16-9]|1(?:[01246-9]\d|3[0-6]|5[0136-9])|2(?:[02-5]\d|1[2-9]))\.\d{1,3}
-replace_tag VECTANT_202_215 202\.215\.(?:[23]|1[246-9]|2[0-57-9]|3[014-7]|4[014-9]|5[5-9]|6[0-35679]|7[013-9]|8[014-9]|9[0179]|1(?:0[02-9]|1[123567]|2[0145689]|3[0-36-9]|4[0-37]|5[1-9]|6[1-58]|7[0-378]|8[0-5789]|9[1-69])|2(?:0[0247]|1\d|2[0-48]|3[01678]|4[01]|55))\.\d{1,3}
+replace_tag VECTANT_163_139 163\.139\.(?:(?:[0-7]|1[05-9]|2[4-9]|3[0124-9]|4[2-9]|5[0-5]|6[0-79]|7[0-589]|8[0-36-9]|9[2-9]|1(?:[01457]\d|2[2367]|3[3-9]|6[0-8]|8[0-7]|9[2-9])|2(?:0[23467]|1[012679]|2[0124679]|3[5-9]|4[0-57]|5[13]))\.\d{1,3}|169\.(?!178 )\d{1,3})
+
+replace_tag VECTANT_183_177 183\.177\.1(?:2[89]|3\d|4[0-367]|5[67]|7[56])\.\d{1,3}
+
+# replace_tag VECTANT_202_215 202\.215\.(?:[23]|1[246-9]|2[0-57-9]|3[014-7]|4[014-9]|5[5-9]|6[0-35679]|7[013-9]|8[014-9]|9[0179]|1(?:0[02-9]|1[123567]|2[0145689]|3[0-36-9]|4[0-37]|5[1-9]|6[1-58]|7[0-378]|8[0-5789]|9[1-69])|2(?:0[0247]|1\d|2[0-48]|3[01678]|4[01]|55))\.\d{1,3}
+replace_tag VECTANT_202_215 202\.215\.(?:(?:[23]|1[246-9]|2[0-57-9]|3[014-7]|4[014-9]|5[5-9]|6[0-35679]|7[013-9]|8[014-9]|9[0179]|1(?:0[02-9]|1[123567]|2[0145689]|3[0-36-9]|4[0-37]|5[1-9]|6[1-58]|7[0-378]|8[0-5789]|9[1-69])|2(?:0[0247]|1\d|2[0-48]|3[01678]|4[01]|55))\.\d{1,3}|32\.(?!204 )\d{1,3})
 replace_tag VECTANT_202_231 202\.231\.(?:6[579]|7[0-5789]|8[12358]|9\d|1(?:0[02-57]|1[2-9]|2[23467]))\.\d{1,3}
-replace_tag VECTANT_222_228 222\.228\.(?:\d|[1-8]\d|9[4-9]|1(?:0\d|1[3-9]|2[0124-9]|3[0-5789]|4\d|5[0-6]|6[0-7]|7[346-9]|[89]\d)|2(?:0\d|1[0-3]|2[0-59]|30))\.\d{1,3}
-replace_tag VECTANT_222_230 222\.230\.(?:(?:\d|[1236-9]\d|4[0-3689]|5[0235-9]|1(?:0[0-8]|1[02-9]|2[13-9]|3[0-5]|4[04-7]|5[124-9]|[67]\d|8[0-35]))\.\d{1,3}|150\.24[128])
-header DIRECTVECTANTDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:<VECTANT_115_179>|<VECTANT_120_51>|<VECTANT_124_110>|<VECTANT_202_215>|<VECTANT_202_231>|<VECTANT_222_228>|<VECTANT_222_230>|202\.189\.(?:19[2-9]|2[01]\d|22[0-3])\.\d{1,3}) /
+replace_tag VECTANT_220_247 220\.247\.(?:(?:[25-9]|1[2-9]|2[0135-9]|[3-8]\d|9[0-5]|10[2-9]|11\d|12[0-7])\.\d{1,3}|0\.(?!(?:143|157) )\d{1,3}|1\.(?!(?:56|189|227) )\d{1,3}|10\.(?!(?:26|168|247) )\d{1,3}|11\.(?!(?:7|106|138|151|163|220) )\d{1,3}|22\.(?!8[1-5] )\d{1,3}|24\.(?!14[78] )\d{1,3}|100\.(?!(?:138|14[069]|24[23]) )\d{1,3}|101\.(?!250 )\d{1,3})
+# replace_tag VECTANT_222_228 222\.228\.(?:\d|[1-8]\d|9[4-9]|1(?:0\d|1[3-9]|2[0124-9]|3[0-5789]|4\d|5[0-6]|6[0-7]|7[346-9]|[89]\d)|2(?:0\d|1[0-3]|2[0-59]|30))\.\d{1,3}
+replace_tag VECTANT_222_228 222\.228\.(?:(?:\d|[1-8]\d|9[24-9]|1(?:0\d|1[3-9]|2[0124-9]|3[0-5789]|4\d|5[0-6]|6[0-7]|7[346-9]|[89]\d)|2(?:0\d|1[0-37]|2[0-589]|3[013-68]|4[6-9]))\.\d{1,3}|90\.(?!111 )\d{1,3}|91\.(?!5[014] )\d{1,3}|93\.(?!(?:10|6[45]|70) )\d{1,3}|110\.(?!(?:2|118) )\d{1,3}|111\.(?!(?:3[345]|45) )\d{1,3}|112\.(?!(?:11[3-8]|202) )\d{1,3}|123\.(?!(?:5[1-5]|14[5-9]|150|16[0456]) )\d{1,3}|136\.(?!220 )\d{1,3}|157\.(?!(?:20|5[0-4]|129|13[04]|18[678]) )\d{1,3}|158\.(?!(?:34|25[0124]) )\d{1,3}|159\.(?!63 )\d{1,3}|168\.(?!(?:2[6-9]|5[0-3]|21[789]|22[012]|242) )\d{1,3}|170\.(?!160 )\d{1,3}|171\.(?!188 )\d{1,3}|172\.(?!(?:8[2-9]|9[0-3]|12[013]) )\d{1,3}|175\.(?![23] )\d{1,3}|214\.(?!(?:4[89]|5[12]|16[0-36-9]|17[128]|18[45]) )\d{1,3}|215\.(?!(?:12[12456]|13[01]) )\d{1,3}|216\.(?!(?:120|133|178) )\d{1,3}|218\.(?!(?:130|161) )\d{1,3}|219\.(?!21[124] )\d{1,3})
+
+# replace_tag VECTANT_222_230 222\.230\.(?:(?:\d|[1236-9]\d|4[0-3689]|5[0235-9]|1(?:0[0-8]|1[02-9]|2[13-9]|3[0-5]|4[04-7]|5[124-9]|[67]\d|8[0-35]))\.\d{1,3}|150\.24[128])
+replace_tag VECTANT_222_230 222\.230\.(?:(?:\d|[1236-9]\d|4[0-3689]|5[0235-9]|1(?:0[0-8]|1[02-9]|2[13-9]|3[0-5]|4[04-7]|5[124-9]|[67]\d|8[0-35]))\.\d{1,3}|150\.24[128]|111\.(?!(?:73|200) )\d{1,3})
+
+header DIRECTVECTANTDYN X-Spam-Relays-Untrusted =~ /^\[ ip=(?:<VECTANT_115_179>|<VECTANT_120_51>|<VECTANT_124_110>|<VECTANT_163_139>|<VECTANT_183_177>|<VECTANT_202_215>|<VECTANT_202_231>|<VECTANT_220_247>|<VECTANT_222_228>|<VECTANT_222_230>|202\.189\.(?:19[2-9]|2[01]\d|22[0-3])\.\d{1,3}) /
 describe DIRECTVECTANTDYN directly received spam from vectant.ne.jp
 score DIRECTVECTANTDYN 1.5
 
@@ -6021,7 +6253,18 @@ describe DIRECTHI_HO directly received spam from Panasonic hi-ho
 score DIRECTHI_HO 1.5
 
 # header DIRECTUSENBROAD X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:124\.34\.(?:4\.(?:0|1|14|4[567]|65|98|10[067]|22[56]|24[09]|25[012])|5\.(?:\d|[1-8]\d|23[2689]|2[45]\d))|221\.252\.14\.7[2-9])|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:usen-[25]\d{1,2}(?:x\d{2,3}){3}\.ap-(?:us|US)\d+\.usen\.ad\.jp|[125]\d{1,2}(?:x\d{2,3}){3,3}\.ap[125]\d{1,2}\.ftth\.ucom\.ne\.jp|\w+\.(?:kabir-ken\.com|vds-server\.net))) /
-header DIRECTUSENBROAD X-Spam-Relays-Untrusted =~ /^\[ ip=(?:113\.34\.82\.\d{1,3}|124\.34\.(?:4\.(?:0|1|14|4[567]|65|98|10[067]|22[56]|24[09]|25[012])|5\.(?:\d|[1-8]\d|23[2689]|2[45]\d))|221\.252\.14\.7[2-9]|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:usen-[25]\d{1,2}(?:x\d{2,3}){3}\.ap-(?:us|US)\d+\.usen\.ad\.jp|[125]\d{1,2}(?:x\d{2,3}){3,3}\.ap[125]\d{1,2}\.ftth\.ucom\.ne\.jp|\w+\.(?:kabir-ken\.com|vds-server\.net))) /
+# header DIRECTUSENBROAD X-Spam-Relays-Untrusted =~ /^\[ ip=(?:113\.34\.82\.\d{1,3}|113\.39\.92\.\d{1,3}|122\.220\.75\.\d{1,3}|124\.34\.(?:4\.(?:0|1|14|4[567]|65|98|10[067]|22[56]|24[09]|25[012])|5\.(?:\d|[1-8]\d|23[2689]|2[45]\d))|221\.252\.14\.7[2-9]|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:usen-[25]\d{1,2}(?:x\d{2,3}){3}\.ap-(?:us|US)\d+\.usen\.ad\.jp|[125]\d{1,2}(?:x\d{2,3}){3,3}\.ap[125]\d{1,2}\.ftth\.ucom\.ne\.jp|\w+\.(?:kabir-ken\.com|vds-server\.net))) /
+
+
+replace_tag USEN_113_36 113\.36\.(?:(?:[02-9]|1[0-35-9]|2[0125-8]|3[013-69]|4[0-39]|[56]\d|7[0-8]|8[0-7]|9[789]|1(?:0[0-6]|1[23469]|[278]\d|3[0124-9]|4[0-47]|5[0-7]|6[0-579]|9[0245])|2\d\d)\.\d{1,3}|191\.(?!35 )\d{1,3})
+
+replace_tag USEN_113_34 113\.34\.82\.\d{1,3}
+replace_tag USEN_113_39 113\.39\.92\.\d{1,3}
+replace_tag USEN_122_220 122\.220\.75\.\d{1,3}
+replace_tag USEN_124_34 124\.34\.(?:4\.(?:0|1|14|4[567]|65|98|10[067]|22[56]|24[09]|25[012])|5\.(?:\d|[1-8]\d|23[2689]|2[45]\d))
+replace_tag USEN_221_252 221\.252\.14\.7[2-9]
+
+header DIRECTUSENBROAD X-Spam-Relays-Untrusted =~ /^\[ ip=(?:<USEN_113_34>|<USEN_113_36>|<USEN_113_39>|<USEN_122_220>|<USEN_124_34>|<USEN_221_252>|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:usen-[25]\d{1,2}(?:x\d{2,3}){3}\.ap-(?:us|US)\d+\.usen\.ad\.jp|[125]\d{1,2}(?:x\d{2,3}){3,3}\.ap[125]\d{1,2}\.ftth\.ucom\.ne\.jp|\w+\.(?:kabir-ken\.com|vds-server\.net))) /
 describe DIRECTUSENBROAD directly received spam from USEN broadgate
 score DIRECTUSENBROAD 1.5
 
@@ -6076,7 +6319,7 @@ score DIRECTVOICETOWN 3.5
 
 
 # header DIRECTSAKURAWEB Received =~ /from .*www[0-9]{1,3}\.sakura\.ne\.jp[^a-z]+[0-9]{2,3}(\.[0-9]{1,3}){3,3}[^(a-z]{0,3}by (mail\.flcl\.org|[a-z0-9]+\.nifty\.((ne|co|ad)\.jp|com)|(alt|dns|mta|ybbmta)[0-9][0-9]\.mail\.((bbt|mci|tnz)\.){0,1}yahoo\.co\.jp|fm[1-6]\.freemail\.ne\.jp)/
-header DIRECTSAKURAWEB X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.106\.(?:14\.204|18\.67|19\.40|20\.223|32\.207|100\.20[34]|107\.72|113\.84)|61\.211\.234\.41|112\.78\.(?:112\.86|196\.79)|202\.(?:181\.(97\.71|98\.162|105\.136)|222\.30\.222)|210\.188\.201\.\d{1,3}|210\.188\.205\.(199|2(05|12))|210\.224\.165\.36|219\.94\.(?:128\.(?:45|51|173|188)|129\.(56|91|156)|132\.(?:7|107)|133\.2(14|42)|143\.3[2-5]|144\.71|148\.176|155\.184|162\.(?:15|142)|163\.153|166\.40|167\.17[78]|181\.120|190\.106))|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:www2{0,1}\.skynetdm\.com|www933\.sakura\.ne\.jp|sv1\.mhai\.jp|sv\d{1,3}\.xserver\.jp)) /
+header DIRECTSAKURAWEB X-Spam-Relays-Untrusted =~ /^\[ ip=(?:(?:59\.106\.(?:14\.204|18\.67|19\.40|20\.223|32\.207|100\.20[34]|107\.72|113\.84)|61\.211\.234\.41|112\.78\.(?:112\.86|196\.79)|202\.(?:181\.(97\.71|98\.162|105\.136)|222\.30\.222)|210\.188\.201\.\d{1,3}|210\.188\.205\.(199|2(05|12))|210\.224\.165\.36|219\.94\.(?:128\.(?:45|51|82|173|188)|129\.(56|91|156)|132\.(?:7|107)|133\.2(14|42)|143\.3[2-5]|144\.71|148\.176|155\.184|162\.(?:15|142)|163\.153|166\.40|167\.17[78]|181\.120|190\.106))|\d{2,3}(?:\.\d{1,3}){3} rdns=(?:www2{0,1}\.skynetdm\.com|www933\.sakura\.ne\.jp|sv1\.mhai\.jp|sv\d{1,3}\.xserver\.jp)) /
 describe DIRECTSAKURAWEB directly received spam from SAKURAWEB
 score DIRECTSAKURAWEB 3.5
 
@@ -6283,7 +6526,7 @@ header DIRECTBITDRIVE X-Spam-Relays-Untrusted =~ /^\[ ip=(202\.94\.(129\.36|153\
 describe DIRECTBITDRIVE directly received spam from BIT-DRIVE(Sony Corporation)
 score DIRECTBITDRIVE 1.5
 
-header DIRECTXREA X-Spam-Relays-Untrusted =~ /^\[ ip=(125\.53\.25\.(\d|[1-5]\d|6[0-3])|210\.196\.169\.(19[2-9]|2[01]\d|22[0-3])|219\.101\.229\.159) /
+header DIRECTXREA X-Spam-Relays-Untrusted =~ /^\[ ip=(125\.53\.25\.(\d|[1-5]\d|6[0-3])|210\.196\.169\.(19[2-9]|2[01]\d|22[0-3])|219\.101\.229\.15\d) /
 describe DIRECTXREA directly received spam from XREA(DIGIROCK,INC.)
 score DIRECTXREA 1.5
 
@@ -6296,9 +6539,15 @@ header DIRECTADVANSCOPE X-Spam-Relays-Untrusted =~ /^\[ ip=61\.121\.224\.\d{1,3}
 describe DIRECTADVANSCOPE directly received spam from advanscope.inc
 score DIRECTADVANSCOPE 1.5
 
-header DIRECTDIGIROCK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.172\.28\.\d{1,3}|219\.163\.200\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])) /
+header DIRECTDIGIROCK X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.172\.(?:2[4-9]|3[01])\.\d{1,3}|219\.163\.200\.(?:6[4-9]|[789]\d|1[01]\d|12[0-7])) /
 describe DIRECTDIGIROCK directly received spam from DigiRock, Inc.
 score DIRECTDIGIROCK 1.5
+
+header __CORESERVER X-Spam-Relays-Untrusted =~ /^\[ ip=\d{2,3}(?:\.\d{1,3}){3} rdns=[^ \[\]]+ helo=\w+\.coreserver\.jp /
+
+meta DIGI_CORE DIRECTDIGIROCK && __CORESERVER
+score DIGI_CORE 3.5
+
 
 header DIRECTCOMMUFA X-Spam-Relays-Untrusted =~ /^\[ ip=210\.173\.156\.223 /
 describe DIRECTCOMMUFA directly received spam from Chubu Telecommunications Co.,Inc
@@ -6314,7 +6563,8 @@ header DIRECTKDDI X-Spam-Relays-Untrusted =~ /^\[ ip=(121\.111\.245\.(\d|[1-5]\d
 describe DIRECTKDDI directly received spam from KDDI CORPORATION
 score DIRECTKDDI 1.5
 
-header DIRECTSBIDC X-Spam-Relays-Untrusted =~ /^\[ ip=(?:202\.218\.36\.(?:19[2-9]|2\d\d)|211\.13\.237\.(?:[789]|[1-5]\d|6[012])) /
+# SOFTBANK TELECOM
+header DIRECTSBIDC X-Spam-Relays-Untrusted =~ /^\[ ip=(?:61\.115.199\.(?:12[89]|1[3-9]\d|2\d\d)|202\.218\.36\.(?:19[2-9]|2\d\d)|211\.13\.237\.(?:[789]|[1-5]\d|6[012])) /
 describe DIRECTSBIDC directly received spam from SOFTBANK IDC Corp.
 score DIRECTSBIDC 1.5
 
@@ -6346,9 +6596,22 @@ header DIRECTJETINTERNET X-Spam-Relays-Untrusted =~ /^\[ ip=203\.79\.(?:4[89]|5\
 describe DIRECTJETINTERNET directly received spam from JETINTERNET Corporation
 score DIRECTJETINTERNET 1.5
 
-header DIRECTQTNET X-Spam-Relays-Untrusted =~ /^\[ ip=110\.54\.43\.65 /
+# 203.135.231.43 110.54.43.65
+header DIRECTQTNET X-Spam-Relays-Untrusted =~ /^\[ ip=(?:110\.54\.(?:\d|\d\d|10\d|11[1-9]|12[0-6])\.\d{1,3}|203\.135\.(?:19[2-79]|2[01235]\d|24[1-9])\.\d{1,3}) /
 describe DIRECTQTNET directly received spam from Kyushu Telecommunication Network Co., Inc.
 score DIRECTQTNET 1.5
+
+header DIRECTIPCORE X-Spam-Relays-Untrusted =~ /^\[ ip=(?:111\.92\.24[4-7]\.\d{1,3}|210\.255\.85\.1(?:7[6-9]|8\d|9[01])) /
+describe DIRECTIPCORE directly received spam from Ip Core Corporation
+score DIRECTIPCORE 1.5
+
+header DIRECTTSUKAERUNET X-Spam-Relays-Untrusted =~ /^\[ ip=119\.82\.(?:2[57]\.\d{1,3}|24\.(?!(?:[89]|1[013479]|2[02379]|3[1679]|4[689]|5[56]|6[1478]|7[01348]|8[034568]|9[1234678]|1(?:0[01246789]|1[1238]|2[02345679]|3[239]|4[12345789]|5[1236]|6[278]|7[067]|8[124568]|9[01235])|2(?:0[012568]|1[0235679]|2[0123456789]|3[178]|4[02468]|5[01])) )\d{1,3}|26\.(?!(?:3|1[046789]|2[2367]|3[12]|4[48]|5[37]|6[2389]|7[0489]|8[459]|92|1(?:0[04579]|1[013578]|2[1-5789]|3[0123568]|4[0138]|5[1245689]|6[0124-9]|7[13789]|8[0-689]|9[0124689])|2(?:0[0-8]|1[2478]|2[0235689]|3[234689]|4[2389])) )\d{1,3}|28\.(?!(?:[68]|1[0145]|58|1(?:0[0135]|1[03-8]|2[01245789]|3[0-4679]|4[26789]|5[02378]|6[1235679]|7[135-9]|82|97)|2(?:03|18|3[89]|44)) )\d{1,3}|29\.(?!(?:[689]|1[369]|2[148]|3[01356]|48|5[24]|6[57]|7[48]|8[013789]|9[1257]|1(?:0[03456789]|1[589]|2[23]|3[03]|4[03568]|5[089]|6[02379]|7[036]|8[357]|9[3589])|2(?:0[03459]|1[23567]|2[01]|3[018]|4[057]|5[14])) )\d{1,3}|30\.(?!(?:61|72|1(?:29|39|4[016]|5[57]|6[0156]|73|95)|2(?:0[12456789]|1[12349]|2[019]|3[0348]|4[046]|5[234])) )\d{1,3}|31\.(?!(?:1(?:0[125]|13|2[0579]|4[1389]|5[03678]|6[125]|7[02357]|9[356])|2(?:00|12|23)) )\d{1,3}) /
+describe DIRECTTSUKAERUNET directly received spam from Tsukaeru.net, Web Hosting Company, Japan
+score DIRECTTSUKAERUNET 1.5
+
+header DIRECTCRMSTYLE X-Spam-Relays-Untrusted =~ /^\[ ip=(?:113\.39\.92\.(?:5[6-9]|6[012])|210\.168\.111\.2(?:1[6-9]|2[012])) /
+describe DIRECTCRMSTYLE directly received spam from Synergy Marketing, Inc.
+score DIRECTCRMSTYLE 1.5
 
 
 header DIRECTUNKNOWN X-Spam-Relays-Untrusted =~ /^\[ ip=(?!(?:127\.0\.0\.1|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|10(?:\.\d{1,3}){3}))\d{2,3}(?:\.\d{1,3}){3} rdns= /
@@ -6356,7 +6619,7 @@ describe DIRECTUNKNOWN directly received spam from suspicious dynamic IP
 score DIRECTUNKNOWN 0.3
 
 
-meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN || DIRECTINFOSPHERE || DIRECTSONETDYN || DIRECTOCNDYN || DIRECTVECTANTDYN || DIRECTHI_HO || DIRECTUSENBROAD || DIRECTBBTEC || DIRECTINFOWEB || DIRECTDTI || DIRECTBIGLOBE || DIRECTALPHANET || DIRECTUNETSURF || DIRECTEDITNET || DIRECTDSNETWORKS || DIRECTGERAGERA || DIRECTGMOACCESS || DIRECTIIJ4U || DIRECTVIPLT || DIRECTVOICETOWN || DIRECTSST_BB || DIRECTASAHINET || DIRECTTCOMADSL || DIRECTXEXONNET || DIRECTBBEXCITE || DIRECTITSCOM || DIRECTSAINET_NET || DIRECTDORPHIN || DIRECTWILLCOM || DIRECTHYPERBOX || DIRECTINTERLINK || DIRECTLINKCLUB || DIRECTPLALA || DIRECTPOWEREDCOM || DIRECTARCSTAR || DIRECTINTERQ || DIRECTEACCESS || DIRECTCPI || DIRECTPROX || COMBZMAIL_JP || TOKU_NET || DIRECTSAKURAWEB || LOLIPOP || SOHO || CSIDENET || NICNAME || DATAHOTEL_JP || DIRECTCLARA || DIRECTSAVVIS || DIRECTATTGNS || DIRECTASIANETCOM || DIRECTSYSTEMDESIGN || DIRECTWAKWAK || DIRECTMEDIAWARS || DIRECTBITDRIVE || DIRECTXREA || DIRECTMEDEXCG || DIRECTADVANSCOPE || DIRECTDIGIROCK || DIRECTCOMMUFA || DIRECTEMOBILE || DIRECTKDDI || DIRECTSBIDC || DIRECTNTTMEDIAS ||DIRECTK_OPTICOM || DIRECTJCN || DIRECTDOMIRU || DIRECTMIRAI || DIRECTPREMIERE || DIRECTJETINTERNET || DIRECTQTNET ||FORGEDHELOYAHOO || ___KOREATAIWANCHINA || WAVEB_US || HOPONE_US || IWEBGROUP_US || SPCS_US || GNAXNET_US || PSINET_US || AKANOC_US || OTHER_FOOTSTOOL 
+meta ___DYNAMICIP DIRECTYOURNET || DIRECTINTERSPIN || DIRECTDION || DIRECTODN || DIRECTINFOSPHERE || DIRECTSONETDYN || DIRECTOCNDYN || DIRECTVECTANTDYN || DIRECTHI_HO || DIRECTUSENBROAD || DIRECTBBTEC || DIRECTINFOWEB || DIRECTDTI || DIRECTBIGLOBE || DIRECTALPHANET || DIRECTUNETSURF || DIRECTEDITNET || DIRECTDSNETWORKS || DIRECTGERAGERA || DIRECTGMOACCESS || DIRECTIIJ4U || DIRECTVIPLT || DIRECTVOICETOWN || DIRECTSST_BB || DIRECTASAHINET || DIRECTTCOMADSL || DIRECTXEXONNET || DIRECTBBEXCITE || DIRECTITSCOM || DIRECTSAINET_NET || DIRECTDORPHIN || DIRECTWILLCOM || DIRECTHYPERBOX || DIRECTINTERLINK || DIRECTLINKCLUB || DIRECTPLALA || DIRECTPOWEREDCOM || DIRECTARCSTAR || DIRECTINTERQ || DIRECTEACCESS || DIRECTCPI || DIRECTPROX || COMBZMAIL_JP || TOKU_NET || DIRECTSAKURAWEB || LOLIPOP || SOHO || CSIDENET || NICNAME || DATAHOTEL_JP || DIRECTCLARA || DIRECTSAVVIS || DIRECTATTGNS || DIRECTASIANETCOM || DIRECTSYSTEMDESIGN || DIRECTWAKWAK || DIRECTMEDIAWARS || DIRECTBITDRIVE || DIRECTXREA || DIRECTMEDEXCG || DIRECTADVANSCOPE || DIRECTDIGIROCK || DIRECTCOMMUFA || DIRECTEMOBILE || DIRECTKDDI || DIRECTSBIDC || DIRECTNTTMEDIAS ||DIRECTK_OPTICOM || DIRECTJCN || DIRECTDOMIRU || DIRECTMIRAI || DIRECTPREMIERE || DIRECTJETINTERNET || DIRECTQTNET || DIRECTIPCORE || DIRECTTSUKAERUNET || DIRECTCRMSTYLE ||FORGEDHELOYAHOO || ___KOREATAIWANCHINA || WAVEB_US || HOPONE_US || IWEBGROUP_US || SPCS_US || GNAXNET_US || PSINET_US || AKANOC_US || OTHER_FOOTSTOOL 
 
 # 
 # 
